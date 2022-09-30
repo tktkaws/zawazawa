@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*--------------------------------------*
+ * foundation
+ *--------------------------------------*/
+@use "./foundation/base";
+@use "./foundation/variable";
+@use "./foundation/reset";
+
+/*--------------------------------------*
+* layout
+*--------------------------------------*/
+@use "./layout/header";
+@use "./layout/footer";
+
+/*-------------------
+* component
+-------------------*/
+@use "./object/component/wrapper";
+@use "./object/component/button";
+
+/*-------------------
+  * project
+  -------------------*/
+@use "./object/project/home-fv";
+@use "./object/project/home-about";
+@use "./object/project/home-news";
+@use "./object/project/home-product";
+@use "./object/project/home-category";
+@use "./object/project/home-info";
+
+/*-------------------
+  * utility
+  -------------------*/
+@use "./object/utility/display";
+
+h1 {
+  color: red;
+}
+h2 {
+  color: blue;
+  font-size: 50px;
+}
