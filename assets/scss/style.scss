@@ -3,9 +3,9 @@
 /*--------------------------------------*
  * foundation
  *--------------------------------------*/
-@use "./foundation/base";
-@use "./foundation/variable";
 @use "./foundation/reset";
+@use "./foundation/base";
+@use "./foundation/global";
 
 /*--------------------------------------*
 * layout

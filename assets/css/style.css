@@ -1,58 +1,4 @@
 @charset "UTF-8";
-html {
-  font-size: 62.5%;
-  line-height: 1.6;
-  height: 100%;
-  scroll-behavior: smooth;
-}
-
-body {
-  color: #333333;
-  font-size: 1.6rem;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  min-width: 350px;
-  width: 100%;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-img,
-video,
-object {
-  max-width: 100%;
-  height: auto;
-  border: none;
-  display: block;
-}
-
-a {
-  color: #0066c0;
-  transition: 0.4s;
-}
-a:hover {
-  text-decoration: none;
-}
-
-a:hover img {
-  text-decoration: none;
-  opacity: 0.8;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 /*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -432,11 +378,66 @@ th {
   font-weight: bold;
 }
 
+/* 基本サイズ */
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  min-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+img,
+video,
+object {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+}
+
+a {
+  color: #0066c0;
+  transition: 0.4s;
+}
+a:hover {
+  text-decoration: none;
+}
+
+a:hover img {
+  text-decoration: none;
+  opacity: 0.8;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .l-header {
   height: 187px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 3.5vw;
 }
 .l-header__logo {
   width: 447px;
@@ -445,8 +446,20 @@ th {
 .l-header__lists {
   display: flex;
   justify-content: space-evenly;
-  gap: 10px;
+  gap: 5vw;
 }
+.l-header__list {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.l-header__link {
+  color: #000000;
+}
+
 .l-footer {
   display: flex;
   justify-content: flex-end;
@@ -459,9 +472,15 @@ th {
 }
 
 .c-button {
-  background-color: black;
-  color: white;
-  padding: 3px 20px;
+  padding: 2em;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* ボックスの高さと同一 */
+  background: #000000;
+  color: #ffffff;
 }
 
 .c-button--large {
@@ -489,11 +508,12 @@ th {
 }
 .p-home-fv__slider {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .p-home-fv__slider-image {
-  width: 588px;
   height: 957px;
+  width: 30%;
+  object-fit: cover;
 }
 .p-home-fv__deco-image {
   position: absolute;
@@ -518,6 +538,9 @@ th {
   font-weight: 500;
   font-size: 128px;
   line-height: 190px;
+  margin-top: -5.5vw;
+  text-transform: uppercase;
+  border-bottom: solid 1px;
 }
 .p-home-fv__subtitle {
   font-family: "Oswald";
@@ -525,6 +548,7 @@ th {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  margin-top: 1vw;
 }
 .p-home-fv__btn-wrapper {
   position: absolute;

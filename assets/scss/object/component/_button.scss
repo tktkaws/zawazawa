@@ -16,9 +16,19 @@
 // }
 
 .c-button {
-  background-color: black;
-  color: white;
-  padding: 3px 20px;
+  // padding-top: 28px;
+  // padding-bottom: 28px;
+  // padding-left: 146px;
+  // padding-right: 146px;
+  padding: 2em;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* ボックスの高さと同一 */
+  background: #000000;
+  color: #ffffff;
 }
 
 .c-button--large {

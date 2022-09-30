@@ -1,28 +1,12 @@
-// @use "./../foundation/variable" as *;
-
-// .l-header {
-//   position: sticky;
-//   top: 0;
-//   background-color: $color-base;
-//   z-index: 1;
-
-//   &__content {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-
-//   &__logo {
-//     display: inline-block;
-//     max-width: 40%;
-//   }
-// }
+@use "./../foundation/global" as *;
 
 .l-header {
   height: 187px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 3.5vw;
+
   &__logo {
     width: 447px;
     height: 59px;
@@ -32,11 +16,18 @@
   &__lists {
     display: flex;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 5vw;
   }
   &__list {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
   }
   &__link {
+    color: #000000;
   }
 }
 

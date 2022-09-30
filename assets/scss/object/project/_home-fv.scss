@@ -2,11 +2,13 @@
   position: relative;
   &__slider {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   &__slider-image {
-    width: 588px;
+    // width: 588px;
     height: 957px;
+    width: 30%;
+    object-fit: cover;
   }
   &__deco-image {
     position: absolute;
@@ -33,6 +35,9 @@
     font-weight: 500;
     font-size: 128px;
     line-height: 190px;
+    margin-top: -5.5vw;
+    text-transform: uppercase;
+    border-bottom: solid 1px;
   }
   &__subtitle {
     font-family: "Oswald";
@@ -40,6 +45,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    margin-top: 1vw;
   }
   &__btn-wrapper {
     position: absolute;
