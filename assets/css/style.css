@@ -472,13 +472,16 @@ a:hover img {
 }
 
 .c-button {
-  padding: 2em;
+  display: inline-block;
+  min-width: 403px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.2em;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
-  /* ボックスの高さと同一 */
   background: #000000;
   color: #ffffff;
 }
@@ -524,13 +527,11 @@ a:hover img {
 .p-home-fv__title-zone {
   position: absolute;
   top: 35%;
-  left: 35%;
+  left: 25%;
   background-color: white;
-  padding: 25px;
-}
-.p-home-fv__title-zone::before {
-  content: "";
-  margin-top: -50px;
+  padding: 50px;
+  width: 900px;
+  height: 206px;
 }
 .p-home-fv__title {
   font-family: "Oswald";
@@ -538,9 +539,12 @@ a:hover img {
   font-weight: 500;
   font-size: 128px;
   line-height: 190px;
-  margin-top: -5.5vw;
+  margin-top: -7.5vw;
   text-transform: uppercase;
   border-bottom: solid 1px;
+  text-align: center;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 .p-home-fv__subtitle {
   font-family: "Oswald";
@@ -549,11 +553,43 @@ a:hover img {
   font-size: 16px;
   line-height: 24px;
   margin-top: 1vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 .p-home-fv__btn-wrapper {
   position: absolute;
-  top: 95%;
-  left: 95%;
+  top: 75%;
+  left: 60%;
+}
+
+.swiper {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.swiper-slide {
+  height: 957px;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+}
+.swiper-slide img {
+  opacity: 0.6;
+  display: block;
+}
+.swiper-slide-active img {
+  opacity: 1;
+  display: block;
+}
+
+.swiper-button-prev {
+  color: black;
+  top: 90%;
+  left: 10%;
+}
+.swiper-button-next {
+  color: black;
+  top: 90%;
+  left: 20%;
 }
 
 .p-home-about {
