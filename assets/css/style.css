@@ -406,7 +406,7 @@ object {
 }
 
 a {
-  color: #0066c0;
+  color: black;
   transition: 0.4s;
 }
 a:hover {
@@ -475,6 +475,11 @@ a:hover img {
   display: flex;
   justify-content: flex-end;
   margin-top: -100px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
 }
 
 .c-wrapper {
@@ -845,19 +850,25 @@ a:hover img {
   display: flex;
 }
 .p-home-category__link {
-  width: 370px;
+  width: 20%;
 }
 .p-home-category__card {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 .p-home-category__card--reverse {
   display: flex;
   flex-direction: column-reverse;
+  gap: 10px;
 }
 .p-home-category__card-image {
-  width: 370px;
+  width: 100%;
   height: 593px;
+}
+.p-home-category__card-image img {
+  height: 100%;
+  width: 100%;
 }
 .p-home-category__card-text {
   text-align: center;
@@ -869,7 +880,7 @@ a:hover img {
   font-size: 64px;
   line-height: 95px;
   border-bottom: 1px solid #000;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 .p-home-category__card-subtitle {
@@ -890,16 +901,24 @@ a:hover img {
   background-color: black;
 }
 .p-home-info__deco {
+  margin-left: 239px;
   display: flex;
+  align-items: center;
   justify-content: center;
   writing-mode: vertical-rl;
+  gap: 19px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
   color: white;
 }
 .p-home-info__deco::before {
   content: "";
   display: block;
   background-color: white;
-  width: 1px;
+  width: 2px;
   height: 557px;
   justify-self: center;
 }
@@ -927,10 +946,11 @@ a:hover img {
 .p-home-info__aside-right {
   width: 500px;
 }
-.p-home-info__image {
+.p-home-info__aside-right img {
   margin-top: 100px;
   width: 434px;
   height: 652px;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 2% 10%);
 }
 
 .u-inline-block {

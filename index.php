@@ -176,7 +176,7 @@
 
         <section class="p-home-category">
             <a href="" class="p-home-category__link">
-                <div class="p-home-category__card">
+                <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item CAP.png" alt="" />
                     </div>
@@ -188,7 +188,7 @@
             </a>
 
             <a href="" class="p-home-category__link">
-                <div class="p-home-category__card--reverse">
+                <div class="p-home-category__card">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item T-SHIRT.png" alt="" />
                     </div>
@@ -200,7 +200,7 @@
             </a>
 
             <a href="" class="p-home-category__link">
-                <div class="p-home-category__card">
+                <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item TOWEL.png" alt="" />
                     </div>
@@ -212,7 +212,7 @@
             </a>
 
             <a href="" class="p-home-category__link">
-                <div class="p-home-category__card--reverse">
+                <div class="p-home-category__card">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item BAG.png" alt="" />
                     </div>
@@ -223,7 +223,7 @@
                 </div>
             </a>
             <a href="" class="p-home-category__link">
-                <div class="p-home-category__card">
+                <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item OTHER.png" alt="" />
                     </div>
