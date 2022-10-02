@@ -15,3 +15,15 @@ add_action('init', function () {
         ),
     ]);
 });
+
+function echo_category_name()
+{
+    $category = get_the_category();
+    echo $category[0]->name;
+}
+
+function echo_category_link()
+{
+    $category = get_the_category();
+    echo get_category_link($category[0]->term_id);
+}

@@ -103,40 +103,31 @@
             <section class="p-home-news">
                 <div class="p-home-news__main-contents-wrapper">
                     <div class="p-home-news__card-wrapper">
+                        <?php
+                        $posts = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 3,
+                        );
+                        $the_query = new WP_Query($posts);
+                        if ($the_query->have_posts()) :
+                        ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                         <div class="p-home-news__card">
-                            <div class="p-home-news__card-image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/LATEST1.png"
-                                    alt="" />
-                                <p class="p-home-news__card-date">
-                                    2022.04,04
-                                </p>
-                            </div>
-                            <div class="p-home-news__card-title">new cap release</div>
-                            <div class="p-home-news__card-subtitle">read more</div>
+                            <a href="<?php echo_category_link(); ?>">
+                                <div class="p-home-news__card-image">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/<?php echo_category_name() ?>.png"
+                                        alt="" />
+                                    <p class="p-home-news__card-date">
+                                        <?php echo get_the_date(); ?>
+                                    </p>
+                                </div>
+                                <div class="p-home-news__card-title">new <?php echo_category_name() ?> release</div>
+                                <div class="p-home-news__card-subtitle">read more</div>
+                            </a>
                         </div>
-                        <div class="p-home-news__card">
-                            <div class="p-home-news__card-image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/LATEST2.png"
-                                    alt="" />
-                                <p class="p-home-news__card-date">
-                                    2022.04,04
-                                </p>
-                            </div>
-
-                            <div class="p-home-news__card-title">new bag release</div>
-                            <div class="p-home-news__card-subtitle">read more</div>
-                        </div>
-                        <div class="p-home-news__card">
-                            <div class="p-home-news__card-image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/LATEST1.png"
-                                    alt="" />
-                                <p class="p-home-news__card-date">
-                                    2022.04,04
-                                </p>
-                            </div>
-                            <div class="p-home-news__card-title">new cap release</div>
-                            <div class="p-home-news__card-subtitle">read more</div>
-                        </div>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                        <?php endif; ?>
                     </div>
                     <div class="p-home-news__title-wrapper">
                         <h2 class="p-home-news__title">latest</h2>
@@ -187,7 +178,7 @@
             <a href="/category/cap/" class="p-home-category__link">
                 <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item CAP.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cap.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">cap</div>
@@ -199,7 +190,7 @@
             <a href="/category/t-shirt/" class="p-home-category__link">
                 <div class="p-home-category__card">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item T-SHIRT.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/t-shirt.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">t-shirt</div>
@@ -211,7 +202,7 @@
             <a href="/category/towel/" class="p-home-category__link">
                 <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item TOWEL.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/towel.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">towel</div>
@@ -223,7 +214,7 @@
             <a href="/category/bag/" class="p-home-category__link">
                 <div class="p-home-category__card">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item BAG.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bag.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">bag</div>
@@ -234,7 +225,7 @@
             <a href="/category/other/" class="p-home-category__link">
                 <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item OTHER.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/other.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">other</div>
