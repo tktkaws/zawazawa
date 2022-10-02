@@ -51,17 +51,10 @@
                 ?>
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                <h1 class="p-home-fv__title"><?php echo get_the_date('Y'); ?>
-                    <?php $m = get_the_date('m'); ?>
-                    <?php if ($m == 3 || $m == 4 || $m == 5) : ?>
-                    spring
-                    <?php elseif ($m == 6 || $m == 7 || $m == 8) : ?>
-                    summer
-                    <?php elseif ($m == 9 || $m == 10 || $m == 11) : ?>
-                    autamn
-                    <?php elseif ($m == 12 || $m == 1 || $m == 2) : ?>
-                    winter
-                    <?php endif; ?></h1>
+                <h1 class="p-home-fv__title">
+                    <?php echo get_the_date('Y'); ?>
+                    <?php echo_season(); ?>
+                </h1>
                 <p class="p-home-fv__subtitle">
                     <?php echo get_the_date(); ?>
                     <?php the_title(); ?>
