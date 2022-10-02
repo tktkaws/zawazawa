@@ -2,10 +2,11 @@
 
 .l-header {
   height: 187px;
+  height: fluid-size(98, 187);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 5vw;
+  padding-inline: 4vw;
 
   &::before {
     position: absolute;
@@ -28,13 +29,17 @@
   &__logo {
     width: 447px;
     height: 59px;
+    // width: max(94px, 22.5vw);
+    width: fluid-size(200, 447);
+    height: fluid-size(29, 59);
   }
   &__gnav {
   }
   &__lists {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 5vw;
+    margin-right: 1.5em;
   }
   &__list {
     font-family: "Oswald";

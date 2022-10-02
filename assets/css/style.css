@@ -380,14 +380,11 @@ th {
 
 /* 基本サイズ */
 html {
-  font-size: 62.5%;
-  line-height: 1.6;
   height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
-  font-size: 1.6rem;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   min-width: 350px;
   width: 100%;
@@ -435,10 +432,11 @@ a:hover img {
 
 .l-header {
   height: 187px;
+  height: clamp(6.125rem, 5.7605177994vw + 4.7748786408rem, 11.6875rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 5vw;
+  padding-inline: 4vw;
 }
 .l-header::before {
   position: absolute;
@@ -453,11 +451,14 @@ a:hover img {
 .l-header__logo {
   width: 447px;
   height: 59px;
+  width: clamp(12.5rem, 15.9870550162vw + 8.7530339806rem, 27.9375rem);
+  height: clamp(1.8125rem, 1.9417475728vw + 1.3574029126rem, 3.6875rem);
 }
 .l-header__lists {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 5vw;
+  margin-right: 1.5em;
 }
 .l-header__list {
   font-family: "Oswald";
@@ -563,7 +564,7 @@ a:hover img {
   font-style: normal;
   font-weight: 500;
   line-height: 190px;
-  font-size: clamp(6rem, 4.4012944984vw + 2.7184466019rem, 12.8rem);
+  font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
   margin-top: -7.5vw;
   border-bottom: solid 1px;
   text-align: center;
@@ -624,7 +625,7 @@ a:hover img {
   font-style: normal;
   font-weight: 500;
   line-height: 190px;
-  font-size: clamp(6rem, 4.4012944984vw + 2.7184466019rem, 12.8rem);
+  font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
   margin-bottom: 42px;
 }
 .p-home-about__subtitle {
@@ -810,7 +811,7 @@ a:hover img {
   font-style: normal;
   font-weight: 500;
   line-height: 190px;
-  font-size: clamp(6rem, 4.4012944984vw + 2.7184466019rem, 12.8rem);
+  font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
   line-height: 146px;
 }
 .p-home-product__desc {
@@ -934,7 +935,7 @@ a:hover img {
   font-style: normal;
   font-weight: 500;
   line-height: 190px;
-  font-size: clamp(6rem, 4.4012944984vw + 2.7184466019rem, 12.8rem);
+  font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
 }
 .p-home-info__desc {
   font-family: "Oswald";
