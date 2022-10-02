@@ -11,3 +11,10 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin headingFont() {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 190px;
+}

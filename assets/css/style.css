@@ -562,10 +562,9 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
   line-height: 190px;
+  font-size: clamp(6rem, 4.4012944984vw + 2.7184466019rem, 12.8rem);
   margin-top: -7.5vw;
-  text-transform: uppercase;
   border-bottom: solid 1px;
   text-align: center;
   margin-left: 1vw;
@@ -624,8 +623,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
   line-height: 190px;
+  font-size: clamp(6rem, 4.4012944984vw + 2.7184466019rem, 12.8rem);
   margin-bottom: 42px;
 }
 .p-home-about__subtitle {
@@ -810,7 +809,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
+  line-height: 190px;
+  font-size: clamp(6rem, 4.4012944984vw + 2.7184466019rem, 12.8rem);
   line-height: 146px;
 }
 .p-home-product__desc {
@@ -933,8 +933,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
   line-height: 190px;
+  font-size: clamp(6rem, 4.4012944984vw + 2.7184466019rem, 12.8rem);
 }
 .p-home-info__desc {
   font-family: "Oswald";

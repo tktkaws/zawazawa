@@ -1,6 +1,6 @@
 <header class="l-header">
     <div class="l-header__logo">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ロゴ.png" alt="" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ロゴ.svg" alt="" />
     </div>
 
     <nav class="l-header__gnav">

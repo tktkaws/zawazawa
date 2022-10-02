@@ -1,3 +1,5 @@
+@use "./../../foundation/global" as *;
+
 .p-home-fv {
   position: relative;
   &__slider {
@@ -31,13 +33,10 @@
     z-index: 1;
   }
   &__title {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 128px;
-    line-height: 190px;
+    @include headingFont;
+    font-size: fluid-size(60, 128);
     margin-top: -7.5vw;
-    text-transform: uppercase;
+
     border-bottom: solid 1px;
     text-align: center;
     margin-left: 1vw;

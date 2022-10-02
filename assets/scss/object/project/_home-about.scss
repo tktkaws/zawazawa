@@ -1,3 +1,5 @@
+@use "./../../foundation/global" as *;
+
 .p-home-about {
   margin-top: 185px;
   display: flex;
@@ -6,11 +8,8 @@
     width: 50%;
   }
   &__title {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 128px;
-    line-height: 190px;
+    @include headingFont;
+    font-size: fluid-size(60, 128);
     margin-bottom: 42px;
   }
   &__subtitle {

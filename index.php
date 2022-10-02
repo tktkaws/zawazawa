@@ -57,8 +57,8 @@
                 </h1>
                 <p class="p-home-fv__subtitle">
                     <?php echo get_the_date(); ?>
-                    <?php the_title(); ?>
-                    <?php the_content(); ?>
+                    新商品が入荷しました。
+
                 </p>
                 <div class="p-home-fv__btn-wrapper">
                     <button class="c-button">read more</button>

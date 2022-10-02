@@ -1,3 +1,5 @@
+@use "./../../foundation/global" as *;
+
 .p-category-list {
   display: flex;
   &__card-wrapper {
