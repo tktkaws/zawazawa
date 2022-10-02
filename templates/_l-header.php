@@ -3,14 +3,6 @@
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ロゴ.png" alt="" />
     </div>
 
-    <?php
-    $category = the_category();
-    echo $category;
-    ?>
-
-
-
-
     <nav class="l-header__gnav">
         <ul class="l-header__lists">
             <li class="l-header__list">

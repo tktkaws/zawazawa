@@ -17,6 +17,9 @@
     <?php get_template_part('templates/_l-header'); ?>
 
     <main>
+
+
+
         <section class="p-home-fv">
             <div class="swiper">
                 <div class="p-home-fv__slider swiper-wrapper">
@@ -38,11 +41,38 @@
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/FVあしらい.png" alt="" />
             </div>
             <div class="p-home-fv__title-zone">
-                <h1 class="p-home-fv__title">2022 summer</h1>
-                <p class="p-home-fv__subtitle">2022.04/04　新商品入荷しました。</p>
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 1,
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                ?>
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+                <h1 class="p-home-fv__title"><?php echo get_the_date('Y'); ?>
+                    <?php $m = get_the_date('m'); ?>
+                    <?php if ($m == 3 || $m == 4 || $m == 5) : ?>
+                    spring
+                    <?php elseif ($m == 6 || $m == 7 || $m == 8) : ?>
+                    summer
+                    <?php elseif ($m == 9 || $m == 10 || $m == 11) : ?>
+                    autamn
+                    <?php elseif ($m == 12 || $m == 1 || $m == 2) : ?>
+                    winter
+                    <?php endif; ?></h1>
+                <p class="p-home-fv__subtitle">
+                    <?php echo get_the_date(); ?>
+                    <?php the_title(); ?>
+                    <?php the_content(); ?>
+                </p>
                 <div class="p-home-fv__btn-wrapper">
                     <button class="c-button">read more</button>
                 </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <?php endif; ?>
             </div>
         </section>
 
