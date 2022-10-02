@@ -393,6 +393,7 @@ body {
   width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
+  text-transform: uppercase;
 }
 
 img,
@@ -437,7 +438,17 @@ a:hover img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 3.5vw;
+  padding-inline: 5vw;
+}
+.l-header::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 7px;
+  width: 100%;
+  background: linear-gradient(90deg, #9b92ec 2.07%, #bdbbfc 28.68%, #dfcbfd 55.01%, #fb8cf0 79.8%, #b233bc 101.2%);
 }
 .l-header__logo {
   width: 447px;
@@ -518,11 +529,15 @@ a:hover img {
   width: 30%;
   object-fit: cover;
 }
+.p-home-fv__slider-image img {
+  height: 100%;
+}
 .p-home-fv__deco-image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 60%;
+  top: -10%;
+  left: 10%;
+  width: 50%;
+  z-index: 1;
 }
 .p-home-fv__title-zone {
   position: absolute;
@@ -532,6 +547,7 @@ a:hover img {
   padding: 50px;
   width: 900px;
   height: 206px;
+  z-index: 1;
 }
 .p-home-fv__title {
   font-family: "Oswald";
@@ -562,11 +578,6 @@ a:hover img {
   left: 60%;
 }
 
-.swiper {
-  margin-top: 200px;
-  margin-bottom: 200px;
-}
-
 .swiper-slide {
   height: 957px;
   background: rgb(255, 255, 255);
@@ -593,10 +604,12 @@ a:hover img {
 }
 
 .p-home-about {
+  margin-top: 185px;
   display: flex;
+  gap: 50px;
 }
 .p-home-about__text-wrapper {
-  width: 45%;
+  width: 50%;
 }
 .p-home-about__title {
   font-family: "Oswald";
@@ -604,8 +617,10 @@ a:hover img {
   font-weight: 500;
   font-size: 128px;
   line-height: 190px;
+  margin-bottom: 42px;
 }
 .p-home-about__subtitle {
+  display: inline-block;
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 700;
@@ -613,8 +628,11 @@ a:hover img {
   line-height: 49px;
   color: #ffffff;
   background-color: black;
+  padding: 12px;
+  margin-bottom: 11px;
 }
 .p-home-about__desc {
+  margin-top: 42px;
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 500;
@@ -638,14 +656,21 @@ a:hover img {
 }
 .p-home-about__deco {
   display: flex;
+  align-items: center;
   justify-content: center;
   writing-mode: vertical-rl;
+  gap: 19px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 .p-home-about__deco::before {
   content: "";
   display: block;
   background-color: black;
-  width: 1px;
+  width: 2px;
   height: 557px;
   justify-self: center;
 }

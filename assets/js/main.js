@@ -19,5 +19,5 @@ const mySwiper = new Swiper(".swiper", {
   //   },
 
   slidesPerView: 3, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
-  spaceBetween: 50, // スライド間の余白（px）
+  spaceBetween: 44, // スライド間の余白（px）
 });

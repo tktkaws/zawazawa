@@ -9,12 +9,16 @@
     height: 957px;
     width: 30%;
     object-fit: cover;
+    img {
+      height: 100%;
+    }
   }
   &__deco-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
+    top: -10%;
+    left: 10%;
+    width: 50%;
+    z-index: 1;
   }
   &__title-zone {
     position: absolute;
@@ -24,11 +28,7 @@
     padding: 50px;
     width: 900px;
     height: 206px;
-
-    // &::before {
-    //   content: "";
-    //   margin-top: -50px;
-    // }
+    z-index: 1;
   }
   &__title {
     font-family: "Oswald";
@@ -62,16 +62,10 @@
 
 // リファクタリング
 .swiper {
-  // width: 300px;
-  // height: 600px;
-  // margin-right: 50px;
-  margin-top: 200px;
-  margin-bottom: 200px;
 }
 
 .swiper-slide {
   height: 957px;
-  // width: 588px;
   background: rgba(255, 255, 255, 1);
   display: inline-block;
   img {

@@ -1,7 +1,9 @@
 .p-home-about {
+  margin-top: 185px;
   display: flex;
+  gap: 50px;
   &__text-wrapper {
-    width: 45%;
+    width: 50%;
   }
   &__title {
     font-family: "Oswald";
@@ -9,8 +11,10 @@
     font-weight: 500;
     font-size: 128px;
     line-height: 190px;
+    margin-bottom: 42px;
   }
   &__subtitle {
+    display: inline-block;
     font-family: "Noto Sans";
     font-style: normal;
     font-weight: 700;
@@ -18,8 +22,11 @@
     line-height: 49px;
     color: #ffffff;
     background-color: black;
+    padding: 12px;
+    margin-bottom: 11px;
   }
   &__desc {
+    margin-top: 42px;
     font-family: "Noto Sans";
     font-style: normal;
     font-weight: 500;
@@ -43,14 +50,22 @@
   }
   &__deco {
     display: flex;
+    align-items: center;
     justify-content: center;
     writing-mode: vertical-rl;
+    gap: 19px;
+
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
 
     &::before {
       content: "";
       display: block;
       background-color: black;
-      width: 1px;
+      width: 2px;
       height: 557px;
 
       justify-self: center;

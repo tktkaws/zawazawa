@@ -39,17 +39,21 @@
     </header>
     <main>
         <section class="p-home-fv">
-            <div class="p-home-fv__slider">
-                <div class="p-home-fv__slider-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー1.png" alt="" />
-                </div>
-                <div class="p-home-fv__slider-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー2.png" alt="" />
-                </div>
-                <div class="p-home-fv__slider-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー3.png" alt="" />
+            <div class="swiper">
+                <div class="p-home-fv__slider swiper-wrapper">
+                    <div class="p-home-fv__slider-image swiper-slide">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー1.png" alt="" />
+                    </div>
+                    <div class="p-home-fv__slider-image swiper-slide">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー2.png" alt="" />
+                    </div>
+                    <div class="p-home-fv__slider-image swiper-slide">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー3.png" alt="" />
+                    </div>
                 </div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
             <div class="p-home-fv__deco-image">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/FVあしらい.png" alt="" />
@@ -63,35 +67,6 @@
             </div>
         </section>
 
-        <section class="swiper-demo">
-
-
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー1.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー2.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー3.png" alt="" />
-                    </div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
-            </div>
-        </section>
         <div class="c-wrapper">
             <section class="p-home-about">
                 <div class="p-home-about__deco">about us</div>
