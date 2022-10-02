@@ -10,33 +10,12 @@
     <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js" type="text/javaScript" charset="utf-8">
     </script> -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/style.css">
+    <?php wp_head() ?>
 </head>
 
 <body>
-    <header class="l-header">
-        <div class="l-header__logo">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ロゴ.png" alt="" />
-        </div>
-        <nav class="l-header__gnav">
-            <ul class="l-header__lists">
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">home</a>
-                </li>
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">company</a>
-                </li>
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">product</a>
-                </li>
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">news</a>
-                </li>
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <?php get_template_part('templates/_l-header'); ?>
+
     <main>
         <section class="p-home-fv">
             <div class="swiper">
@@ -175,7 +154,7 @@
         </div>
 
         <section class="p-home-category">
-            <a href="" class="p-home-category__link">
+            <a href="/category/cap/" class="p-home-category__link">
                 <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item CAP.png" alt="" />
@@ -187,7 +166,7 @@
                 </div>
             </a>
 
-            <a href="" class="p-home-category__link">
+            <a href="/category/t-shirt/" class="p-home-category__link">
                 <div class="p-home-category__card">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item T-SHIRT.png" alt="" />
@@ -199,7 +178,7 @@
                 </div>
             </a>
 
-            <a href="" class="p-home-category__link">
+            <a href="/category/towel/" class="p-home-category__link">
                 <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item TOWEL.png" alt="" />
@@ -211,7 +190,7 @@
                 </div>
             </a>
 
-            <a href="" class="p-home-category__link">
+            <a href="/category/bag/" class="p-home-category__link">
                 <div class="p-home-category__card">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item BAG.png" alt="" />
@@ -222,7 +201,7 @@
                     </div>
                 </div>
             </a>
-            <a href="" class="p-home-category__link">
+            <a href="/category/other/" class="p-home-category__link">
                 <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item OTHER.png" alt="" />
@@ -256,13 +235,12 @@
             </div>
         </section>
     </main>
-    <footer class="l-footer">
-        <p class="l-footer__text">©2022 ZAWA-ZAWA Inc.</p>
-    </footer>
+    <?php get_template_part('templates/_l-footer'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js" type="text/javaScript" charset="utf-8">
     </script>
+    <?php wp_footer() ?>
 </body>
 
 </html>

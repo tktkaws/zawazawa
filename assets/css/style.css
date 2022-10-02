@@ -953,6 +953,58 @@ a:hover img {
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 2% 10%);
 }
 
+.p-category-list {
+  display: flex;
+}
+.p-category-list__card-wrapper {
+  display: flex;
+  gap: 120px;
+  margin-top: 90px;
+}
+.p-category-list__card-image {
+  width: 238px;
+  height: 199px;
+  position: relative;
+}
+.p-category-list__card-image img {
+  width: 100%;
+  height: 100%;
+}
+.p-category-list__card-image::after {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  content: "";
+  width: 238px;
+  height: 199px;
+  background: linear-gradient(90deg, #9b92ec 2.07%, #bdbbfc 28.68%, #dfcbfd 55.01%, #fb8cf0 79.8%, #b233bc 101.2%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  z-index: -1;
+}
+.p-category-list__card-date {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #d058d1;
+}
+.p-category-list__card-title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 50px;
+  border-bottom: 1px solid;
+  margin-top: 30px;
+}
+.p-category-list__card-subtitle {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
 .u-inline-block {
   display: inline-block;
 } /*--------------------------------------*
