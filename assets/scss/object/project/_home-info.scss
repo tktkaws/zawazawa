@@ -8,16 +8,25 @@
   }
 
   &__deco {
+    margin-left: 239px;
     display: flex;
+    align-items: center;
     justify-content: center;
     writing-mode: vertical-rl;
+    gap: 19px;
+
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
     color: white;
 
     &::before {
       content: "";
       display: block;
       background-color: white;
-      width: 1px;
+      width: 2px;
       height: 557px;
 
       justify-self: center;
@@ -47,10 +56,11 @@
   }
   &__aside-right {
     width: 500px;
-  }
-  &__image {
-    margin-top: 100px;
-    width: 434px;
-    height: 652px;
+    img {
+      margin-top: 100px;
+      width: 434px;
+      height: 652px;
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 2% 10%);
+    }
   }
 }

@@ -16,15 +16,24 @@
 // }
 
 .c-button {
-  background-color: black;
-  color: white;
-  padding: 3px 20px;
+  display: inline-block;
+  min-width: 403px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.2em;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  background: #000000;
+  color: #ffffff;
 }
 
 .c-button--large {
+  position: relative;
   width: 651px;
   height: 92px;
-
   background-color: black;
   color: white;
 
@@ -37,10 +46,13 @@
   text-align: center;
 
   &::after {
+    position: absolute;
+    top: 50%;
+    left: 95%;
     content: "";
     background-color: white;
     display: block;
-    width: 50px;
+    width: 90px;
     height: 1px;
   }
 }

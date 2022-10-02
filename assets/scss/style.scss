@@ -3,9 +3,9 @@
 /*--------------------------------------*
  * foundation
  *--------------------------------------*/
-@use "./foundation/base";
-@use "./foundation/variable";
 @use "./foundation/reset";
+@use "./foundation/base";
+@use "./foundation/global";
 
 /*--------------------------------------*
 * layout
@@ -28,6 +28,7 @@
 @use "./object/project/home-product";
 @use "./object/project/home-category";
 @use "./object/project/home-info";
+@use "./object/project/category-list";
 
 /*-------------------
   * utility

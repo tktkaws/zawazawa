@@ -5,60 +5,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>はじめてのGulp</title>
+    <title>ZAWAZAWA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js" type="text/javaScript" charset="utf-8">
+    </script> -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/style.css">
+    <?php wp_head() ?>
 </head>
 
 <body>
-    <header class="l-header">
-        <div class="l-header__logo">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ロゴ.png" alt="" />
-        </div>
-        <nav class="l-header__gnav">
-            <ul class="l-header__lists">
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">home</a>
-                </li>
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">company</a>
-                </li>
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">product</a>
-                </li>
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">news</a>
-                </li>
-                <li class="l-header__list">
-                    <a href="" class="l-header__link">contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <?php get_template_part('templates/_l-header'); ?>
+
     <main>
+
+
+
         <section class="p-home-fv">
-            <div class="p-home-fv__slider">
-                <div class="p-home-fv__slider-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー1.png" alt="" />
-                </div>
-                <div class="p-home-fv__slider-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー2.png" alt="" />
-                </div>
-                <div class="p-home-fv__slider-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー3.png" alt="" />
+            <div class="swiper">
+                <div class="p-home-fv__slider swiper-wrapper">
+                    <div class="p-home-fv__slider-image swiper-slide">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー1.png" alt="" />
+                    </div>
+                    <div class="p-home-fv__slider-image swiper-slide">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー2.png" alt="" />
+                    </div>
+                    <div class="p-home-fv__slider-image swiper-slide">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー3.png" alt="" />
+                    </div>
                 </div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
             <div class="p-home-fv__deco-image">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/FVあしらい.png" alt="" />
             </div>
             <div class="p-home-fv__title-zone">
-                <h1 class="p-home-fv__title">2022 summer</h1>
-                <p class="p-home-fv__subtitle">2022.04/04　新商品入荷しました。</p>
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 1,
+                );
+                $the_query = new WP_Query($args);
+                if ($the_query->have_posts()) :
+                ?>
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+                <h1 class="p-home-fv__title"><?php echo get_the_date('Y'); ?>
+                    <?php $m = get_the_date('m'); ?>
+                    <?php if ($m == 3 || $m == 4 || $m == 5) : ?>
+                    spring
+                    <?php elseif ($m == 6 || $m == 7 || $m == 8) : ?>
+                    summer
+                    <?php elseif ($m == 9 || $m == 10 || $m == 11) : ?>
+                    autamn
+                    <?php elseif ($m == 12 || $m == 1 || $m == 2) : ?>
+                    winter
+                    <?php endif; ?></h1>
+                <p class="p-home-fv__subtitle">
+                    <?php echo get_the_date(); ?>
+                    <?php the_title(); ?>
+                    <?php the_content(); ?>
+                </p>
                 <div class="p-home-fv__btn-wrapper">
                     <button class="c-button">read more</button>
                 </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <?php endif; ?>
             </div>
         </section>
+
         <div class="c-wrapper">
             <section class="p-home-about">
                 <div class="p-home-about__deco">about us</div>
@@ -86,32 +103,42 @@
             <section class="p-home-news">
                 <div class="p-home-news__main-contents-wrapper">
                     <div class="p-home-news__card-wrapper">
+                        <?php
+                        $posts = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 3,
+                        );
+                        $the_query = new WP_Query($posts);
+                        if ($the_query->have_posts()) :
+                        ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                         <div class="p-home-news__card">
-                            <div class="p-home-news__card-image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/LATEST1.png"
-                                    alt="" />
-                            </div>
-                            <div class="p-home-news__card-title">new cap release</div>
-                            <div class="p-home-news__card-subtitle">read more</div>
+                            <a href="<?php echo_category_link(); ?>">
+                                <div class="p-home-news__card-image">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/<?php echo_category_name() ?>.png"
+                                        alt="" />
+                                    <p class="p-home-news__card-date">
+                                        <?php echo get_the_date(); ?>
+                                    </p>
+                                </div>
+                                <div class="p-home-news__card-title">new <?php echo_category_name() ?> release</div>
+                                <div class="p-home-news__card-subtitle">read more</div>
+                            </a>
                         </div>
-                        <div class="p-home-news__card">
-                            <div class="p-home-news__card-image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/LATEST2.png"
-                                    alt="" />
-                            </div>
-                            <div class="p-home-news__card-title">new bag release</div>
-                            <div class="p-home-news__card-subtitle">read more</div>
-                        </div>
-                        <div class="p-home-news__card">
-                            <div class="p-home-news__card-image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/LATEST1.png"
-                                    alt="" />
-                            </div>
-                            <div class="p-home-news__card-title">new cap release</div>
-                            <div class="p-home-news__card-subtitle">read more</div>
-                        </div>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                        <?php endif; ?>
                     </div>
-                    <h2 class="p-home-news__title">latest</h2>
+                    <div class="p-home-news__title-wrapper">
+                        <h2 class="p-home-news__title">latest</h2>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                            class="p-home-news__title-image" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                            class="p-home-news__title-image" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                            class="p-home-news__title-image" />
+                    </div>
+
                 </div>
                 <div class="p-home-news__btn-wrapper">
                     <button class="c-button--large">read more</button>
@@ -148,10 +175,10 @@
         </div>
 
         <section class="p-home-category">
-            <a href="" class="p-home-category__link">
-                <div class="p-home-category__card">
+            <a href="/category/cap/" class="p-home-category__link">
+                <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item CAP.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cap.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">cap</div>
@@ -160,10 +187,10 @@
                 </div>
             </a>
 
-            <a href="" class="p-home-category__link">
-                <div class="p-home-category__card--reverse">
+            <a href="/category/t-shirt/" class="p-home-category__link">
+                <div class="p-home-category__card">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item T-SHIRT.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/t-shirt.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">t-shirt</div>
@@ -172,10 +199,10 @@
                 </div>
             </a>
 
-            <a href="" class="p-home-category__link">
-                <div class="p-home-category__card">
+            <a href="/category/towel/" class="p-home-category__link">
+                <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item TOWEL.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/towel.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">towel</div>
@@ -184,10 +211,10 @@
                 </div>
             </a>
 
-            <a href="" class="p-home-category__link">
-                <div class="p-home-category__card--reverse">
+            <a href="/category/bag/" class="p-home-category__link">
+                <div class="p-home-category__card">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item BAG.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bag.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">bag</div>
@@ -195,10 +222,10 @@
                     </div>
                 </div>
             </a>
-            <a href="" class="p-home-category__link">
-                <div class="p-home-category__card">
+            <a href="/category/other/" class="p-home-category__link">
+                <div class="p-home-category__card--reverse">
                     <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item OTHER.png" alt="" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/other.png" alt="" />
                     </div>
                     <div class="p-home-category__card-text">
                         <div class="p-home-category__card-title">other</div>
@@ -229,9 +256,12 @@
             </div>
         </section>
     </main>
-    <footer class="l-footer">
-        <p class="l-footer__text">©2022 ZAWA-ZAWA Inc.</p>
-    </footer>
+    <?php get_template_part('templates/_l-footer'); ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js" type="text/javaScript" charset="utf-8">
+    </script>
+    <?php wp_footer() ?>
 </body>
 
 </html>

@@ -1,32 +1,44 @@
 .p-home-product {
+  margin-top: 100px;
   &__main-contents-wrapper {
     display: flex;
   }
   &__deco {
     display: flex;
+    align-items: center;
     justify-content: center;
     writing-mode: vertical-rl;
+    gap: 19px;
+
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
 
     &::before {
       content: "";
       display: block;
       background-color: black;
-      width: 1px;
+      width: 2px;
       height: 557px;
 
       justify-self: center;
     }
   }
+
   &__text-wrapper {
+    margin-left: 50px;
   }
   &__title {
     font-family: "Oswald";
     font-style: normal;
     font-weight: 500;
     font-size: 128px;
-    line-height: 190px;
+    line-height: 146px;
   }
   &__desc {
+    margin-top: 50px;
     font-family: "Noto Sans";
     font-style: normal;
     font-weight: 500;
@@ -34,11 +46,15 @@
     line-height: 31px;
   }
   &__image-wrapper {
+    margin-left: -250px;
+    z-index: -1;
+    margin-top: 150px;
   }
   &__image-left {
     position: relative;
     width: 634px;
     height: 950px;
+
     &::after {
       content: "";
       display: block;
@@ -47,14 +63,14 @@
       height: 950px;
       background: #f1e8ff;
       top: 0;
-      left: 10%;
+      left: 167px;
       z-index: -1;
     }
   }
   &__btn-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: -200px;
+    margin-top: -150px;
     z-index: 2;
   }
 }
