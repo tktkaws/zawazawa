@@ -98,6 +98,9 @@
                             <div class="p-home-news__card-image">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/LATEST1.png"
                                     alt="" />
+                                <p class="p-home-news__card-date">
+                                    2022.04,04
+                                </p>
                             </div>
                             <div class="p-home-news__card-title">new cap release</div>
                             <div class="p-home-news__card-subtitle">read more</div>
@@ -106,7 +109,11 @@
                             <div class="p-home-news__card-image">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/LATEST2.png"
                                     alt="" />
+                                <p class="p-home-news__card-date">
+                                    2022.04,04
+                                </p>
                             </div>
+
                             <div class="p-home-news__card-title">new bag release</div>
                             <div class="p-home-news__card-subtitle">read more</div>
                         </div>
@@ -114,12 +121,24 @@
                             <div class="p-home-news__card-image">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/LATEST1.png"
                                     alt="" />
+                                <p class="p-home-news__card-date">
+                                    2022.04,04
+                                </p>
                             </div>
                             <div class="p-home-news__card-title">new cap release</div>
                             <div class="p-home-news__card-subtitle">read more</div>
                         </div>
                     </div>
-                    <h2 class="p-home-news__title">latest</h2>
+                    <div class="p-home-news__title-wrapper">
+                        <h2 class="p-home-news__title">latest</h2>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                            class="p-home-news__title-image" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                            class="p-home-news__title-image" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                            class="p-home-news__title-image" />
+                    </div>
+
                 </div>
                 <div class="p-home-news__btn-wrapper">
                     <button class="c-button--large">read more</button>

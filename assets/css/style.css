@@ -498,6 +498,7 @@ a:hover img {
 }
 
 .c-button--large {
+  position: relative;
   width: 651px;
   height: 92px;
   background-color: black;
@@ -510,10 +511,13 @@ a:hover img {
   text-align: center;
 }
 .c-button--large::after {
+  position: absolute;
+  top: 50%;
+  left: 95%;
   content: "";
   background-color: white;
   display: block;
-  width: 50px;
+  width: 90px;
   height: 1px;
 }
 
@@ -676,6 +680,7 @@ a:hover img {
 }
 
 .p-home-news {
+  margin-top: 97px;
   position: relative;
 }
 .p-home-news__main-contents-wrapper {
@@ -699,12 +704,30 @@ a:hover img {
 }
 .p-home-news__card-wrapper {
   display: flex;
-  gap: 50px;
-  margin-top: 100px;
+  gap: 120px;
+  margin-top: 90px;
 }
 .p-home-news__card-image {
   width: 238px;
   height: 199px;
+  position: relative;
+}
+.p-home-news__card-image::after {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  content: "";
+  width: 238px;
+  height: 199px;
+  background: linear-gradient(90deg, #9b92ec 2.07%, #bdbbfc 28.68%, #dfcbfd 55.01%, #fb8cf0 79.8%, #b233bc 101.2%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  z-index: -1;
+}
+.p-home-news__card-date {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #d058d1;
 }
 .p-home-news__card-title {
   font-family: "Oswald";
@@ -713,6 +736,7 @@ a:hover img {
   font-size: 34px;
   line-height: 50px;
   border-bottom: 1px solid;
+  margin-top: 30px;
 }
 .p-home-news__card-subtitle {
   font-family: "Oswald";
@@ -720,9 +744,16 @@ a:hover img {
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
+  margin-top: 10px;
+}
+.p-home-news__title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 .p-home-news__title {
-  display: flex;
   writing-mode: vertical-rl;
   font-family: "Oswald";
   font-style: normal;
@@ -730,17 +761,16 @@ a:hover img {
   font-size: 64px;
   line-height: 95px;
 }
-.p-home-news__title::after {
-  content: "▶";
-  display: block;
-  transform: rotate(90deg);
-}
 .p-home-news__btn-wrapper {
+  margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.p-home-product {
+  margin-top: 100px;
+}
 .p-home-product__main-contents-wrapper {
   display: flex;
 }
