@@ -22,4 +22,30 @@
             </li>
         </ul>
     </nav>
+
+    <button class="l-header__navbtn" onClick="document.querySelector('body').classList.toggle('open')">
+        <span class="l-header__navbtn-bar"></span>
+        <span class="l-header__sr-only">MENU</span>
+    </button>
+
+    <nav class="l-header__nav">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ロゴ.svg" alt="" />
+        <ul class="l-header__nav-menu">
+            <li class="l-header__nav-menu-list">
+                <a href="" class="l-header__nav-menu-link">home</a>
+            </li>
+            <li class="l-header__nav-menu-list">
+                <a href="" class="l-header__nav-menu-link">company</a>
+            </li>
+            <li class="l-header__nav-menu-list">
+                <a href="" class="l-header__nav-menu-link">product</a>
+            </li>
+            <li class="l-header__nav-menu-list">
+                <a href="" class="l-header__nav-menu-link">news</a>
+            </li>
+            <li class="l-header__nav-menu-list">
+                <a href="" class="l-header__nav-menu-link">contact</a>
+            </li>
+        </ul>
+    </nav>
 </header>
