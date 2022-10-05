@@ -1,7 +1,7 @@
 @use "./../foundation/global" as *;
 
 .l-header {
-  height: 187px;
+  // height: 187px;
   height: fluid-size(98, 187);
   display: flex;
   justify-content: space-between;
@@ -27,15 +27,22 @@
   }
 
   &__logo {
-    width: 447px;
-    height: 59px;
-    // width: max(94px, 22.5vw);
-    width: fluid-size(200, 447);
-    height: fluid-size(29, 59);
+    img {
+      width: max(224px, 22.5vw);
+    }
+
+    // width: 447px;
+
+    // height: 59px;
+
+    // width: fluid-size(300, 447);
+    // height: fluid-size(29, 59);
+    // width: max(224px, 22.5vw);
+    // aspect-ratio: 447/59;
   }
   &__gnav {
     visibility: hidden;
-    @include mq(md) {
+    @include mq(lg) {
       visibility: visible;
     }
   }
@@ -59,14 +66,15 @@
 
   /* ハンバーガーボタン */
   &__navbtn {
-    @include mq(md) {
-      display: none;
+    visibility: visible;
+    @include mq(lg) {
+      visibility: hidden;
     }
     all: unset;
     outline: revert;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
-    width: max(46px, var(--size1));
+    // width: max(46px, var(--size1));
     width: 46px;
     aspect-ratio: 1/1;
     display: grid;
