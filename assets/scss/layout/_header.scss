@@ -41,9 +41,9 @@
     // aspect-ratio: 447/59;
   }
   &__gnav {
-    visibility: hidden;
+    display: none;
     @include mq(lg) {
-      visibility: visible;
+      display: block;
     }
   }
   &__lists {
@@ -66,9 +66,8 @@
 
   /* ハンバーガーボタン */
   &__navbtn {
-    visibility: visible;
     @include mq(lg) {
-      visibility: hidden;
+      display: none;
     }
     all: unset;
     outline: revert;

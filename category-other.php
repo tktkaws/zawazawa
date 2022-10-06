@@ -26,7 +26,8 @@
 
             <div class="p-category-list__card">
                 <div class="p-category-list__card-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item OTHER.png" alt="" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/<?php echo_category_name() ?>.png"
+                        alt="" />
                     <p class="p-category-list__card-date">
                         2022.04,04
                     </p>

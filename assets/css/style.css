@@ -396,6 +396,7 @@ body {
 img,
 video,
 object {
+  max-width: 100%;
   height: auto;
   border: none;
   display: block;
@@ -453,11 +454,11 @@ a:hover img {
   width: max(224px, 22.5vw);
 }
 .l-header__gnav {
-  visibility: hidden;
+  display: none;
 }
 @media (min-width: 1024px) {
   .l-header__gnav {
-    visibility: visible;
+    display: block;
   }
 }
 .l-header__lists {
@@ -478,7 +479,6 @@ a:hover img {
   color: #000000;
 }
 .l-header__navbtn {
-  visibility: visible;
   all: unset;
   outline: revert;
   -webkit-tap-highlight-color: transparent;
@@ -491,7 +491,7 @@ a:hover img {
 }
 @media (min-width: 1024px) {
   .l-header__navbtn {
-    visibility: hidden;
+    display: none;
   }
 }
 .l-header__navbtn-bar, .l-header__navbtn::before, .l-header__navbtn::after {
