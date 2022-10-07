@@ -626,9 +626,9 @@ a:hover img {
 }
 .p-home-fv__deco-image {
   position: absolute;
-  top: -10%;
-  left: 10%;
-  width: 50%;
+  top: -200%;
+  left: -50%;
+  width: 110%;
   z-index: 1;
 }
 .p-home-fv__title-zone {
