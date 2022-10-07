@@ -77,12 +77,12 @@
 
         </section>
 
-        <div class="c-wrapper">
-            <section class="p-home-about">
-                <div class="p-home-about__deco">about us</div>
+        <!-- <div class="c-wrapper"></div> -->
+        <section class="p-home-about">
+            <div class="c-grid-wrapper">
                 <div class="p-home-about__text-wrapper">
                     <h2 class="p-home-about__title">company</h2>
-                    <p class="p-home-about__subtitle">イベント・コンサートグッズ制作</p>
+                    <p class="p-home-about__subtitle">イベント・コンサートグッズ制作</p><br />
                     <p class="p-home-about__subtitle">OEM商品制作ならエムズジー</p>
                     <p class="p-home-about__desc">
                         株式会社ZAWA-ZAWAは<br />
@@ -91,89 +91,91 @@
                         等の雑貨の製造は 弊社にお任せください。
                     </p>
                 </div>
-                <div class="p-home-about__image-wrapper">
-                    <div class="p-home-about__image-left">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company1.png" alt="" />
-                    </div>
-                    <div class="p-home-about__image-right">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company2.png" alt="" />
-                    </div>
+                <!-- <div class="p-home-about__image-wrapper"></div> -->
+                <div class="p-home-about__image-left">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company1.png" alt="" />
                 </div>
-            </section>
+                <div class="p-home-about__image-right">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company2.png" alt="" />
+                </div>
+                <div class="p-home-about__deco">about us</div>
 
-            <section class="p-home-news">
-                <div class="p-home-news__main-contents-wrapper">
-                    <div class="p-home-news__card-wrapper">
-                        <?php
-                        $posts = array(
-                            'post_type' => 'post',
-                            'posts_per_page' => 3,
-                        );
-                        $the_query = new WP_Query($posts);
-                        if ($the_query->have_posts()) :
-                        ?>
-                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                        <div class="p-home-news__card">
-                            <a href="<?php echo_category_link(); ?>">
-                                <div class="p-home-news__card-image">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/<?php echo_category_name() ?>.png"
-                                        alt="" />
-                                    <p class="p-home-news__card-date">
-                                        <?php echo get_the_date(); ?>
-                                    </p>
-                                </div>
-                                <div class="p-home-news__card-title">new <?php echo_category_name() ?> release</div>
-                                <div class="p-home-news__card-subtitle">read more</div>
-                            </a>
-                        </div>
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>
-                        <?php endif; ?>
-                    </div>
-                    <div class="p-home-news__title-wrapper">
-                        <h2 class="p-home-news__title">latest</h2>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
-                            class="p-home-news__title-image" />
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
-                            class="p-home-news__title-image" />
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
-                            class="p-home-news__title-image" />
-                    </div>
+            </div>
+        </section>
 
+        <section class="p-home-news">
+            <div class="p-home-news__main-contents-wrapper">
+                <div class="p-home-news__card-wrapper">
+                    <?php
+                    $posts = array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 3,
+                    );
+                    $the_query = new WP_Query($posts);
+                    if ($the_query->have_posts()) :
+                    ?>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                    <div class="p-home-news__card">
+                        <a href="<?php echo_category_link(); ?>">
+                            <div class="p-home-news__card-image">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/<?php echo_category_name() ?>.png"
+                                    alt="" />
+                                <p class="p-home-news__card-date">
+                                    <?php echo get_the_date(); ?>
+                                </p>
+                            </div>
+                            <div class="p-home-news__card-title">new <?php echo_category_name() ?> release</div>
+                            <div class="p-home-news__card-subtitle">read more</div>
+                        </a>
+                    </div>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
                 </div>
-                <div class="p-home-news__btn-wrapper">
-                    <button class="c-button--large">read more</button>
+                <div class="p-home-news__title-wrapper">
+                    <h2 class="p-home-news__title">latest</h2>
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                        class="p-home-news__title-image" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                        class="p-home-news__title-image" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                        class="p-home-news__title-image" />
                 </div>
-            </section>
 
-            <section class="p-home-product">
-                <div class="p-home-product__main-contents-wrapper">
-                    <div class="p-home-product__deco">product</div>
-                    <div class="p-home-product__text-wrapper">
-                        <h2 class="p-home-product__title">
-                            BASIC,MANISH,<br />
-                            TREND,AND<br />
-                            QUALITY.
-                        </h2>
-                        <p class="p-home-product__desc">
-                            株式会社ZAWA-ZAWAはカルチャーとファッ<br />
-                            ションを楽しみ、提供する会社です。<br />
-                            Ｔシャツ・タオル・バッグやポーチなど様々<br />
-                            なアイテムを取り扱っています。
-                        </p>
-                    </div>
-                    <div class="p-home-product__image-wrapper">
-                        <div class="p-home-product__image-left">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/product.png" alt="" />
-                        </div>
-                        <div class="p-home-product__image-right"></div>
-                    </div>
+            </div>
+            <div class="p-home-news__btn-wrapper">
+                <button class="c-button--large">read more</button>
+            </div>
+        </section>
+
+        <section class="p-home-product">
+            <div class="p-home-product__main-contents-wrapper">
+                <div class="p-home-product__deco">product</div>
+                <div class="p-home-product__text-wrapper">
+                    <h2 class="p-home-product__title">
+                        BASIC,MANISH,<br />
+                        TREND,AND<br />
+                        QUALITY.
+                    </h2>
+                    <p class="p-home-product__desc">
+                        株式会社ZAWA-ZAWAはカルチャーとファッ<br />
+                        ションを楽しみ、提供する会社です。<br />
+                        Ｔシャツ・タオル・バッグやポーチなど様々<br />
+                        なアイテムを取り扱っています。
+                    </p>
                 </div>
-                <div class="p-home-product__btn-wrapper">
-                    <button class="c-button--large">read more</button>
+                <div class="p-home-product__image-wrapper">
+                    <div class="p-home-product__image-left">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/product.png" alt="" />
+                    </div>
+                    <div class="p-home-product__image-right"></div>
                 </div>
-            </section>
-        </div>
+            </div>
+            <div class="p-home-product__btn-wrapper">
+                <button class="c-button--large">read more</button>
+            </div>
+        </section>
+
 
         <section class="p-home-category">
             <a href="/category/cap/" class="p-home-category__link">

@@ -1,77 +1,87 @@
-@use "./../../foundation/global" as *;
+// @use "./../../foundation/global" as *;
 
-.p-home-about {
-  margin-top: 185px;
-  margin-left: 43px;
-  display: flex;
-  gap: 40px;
-  // justify-content: space-between;
+// .p-home-about {
+//   margin-top: 185px;
+//   margin-left: 43px;
+//   display: flex;
+//   gap: 40px;
+//   // justify-content: space-between;
 
-  &__text-wrapper {
-    width: 37vw;
-  }
-  &__title {
-    @include headingFont;
-    font-size: fluid-size(60, 128);
-    margin-bottom: 42px;
-  }
-  &__subtitle {
-    display: inline-block;
-    font-family: "Noto Sans";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 49px;
-    color: #ffffff;
-    background-color: black;
-    padding: 12px;
-    margin-bottom: 11px;
-  }
-  &__desc {
-    margin-top: 32px;
-    font-family: "Noto Sans";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22.5px;
-    line-height: 31px;
-  }
-  &__image-wrapper {
-    display: flex;
-  }
-  &__image-left {
-    width: 385px;
-    height: 572px;
-    margin-top: 165px;
-    margin-left: -10px;
-    z-index: 2;
-  }
-  &__image-right {
-    width: 378px;
-    height: 549px;
-    margin-left: -136px;
-    margin-top: 10px;
-  }
-  &__deco {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    writing-mode: vertical-rl;
-    gap: 20px;
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 40px;
+//   &__text-wrapper {
+//     width: 37vw;
+//   }
+//   &__title {
+//     @include headingFont;
+//     font-size: fluid-size(60, 128);
+//     margin-bottom: 42px;
+//   }
+//   &__subtitle {
+//     display: inline-block;
+//     font-family: "Noto Sans";
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 49px;
+//     color: #ffffff;
+//     background-color: black;
+//     padding: 12px;
+//     margin-bottom: 11px;
+//   }
+//   &__desc {
+//     margin-top: 32px;
+//     font-family: "Noto Sans";
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 22.5px;
+//     line-height: 31px;
+//   }
+//   &__image-wrapper {
+//     display: flex;
+//   }
+//   &__image-left {
+//     // width: 385px;
+//     // height: 572px;
+//     width: 20vw;
+//     aspect-ratio: 385/572;
+//     height: auto;
+//     // margin-top: 165px;
+//     // margin-left: -10px;
+//     margin-top: 8.5vw;
+//     margin-left: -0.5vw;
+//     z-index: 2;
+//   }
+//   &__image-right {
+//     // width: 378px;
+//     // height: 549px;
+//     width: 20vw;
+//     aspect-ratio: 378/549;
+//     height: auto;
+//     // margin-left: -136px;
+//     // margin-top: 10px;
+//     margin-left: -7vw;
+//     margin-top: 0.5vw;
+//   }
+//   &__deco {
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     writing-mode: vertical-rl;
+//     gap: 20px;
+//     font-family: "Oswald";
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 24px;
+//     margin-top: 40px;
 
-    &::before {
-      content: "";
-      display: block;
-      background-color: black;
-      width: 2px;
-      height: 557px;
+//     &::before {
+//       content: "";
+//       display: block;
+//       background-color: black;
+//       width: 2px;
+//       height: 557px;
 
-      justify-self: center;
-    }
-  }
-}
+//       justify-self: center;
+//     }
+//   }
+// }

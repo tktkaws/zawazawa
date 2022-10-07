@@ -19,3 +19,12 @@ $breakpoints: (
   font-size: 128px;
   line-height: 190px;
 }
+
+@mixin japaneseFont() {
+  font-family: "Noto Sans";
+  font-style: normal;
+}
+
+// @include mq(lg) {
+//   display: block;
+// }

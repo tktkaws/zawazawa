@@ -744,14 +744,21 @@ a:hover img {
   background: transparent url(./../img/next.svg) no-repeat center/contain;
 }
 
+.c-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
+  row-gap: 44px;
+}
+.c-grid-wrapper > * {
+  grid-column: 2/-2;
+}
+
 .p-home-about {
-  margin-top: 185px;
-  margin-left: 43px;
-  display: flex;
-  gap: 40px;
+  margin-top: clamp(0.625rem, 1.9417475728vw + 0.1699029126rem, 2.5rem);
 }
 .p-home-about__text-wrapper {
-  width: 37vw;
+  grid-column: 4/-4;
+  grid-row: 1;
 }
 .p-home-about__title {
   font-family: "Oswald";
@@ -760,7 +767,8 @@ a:hover img {
   font-size: 128px;
   line-height: 190px;
   font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
-  margin-bottom: 42px;
+  line-height: clamp(5.625rem, 6.4724919094vw + 4.1080097087rem, 11.875rem);
+  margin-bottom: clamp(0.625rem, 1.9417475728vw + 0.1699029126rem, 2.5rem);
 }
 .p-home-about__subtitle {
   display: inline-block;
@@ -769,10 +777,13 @@ a:hover img {
   font-weight: 700;
   font-size: 36px;
   line-height: 49px;
+  margin-bottom: 11px;
+  font-size: clamp(0.875rem, 1.4239482201vw + 0.5412621359rem, 2.25rem);
+  line-height: clamp(1.5625rem, 1.5533980583vw + 1.1984223301rem, 3.0625rem);
+  margin-bottom: clamp(0.375rem, 0.3236245955vw + 0.2991504854rem, 0.6875rem);
   color: #ffffff;
   background-color: black;
   padding: 12px;
-  margin-bottom: 11px;
 }
 .p-home-about__desc {
   margin-top: 32px;
@@ -781,24 +792,11 @@ a:hover img {
   font-weight: 500;
   font-size: 22.5px;
   line-height: 31px;
-}
-.p-home-about__image-wrapper {
-  display: flex;
-}
-.p-home-about__image-left {
-  width: 385px;
-  height: 572px;
-  margin-top: 165px;
-  margin-left: -10px;
-  z-index: 2;
-}
-.p-home-about__image-right {
-  width: 378px;
-  height: 549px;
-  margin-left: -136px;
-  margin-top: 10px;
+  font-size: clamp(0.625rem, 0.8090614887vw + 0.4353762136rem, 1.40625rem);
+  line-height: clamp(1.125rem, 0.8414239482vw + 0.9277912621rem, 1.9375rem);
 }
 .p-home-about__deco {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -809,15 +807,38 @@ a:hover img {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  margin-top: 40px;
+  margin-top: 5vw;
+  height: 900px;
+  height: clamp(31.25rem, 25.8899676375vw + 25.182038835rem, 56.25rem);
+  margin-left: 5vw;
 }
 .p-home-about__deco::before {
   content: "";
   display: block;
   background-color: black;
   width: 2px;
-  height: 557px;
+  height: 800px;
+  height: clamp(25rem, 25.8899676375vw + 18.932038835rem, 50rem);
   justify-self: center;
+}
+.p-home-about__image-left {
+  grid-column: 4/-4;
+  grid-row: 2;
+  width: 40vw;
+  aspect-ratio: 385/572;
+  height: auto;
+  margin-top: 10vw;
+  margin-left: -0.5vw;
+  z-index: 2;
+}
+.p-home-about__image-right {
+  grid-column: 4/-4;
+  grid-row: 2;
+  width: 40vw;
+  aspect-ratio: 378/549;
+  height: auto;
+  margin-left: 29vw;
+  margin-top: 0vw;
 }
 
 .p-home-news {
