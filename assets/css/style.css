@@ -616,17 +616,13 @@ a:hover img {
 .p-home-fv {
   position: relative;
 }
-.p-home-fv__slider {
-  display: flex;
-  justify-content: space-between;
-}
-.p-home-fv__slider-image {
+.p-home-fv__slider-item {
   height: 957px;
-  width: 30%;
   object-fit: cover;
 }
-.p-home-fv__slider-image img {
+.p-home-fv__slider-item img {
   height: 100%;
+  width: 100%;
 }
 .p-home-fv__deco-image {
   position: absolute;
@@ -673,8 +669,12 @@ a:hover img {
   left: 60%;
 }
 
+.swiper-wrapper {
+  display: flex;
+}
+
 .swiper-slide {
-  height: 957px;
+  width: 20%;
   background: rgb(255, 255, 255);
   display: inline-block;
 }

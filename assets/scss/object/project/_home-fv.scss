@@ -3,16 +3,13 @@
 .p-home-fv {
   position: relative;
   &__slider {
-    display: flex;
-    justify-content: space-between;
   }
-  &__slider-image {
-    // width: 588px;
+  &__slider-item {
     height: 957px;
-    width: 30%;
     object-fit: cover;
     img {
       height: 100%;
+      width: 100%;
     }
   }
   &__deco-image {
@@ -62,9 +59,12 @@
 // リファクタリング
 .swiper {
 }
+.swiper-wrapper {
+  display: flex;
+}
 
 .swiper-slide {
-  height: 957px;
+  width: 20%;
   background: rgba(255, 255, 255, 1);
   display: inline-block;
   img {

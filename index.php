@@ -24,13 +24,20 @@
             <div class="swiper">
                 <div class="p-home-fv__slider swiper-wrapper">
                     <div class="p-home-fv__slider-image swiper-slide">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー1.png" alt="" />
+                        <div class="p-home-fv__slider-item">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー1.png" alt="" />
+                        </div>
+
                     </div>
                     <div class="p-home-fv__slider-image swiper-slide">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー2.png" alt="" />
+                        <div class="p-home-fv__slider-item">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー2.png" alt="" />
+                        </div>
                     </div>
                     <div class="p-home-fv__slider-image swiper-slide">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー3.png" alt="" />
+                        <div class="p-home-fv__slider-item">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/スライダー3.png" alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
