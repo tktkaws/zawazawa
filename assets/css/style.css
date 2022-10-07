@@ -673,6 +673,19 @@ a:hover img {
   left: 60%;
 }
 
+.swiper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  clip-path: polygon(0 85%, 0% 100%, 40% 100%);
+}
+
 .swiper-wrapper {
   display: flex;
 }
@@ -693,22 +706,52 @@ a:hover img {
 
 .swiper-button-prev {
   color: black;
-  top: 90%;
-  left: 10%;
+  top: 95%;
+  left: 6%;
 }
 .swiper-button-next {
   color: black;
-  top: 90%;
-  left: 20%;
+  top: 95%;
+  left: 12.5%;
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  bottom: 0;
+  content: "";
+  height: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 0;
+  content: url(./assets/img/prev.svg);
+}
+
+/* 前への矢印カスタマイズ */
+.swiper-button-prev:after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  background: transparent url(./../img/prev.svg) no-repeat center/contain;
+}
+
+/* 次への矢印カスタマイズ */
+.swiper-button-next:after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  background: transparent url(./../img/next.svg) no-repeat center/contain;
 }
 
 .p-home-about {
   margin-top: 185px;
+  margin-left: 43px;
   display: flex;
-  gap: 50px;
+  gap: 40px;
 }
 .p-home-about__text-wrapper {
-  width: 50%;
+  width: 37vw;
 }
 .p-home-about__title {
   font-family: "Oswald";
@@ -732,7 +775,7 @@ a:hover img {
   margin-bottom: 11px;
 }
 .p-home-about__desc {
-  margin-top: 42px;
+  margin-top: 32px;
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 500;
@@ -741,30 +784,32 @@ a:hover img {
 }
 .p-home-about__image-wrapper {
   display: flex;
-  width: 45%;
 }
 .p-home-about__image-left {
   width: 385px;
   height: 572px;
-  margin-right: -200px;
-  margin-top: 200px;
+  margin-top: 165px;
+  margin-left: -10px;
   z-index: 2;
 }
 .p-home-about__image-right {
-  width: 385px;
-  height: 572px;
+  width: 378px;
+  height: 549px;
+  margin-left: -136px;
+  margin-top: 10px;
 }
 .p-home-about__deco {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   writing-mode: vertical-rl;
-  gap: 19px;
+  gap: 20px;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  margin-top: 40px;
 }
 .p-home-about__deco::before {
   content: "";

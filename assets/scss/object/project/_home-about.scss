@@ -2,10 +2,13 @@
 
 .p-home-about {
   margin-top: 185px;
+  margin-left: 43px;
   display: flex;
-  gap: 50px;
+  gap: 40px;
+  // justify-content: space-between;
+
   &__text-wrapper {
-    width: 50%;
+    width: 37vw;
   }
   &__title {
     @include headingFont;
@@ -25,7 +28,7 @@
     margin-bottom: 11px;
   }
   &__desc {
-    margin-top: 42px;
+    margin-top: 32px;
     font-family: "Noto Sans";
     font-style: normal;
     font-weight: 500;
@@ -34,31 +37,32 @@
   }
   &__image-wrapper {
     display: flex;
-    width: 45%;
   }
   &__image-left {
     width: 385px;
     height: 572px;
-    margin-right: -200px;
-    margin-top: 200px;
+    margin-top: 165px;
+    margin-left: -10px;
     z-index: 2;
   }
   &__image-right {
-    width: 385px;
-    height: 572px;
+    width: 378px;
+    height: 549px;
+    margin-left: -136px;
+    margin-top: 10px;
   }
   &__deco {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     writing-mode: vertical-rl;
-    gap: 19px;
-
+    gap: 20px;
     font-family: "Oswald";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    margin-top: 40px;
 
     &::before {
       content: "";
