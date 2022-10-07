@@ -15,19 +15,39 @@
 //   }
 // }
 
+// .c-button {
+//   display: inline-block;
+//   min-width: 403px;
+//   text-align: center;
+//   text-transform: uppercase;
+//   padding: 1.2em;
+//   font-family: "Oswald";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 24px;
+//   line-height: 36px;
+//   background: #000000;
+//   color: #ffffff;
+// }
+
 .c-button {
   display: inline-block;
-  min-width: 403px;
+
   text-align: center;
   text-transform: uppercase;
-  padding: 1.2em;
+
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
+
   background: #000000;
   color: #ffffff;
+
+  // min-width: 403px;
+  width: 20vw;
+  padding: 1.2em;
+  font-size: 1.2vw;
+  line-height: 1.5em;
 }
 
 .c-button--large {

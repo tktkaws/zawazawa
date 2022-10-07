@@ -570,23 +570,23 @@ a:hover img {
 }
 
 .c-wrapper {
-  width: 1500px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
 .c-button {
   display: inline-block;
-  min-width: 403px;
   text-align: center;
   text-transform: uppercase;
-  padding: 1.2em;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
   background: #000000;
   color: #ffffff;
+  width: 20vw;
+  padding: 1.2em;
+  font-size: 1.2vw;
+  line-height: 1.5em;
 }
 
 .c-button--large {
@@ -633,21 +633,23 @@ a:hover img {
 }
 .p-home-fv__title-zone {
   position: absolute;
-  top: 35%;
-  left: 25%;
+  top: 38%;
+  left: 28%;
   background-color: white;
-  padding: 50px;
-  width: 900px;
-  height: 206px;
+  padding: 2.6vw;
+  width: 47vw;
+  height: 11vw;
   z-index: 1;
 }
 .p-home-fv__title {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
+  font-size: 128px;
   line-height: 190px;
-  font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
   margin-top: -7.5vw;
+  font-size: 7vw;
+  line-height: 1.5em;
   border-bottom: solid 1px;
   text-align: center;
   margin-left: 1vw;
@@ -657,8 +659,10 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 128px;
+  line-height: 190px;
+  font-size: 0.8vw;
+  line-height: 1.5em;
   margin-top: 1vw;
   margin-left: 1vw;
   margin-right: 1vw;
@@ -710,6 +714,7 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
+  font-size: 128px;
   line-height: 190px;
   font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
   margin-bottom: 42px;
@@ -786,8 +791,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 700;
-  font-size: 400px;
-  line-height: 593px;
+  font-size: 27vw;
+  line-height: 34vw;
   color: #f4f4f4;
   z-index: -1;
   top: 0;
@@ -896,6 +901,7 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
+  font-size: 128px;
   line-height: 190px;
   font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
   line-height: 146px;
@@ -1020,6 +1026,7 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
+  font-size: 128px;
   line-height: 190px;
   font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
 }

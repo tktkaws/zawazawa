@@ -21,18 +21,32 @@
   }
   &__title-zone {
     position: absolute;
-    top: 35%;
-    left: 25%;
+    top: 38%;
+    left: 28%;
     background-color: white;
-    padding: 50px;
-    width: 900px;
-    height: 206px;
+    // padding: 50px;
+    // width: 900px;
+    // height: 206px;
+    padding: 2.6vw;
+    width: 47vw;
+    height: 11vw;
+
+    // padding: fluid-size(25, 50);
+    // width: fluid-size(450, 900);
+    // height: fluid-size(103, 206);
+
     z-index: 1;
   }
   &__title {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
     @include headingFont;
-    font-size: fluid-size(60, 128);
     margin-top: -7.5vw;
+    // font-size: fluid-size(64, 128);
+
+    font-size: 7vw;
+    line-height: 1.5em;
 
     border-bottom: solid 1px;
     text-align: center;
@@ -40,11 +54,11 @@
     margin-right: 1vw;
   }
   &__subtitle {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    @include headingFont;
+    // font-size: 16px;
+    // line-height: 24px;
+    font-size: 0.8vw;
+    line-height: 1.5em;
     margin-top: 1vw;
     margin-left: 1vw;
     margin-right: 1vw;
