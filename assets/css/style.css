@@ -615,7 +615,7 @@ a:hover img {
 
 .c-button--responsive {
   position: relative;
-  width: 100%;
+  width: clamp(18.75rem, 19.6763754045vw + 14.1383495146rem, 37.75rem);
   height: 92px;
   height: clamp(2.875rem, 2.9773462783vw + 2.177184466rem, 5.75rem);
   background-color: black;
@@ -956,6 +956,8 @@ a:hover img {
   font-weight: 700;
   font-size: 27vw;
   line-height: 34vw;
+  font-size: clamp(12.5rem, 12.9449838188vw + 9.4660194175rem, 25rem);
+  line-height: clamp(20rem, 17.6699029126vw + 15.8586165049rem, 37.0625rem);
   color: #f4f4f4;
   z-index: -1;
   top: 0;
@@ -969,6 +971,7 @@ a:hover img {
   aspect-ratio: 238/199;
   object-fit: cover;
   width: 50%;
+  width: clamp(7.25rem, 7.8964401294vw + 5.3992718447rem, 14.875rem);
   position: relative;
 }
 .p-home-news__card-image img {
@@ -997,8 +1000,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 34px;
-  line-height: 50px;
+  font-size: clamp(1rem, 1.1650485437vw + 0.7269417476rem, 2.125rem);
+  line-height: clamp(1.4375rem, 1.7475728155vw + 1.0279126214rem, 3.125rem);
   border-bottom: 1px solid;
   margin-top: 30px;
 }
@@ -1034,6 +1037,42 @@ a:hover img {
   align-items: center;
 }
 
+@media (min-width: 768px) {
+  .p-home-news .c-grid-wrapper {
+    grid-template-columns: 270fr 1500fr 270fr;
+  }
+  .p-home-news__card-wrapper {
+    grid-column: 2/2;
+    grid-row: 1;
+    flex-direction: row;
+    margin-left: 125px;
+    margin-top: 6px;
+  }
+  .p-home-news__card-wrapper::before {
+    writing-mode: lr;
+    top: -19%;
+    left: 16%;
+  }
+  .p-home-news__title-wrapper {
+    grid-column: 3/3;
+    grid-row: 1;
+    margin-left: -15vw;
+    margin-top: -3vw;
+  }
+  .p-home-news__btn-wrapper {
+    grid-column: 2/2;
+    grid-row: 2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 76px;
+    margin-top: clamp(1.25rem, 3.6245954693vw + 0.4004854369rem, 4.75rem);
+  }
+  .p-home-news__btn-wrapper > * {
+    margin-left: 4vw;
+  }
+}
 .p-home-product {
   margin-top: clamp(3.125rem, 9.7087378641vw + 0.8495145631rem, 12.5rem);
 }

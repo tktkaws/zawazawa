@@ -4,32 +4,6 @@
   margin-top: 97px;
   margin-bottom: 97px;
   position: relative;
-  &__main-contents-wrapper {
-    // grid-column: 4/-4;
-    // grid-row: 1;
-    // &::before {
-    //   position: absolute;
-    //   content: "journal";
-    //   display: block;
-    //   writing-mode: vertical-rl;
-    //   font-family: "Oswald";
-    //   font-style: normal;
-    //   font-weight: 700;
-    //   // font-size: 400px;
-    //   // line-height: 593px;
-    //   font-size: 27vw;
-    //   line-height: 34vw;
-    //   color: #f4f4f4;
-    //   z-index: -1;
-    //   top: 0;
-    //   left: 0;
-    //   left: 50%;
-    // }
-
-    // display: flex;
-    // justify-content: space-evenly;
-    // height: 400px;
-  }
 
   &__card-wrapper {
     display: flex;
@@ -52,6 +26,9 @@
       // line-height: 593px;
       font-size: 27vw;
       line-height: 34vw;
+      font-size: fluid-size(200, 400);
+      line-height: fluid-size(320, 593);
+
       color: #f4f4f4;
       z-index: -1;
       top: 0;
@@ -66,6 +43,7 @@
     aspect-ratio: 238/199;
     object-fit: cover;
     width: 50%;
+    width: fluid-size(116, 238);
     // width: 238px;
     // height: 199px;
     position: relative;
@@ -105,8 +83,8 @@
     font-family: "Oswald";
     font-style: normal;
     font-weight: 500;
-    font-size: 34px;
-    line-height: 50px;
+    font-size: fluid-size(16, 34);
+    line-height: fluid-size(23, 50);
     border-bottom: 1px solid;
     margin-top: 30px;
   }
@@ -147,6 +125,53 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@include mq(md) {
+  .p-home-news {
+    .c-grid-wrapper {
+      // grid-template-columns: 70fr 704fr 35fr 628fr;
+      // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
+      grid-template-columns: 270fr 1500fr 270fr;
+    }
+
+    &__card-wrapper {
+      grid-column: 2/2;
+      grid-row: 1;
+      flex-direction: row;
+
+      margin-left: 125px;
+      margin-top: 6px;
+
+      &::before {
+        writing-mode: lr;
+        top: -19%;
+        left: 16%;
+      }
+    }
+
+    &__title-wrapper {
+      grid-column: 3/3;
+      // grid-column: 4/-4;
+      grid-row: 1;
+      margin-left: -15vw;
+      margin-top: -3vw;
+    }
+
+    &__btn-wrapper {
+      grid-column: 2/2;
+      grid-row: 2;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 76px;
+      margin-top: fluid-size(20, 76);
+      & > * {
+        margin-left: 4vw;
+      }
+    }
   }
 }
 
