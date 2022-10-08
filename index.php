@@ -180,64 +180,66 @@
 
 
         <section class="p-home-category">
-            <a href="/category/cap/" class="p-home-category__link">
-                <div class="p-home-category__card--reverse">
-                    <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cap.png" alt="" />
+            <div class="grid10">
+                <a href="/category/cap/" class="p-home-category__link">
+                    <div class="p-home-category__card">
+                        <div class="p-home-category__card-image">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cap.png" alt="" />
+                        </div>
+                        <div class="p-home-category__card-text">
+                            <div class="p-home-category__card-title">cap</div>
+                            <div class="p-home-category__card-subtitle">帽子・キャップ</div>
+                        </div>
                     </div>
-                    <div class="p-home-category__card-text">
-                        <div class="p-home-category__card-title">cap</div>
-                        <div class="p-home-category__card-subtitle">帽子・キャップ</div>
-                    </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="/category/t-shirt/" class="p-home-category__link">
-                <div class="p-home-category__card">
-                    <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/t-shirt.png" alt="" />
+                <a href="/category/t-shirt/" class="p-home-category__link">
+                    <div class="p-home-category__card">
+                        <div class="p-home-category__card-image">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/t-shirt.png" alt="" />
+                        </div>
+                        <div class="p-home-category__card-text">
+                            <div class="p-home-category__card-title">t-shirt</div>
+                            <div class="p-home-category__card-subtitle">t-シャツ</div>
+                        </div>
                     </div>
-                    <div class="p-home-category__card-text">
-                        <div class="p-home-category__card-title">t-shirt</div>
-                        <div class="p-home-category__card-subtitle">t-シャツ</div>
-                    </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="/category/towel/" class="p-home-category__link">
-                <div class="p-home-category__card--reverse">
-                    <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/towel.png" alt="" />
+                <a href="/category/towel/" class="p-home-category__link">
+                    <div class="p-home-category__card">
+                        <div class="p-home-category__card-image">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/towel.png" alt="" />
+                        </div>
+                        <div class="p-home-category__card-text">
+                            <div class="p-home-category__card-title">towel</div>
+                            <div class="p-home-category__card-subtitle">タオル</div>
+                        </div>
                     </div>
-                    <div class="p-home-category__card-text">
-                        <div class="p-home-category__card-title">towel</div>
-                        <div class="p-home-category__card-subtitle">タオル</div>
-                    </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="/category/bag/" class="p-home-category__link">
-                <div class="p-home-category__card">
-                    <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bag.png" alt="" />
+                <a href="/category/bag/" class="p-home-category__link">
+                    <div class="p-home-category__card">
+                        <div class="p-home-category__card-image">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bag.png" alt="" />
+                        </div>
+                        <div class="p-home-category__card-text">
+                            <div class="p-home-category__card-title">bag</div>
+                            <div class="p-home-category__card-subtitle">バッグ・ポーチ</div>
+                        </div>
                     </div>
-                    <div class="p-home-category__card-text">
-                        <div class="p-home-category__card-title">bag</div>
-                        <div class="p-home-category__card-subtitle">バッグ・ポーチ</div>
+                </a>
+                <a href="/category/other/" class="p-home-category__link">
+                    <div class="p-home-category__card">
+                        <div class="p-home-category__card-image">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/other.png" alt="" />
+                        </div>
+                        <div class="p-home-category__card-text">
+                            <div class="p-home-category__card-title">other</div>
+                            <div class="p-home-category__card-subtitle">その他</div>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="/category/other/" class="p-home-category__link">
-                <div class="p-home-category__card--reverse">
-                    <div class="p-home-category__card-image">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/other.png" alt="" />
-                    </div>
-                    <div class="p-home-category__card-text">
-                        <div class="p-home-category__card-title">other</div>
-                        <div class="p-home-category__card-subtitle">その他</div>
-                    </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </section>
         <section class="p-home-info">
             <div class="p-home-info__aside-left">
