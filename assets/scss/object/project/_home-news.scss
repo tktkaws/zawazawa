@@ -2,12 +2,49 @@
 
 .p-home-news {
   margin-top: 97px;
+  margin-bottom: 97px;
   position: relative;
   &__main-contents-wrapper {
+    // grid-column: 4/-4;
+    // grid-row: 1;
+    // &::before {
+    //   position: absolute;
+    //   content: "journal";
+    //   display: block;
+    //   writing-mode: vertical-rl;
+    //   font-family: "Oswald";
+    //   font-style: normal;
+    //   font-weight: 700;
+    //   // font-size: 400px;
+    //   // line-height: 593px;
+    //   font-size: 27vw;
+    //   line-height: 34vw;
+    //   color: #f4f4f4;
+    //   z-index: -1;
+    //   top: 0;
+    //   left: 0;
+    //   left: 50%;
+    // }
+
+    // display: flex;
+    // justify-content: space-evenly;
+    // height: 400px;
+  }
+
+  &__card-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-column: 4/-4;
+    grid-row: 1;
+
+    gap: 60px;
+    margin-top: 30px;
+
     &::before {
       position: absolute;
       content: "journal";
       display: block;
+      writing-mode: vertical-rl;
       font-family: "Oswald";
       font-style: normal;
       font-weight: 700;
@@ -19,24 +56,18 @@
       z-index: -1;
       top: 0;
       left: 0;
+      left: 35%;
     }
-
-    display: flex;
-    justify-content: space-evenly;
-    height: 400px;
-  }
-
-  &__card-wrapper {
-    display: flex;
-
-    gap: 120px;
-    margin-top: 90px;
   }
   &__card {
+    display: inline-block;
   }
   &__card-image {
-    width: 238px;
-    height: 199px;
+    aspect-ratio: 238/199;
+    object-fit: cover;
+    width: 50%;
+    // width: 238px;
+    // height: 199px;
     position: relative;
 
     img {
@@ -49,8 +80,8 @@
       top: 10%;
       left: 10%;
       content: "";
-      width: 238px;
-      height: 199px;
+      width: 100%;
+      height: 100%;
       background: linear-gradient(
         90deg,
         #9b92ec 2.07%,
@@ -70,6 +101,7 @@
     color: #d058d1;
   }
   &__card-title {
+    display: inline-block;
     font-family: "Oswald";
     font-style: normal;
     font-weight: 500;
@@ -88,8 +120,11 @@
   }
 
   &__title-wrapper {
+    grid-column: 5/5;
+    // grid-column: 4/-4;
+    grid-row: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     gap: 10px;
@@ -107,9 +142,124 @@
     // width: 50px;
   }
   &__btn-wrapper {
-    margin-top: 150px;
+    grid-column: 4/-4;
+    // margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
+
+// .p-home-news {
+//   margin-top: 97px;
+//   position: relative;
+//   &__main-contents-wrapper {
+//     &::before {
+//       position: absolute;
+//       content: "journal";
+//       display: block;
+//       font-family: "Oswald";
+//       font-style: normal;
+//       font-weight: 700;
+//       // font-size: 400px;
+//       // line-height: 593px;
+//       font-size: 27vw;
+//       line-height: 34vw;
+//       color: #f4f4f4;
+//       z-index: -1;
+//       top: 0;
+//       left: 0;
+//     }
+
+//     display: flex;
+//     justify-content: space-evenly;
+//     height: 400px;
+//   }
+
+//   &__card-wrapper {
+//     display: flex;
+
+//     gap: 120px;
+//     margin-top: 90px;
+//   }
+//   &__card {
+//   }
+//   &__card-image {
+//     width: 238px;
+//     height: 199px;
+//     position: relative;
+
+//     img {
+//       width: 100%;
+//       height: 100%;
+//     }
+
+//     &::after {
+//       position: absolute;
+//       top: 10%;
+//       left: 10%;
+//       content: "";
+//       width: 238px;
+//       height: 199px;
+//       background: linear-gradient(
+//         90deg,
+//         #9b92ec 2.07%,
+//         #bdbbfc 28.68%,
+//         #dfcbfd 55.01%,
+//         #fb8cf0 79.8%,
+//         #b233bc 101.2%
+//       );
+//       transform: matrix(1, 0, 0, -1, 0, 0);
+//       z-index: -1;
+//     }
+//   }
+//   &__card-date {
+//     position: absolute;
+//     top: 10%;
+//     left: 10%;
+//     color: #d058d1;
+//   }
+//   &__card-title {
+//     font-family: "Oswald";
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 34px;
+//     line-height: 50px;
+//     border-bottom: 1px solid;
+//     margin-top: 30px;
+//   }
+//   &__card-subtitle {
+//     font-family: "Oswald";
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 20px;
+//     line-height: 30px;
+//     margin-top: 10px;
+//   }
+
+//   &__title-wrapper {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     gap: 10px;
+//   }
+//   &__title {
+//     writing-mode: vertical-rl;
+
+//     font-family: "Oswald";
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 64px;
+//     line-height: 95px;
+//   }
+//   &__title-image {
+//     // width: 50px;
+//   }
+//   &__btn-wrapper {
+//     margin-top: 150px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
