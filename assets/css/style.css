@@ -1074,7 +1074,7 @@ a:hover img {
   }
 }
 .p-home-product {
-  margin-top: clamp(3.125rem, 9.7087378641vw + 0.8495145631rem, 12.5rem);
+  margin-top: clamp(3.125rem, 4.6601941748vw + 2.0327669903rem, 7.625rem);
 }
 .p-home-product .c-grid-wrapper {
   display: grid;
@@ -1220,7 +1220,7 @@ a:hover img {
   }
 }
 .p-home-category {
-  margin-top: 200px;
+  margin-top: clamp(0.3125rem, 0.6472491909vw + 0.1608009709rem, 0.9375rem);
 }
 .p-home-category__link {
   width: 100%;
@@ -1302,17 +1302,20 @@ a:hover img {
     grid-column: span 2;
   }
 }
+.grid10 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
 .p-home-info {
-  margin-top: 200px;
-  display: flex;
-  gap: 100px;
+  margin-top: clamp(3.125rem, 13.2686084142vw + 0.0151699029rem, 15.9375rem);
 }
 .p-home-info__aside-left {
-  width: 369px;
+  grid-column: span 2;
   background-color: black;
 }
 .p-home-info__deco {
-  margin-left: 239px;
+  margin-left: clamp(6.875rem, 7.572815534vw + 5.1001213592rem, 14.1875rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1334,7 +1337,10 @@ a:hover img {
   justify-self: center;
 }
 .p-home-info__main-wrapper {
-  width: 684px;
+  grid-column: 4/8;
+  margin-top: clamp(2.5rem, 2.5889967638vw + 1.8932038835rem, 5rem);
+  margin-left: -41px;
+  margin-left: -1.1vw;
 }
 .p-home-info__title {
   font-family: "Oswald";
@@ -1349,20 +1355,42 @@ a:hover img {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 40px;
+  margin-top: 45px;
+  margin-left: 10px;
+  font-size: clamp(1rem, 0.5177993528vw + 0.8786407767rem, 1.5rem);
+  line-height: clamp(1.75rem, 0.7766990291vw + 1.567961165rem, 2.5rem);
+  margin-top: clamp(1.4375rem, 1.4239482201vw + 1.1037621359rem, 2.8125rem);
+  margin-left: clamp(0.3125rem, 0.3236245955vw + 0.2366504854rem, 0.625rem);
 }
 .p-home-info__map {
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 110px;
+  margin-top: clamp(3.1875rem, 3.3656957929vw + 2.3986650485rem, 6.4375rem);
+  margin-bottom: clamp(3.4375rem, 3.5598705502vw + 2.6031553398rem, 6.875rem);
 }
-.p-home-info__aside-right {
-  width: 500px;
-}
-.p-home-info__aside-right img {
-  margin-top: 100px;
+.p-home-info__image {
+  position: relative;
+  grid-column: 8/10;
+  aspect-ratio: 434/652;
   width: 434px;
-  height: 652px;
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 2% 10%);
+  width: clamp(12.5rem, 15.145631068vw + 8.9502427184rem, 27.125rem);
+  height: auto;
+  margin-top: 315px;
+  margin-top: clamp(10rem, 10.0323624595vw + 7.6486650485rem, 19.6875rem);
+}
+.p-home-info__image::before {
+  position: absolute;
+  content: url(./../img/info_deco.png);
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: -0.5%;
+  left: -0.5%;
+  z-index: 2;
+}
+.p-home-info__image img {
+  width: 100%;
 }
 
 .p-category-list {

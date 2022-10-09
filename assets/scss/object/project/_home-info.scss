@@ -1,16 +1,24 @@
 @use "./../../foundation/global" as *;
 
+.grid10 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
 .p-home-info {
-  margin-top: 200px;
-  display: flex;
-  gap: 100px;
+  margin-top: fluid-size(50, 255);
+  // display: flex;
+  // gap: 100px;
   &__aside-left {
-    width: 369px;
+    grid-column: span 2;
+    // margin-right: fluid-size(6, 12);
+
+    // width: 369px;
     background-color: black;
   }
 
   &__deco {
-    margin-left: 239px;
+    margin-left: fluid-size(110, 227);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +44,11 @@
   }
 
   &__main-wrapper {
-    width: 684px;
+    grid-column: 4/8;
+    margin-top: fluid-size(40, 80);
+    margin-left: -41px;
+    margin-left: -1.1vw;
+    // width: 684px;
   }
   &__title {
     @include headingFont;
@@ -47,19 +59,45 @@
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 36px;
+    line-height: 40px;
+    margin-top: 45px;
+    margin-left: 10px;
+    font-size: fluid-size(16, 24);
+    line-height: fluid-size(28, 40);
+    margin-top: fluid-size(23, 45);
+    margin-left: fluid-size(5, 10);
   }
   &__map {
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 110px;
+    margin-top: fluid-size(51, 103);
+    margin-bottom: fluid-size(55, 110);
   }
-  &__aside-right {
-    width: 500px;
+  &__image {
+    position: relative;
+    grid-column: 8/10;
+    aspect-ratio: 434/652;
+    width: 434px;
+    width: fluid-size(200, 434);
+    height: auto;
+    margin-top: 315px;
+    margin-top: fluid-size(160, 315);
+    &::before {
+      position: absolute;
+      content: url(./../img/info_deco.png);
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: -0.5%;
+      left: -0.5%;
+      z-index: 2;
+    }
+
     img {
-      margin-top: 100px;
-      width: 434px;
-      height: 652px;
-      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 2% 10%);
+      width: 100%;
+
+      // height: 652px;
+      // clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 2% 10%);
     }
   }
 }
