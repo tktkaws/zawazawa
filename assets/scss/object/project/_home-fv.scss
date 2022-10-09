@@ -12,6 +12,7 @@
   }
   &__slider-item {
     height: 957px;
+    height: fluid-size(700, 957);
     object-fit: cover;
     img {
       height: 100%;
@@ -37,6 +38,7 @@
     // position: absolute;
     position: relative;
     width: 933px;
+    width: fluid-size(325, 933);
     background-color: white;
     // padding: 50px;
     // width: 900px;
@@ -44,8 +46,10 @@
     // padding: 2.6vw;
     // width: 49vw;
     height: 11vw;
+    height: fluid-size(100, 206);
     // margin-left: 8vw;
     margin-left: 160px;
+    margin-left: fluid-size(0, 160);
 
     // padding: fluid-size(25, 50);
     // width: fluid-size(450, 900);
@@ -58,11 +62,12 @@
     // top: 0;
     // left: 0;
     @include headingFont;
-    font-size: fluid-size(64, 128);
+    font-size: fluid-size(48, 128);
     line-height: 1.5em;
     text-align: center;
-    margin-top: -108px;
-    margin-left: -20px;
+    // margin-top: -108px;
+    margin-top: -5.5vw;
+    margin-left: -1vw;
   }
   &__title--season {
     margin-left: 30px;
@@ -87,18 +92,10 @@
 
   &__deco-image {
     position: absolute;
-    // top: -10%;
-    // left: 10%;
-    top: -219%;
-    left: -58%;
-    width: 115%;
-    // width: max(720px, 50%);
-    z-index: 1;
-    // @include mq(md-lg) {
-    //   top: 10%;
-    //   left: 10%;
-    //   width: 50%;
-    // }
+    top: -5vw;
+    left: 1vw;
+    width: fluid-size(500, 1076);
+    z-index: -1;
   }
 
   &__swiper-deco {

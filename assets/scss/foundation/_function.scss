@@ -15,19 +15,57 @@
   @return clamp($min-size / 16 * 1rem, $fluid-size, $max-size / 16 * 1rem);
 }
 
-@function fluid-margin($min-size, $max-size) {
-  $min-viewport: 375;
-  $max-viewport: 1920;
+// @function fluid-size-minus($min-size, $max-size) {
+//   $min-viewport: 375;
+//   $max-viewport: 1920;
 
-  /* a 傾き */
-  $slope: calc(($max-size - $min-size) / ($max-viewport - $min-viewport));
+//   /* a 傾き */
+//   $slope: calc(($max-size - $min-size) / ($max-viewport - $min-viewport));
 
-  /* b 切片 */
-  $intercept: calc($min-size - $slope * $min-viewport);
+//   /* b 切片 */
+//   $intercept: calc($min-size - $slope * $min-viewport);
 
-  /* y = ax + b 可変サイズ */
-  $fluid-size: calc($slope * 100vw + $intercept / 16 * 1rem);
+//   /* y = ax + b 可変サイズ */
+//   $fluid-size: calc($slope * 100vw * -1 + $intercept / 16 * 1rem * -1);
 
-  /* clamp(最小サイズ, 可変サイズ, 最大サイズ) */
-  @return clamp(0px, $fluid-size, 15px);
-}
+//   /* clamp(最小サイズ, 可変サイズ, 最大サイズ) */
+//   @return clamp(
+//     $min-size / 16 * 1rem * -1,
+//     $fluid-size,
+//     $max-size / 16 * 1rem * -1
+//   );
+// }
+
+// @function fluid-size-reverse($min-size, $max-size) {
+//   $min-viewport: 375;
+//   $max-viewport: 1920;
+
+//   /* a 傾き */
+//   $slope: calc(($max-size - $min-size) / ($max-viewport - $min-viewport));
+
+//   /* b 切片 */
+//   $intercept: calc($min-size - $slope * $min-viewport);
+
+//   /* y = ax + b 可変サイズ */
+//   $fluid-size: calc($slope * 100vw + $intercept / 16 * 1rem);
+
+//   /* clamp(最小サイズ, 可変サイズ, 最大サイズ) */
+//   @return clamp($max-size / 16 * 1rem, $fluid-size, $min-size / 16 * 1rem);
+// }
+
+// @function fluid-margin($min-size, $max-size) {
+//   $min-viewport: 375;
+//   $max-viewport: 1920;
+
+//   /* a 傾き */
+//   $slope: calc(($max-size - $min-size) / ($max-viewport - $min-viewport));
+
+//   /* b 切片 */
+//   $intercept: calc($min-size - $slope * $min-viewport);
+
+//   /* y = ax + b 可変サイズ */
+//   $fluid-size: calc($slope * 100vw + $intercept / 16 * 1rem);
+
+//   /* clamp(最小サイズ, 可変サイズ, 最大サイズ) */
+//   @return clamp(0px, $fluid-size, 15px);
+// }

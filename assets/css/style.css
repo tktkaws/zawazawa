@@ -678,6 +678,7 @@ a:hover img {
 }
 .p-home-fv__slider-item {
   height: 957px;
+  height: clamp(43.75rem, 16.6343042071vw + 39.8513349515rem, 59.8125rem);
   object-fit: cover;
 }
 .p-home-fv__slider-item img {
@@ -698,9 +699,12 @@ a:hover img {
 .p-home-fv__title-zone {
   position: relative;
   width: 933px;
+  width: clamp(20.3125rem, 39.3527508091vw + 11.0891990291rem, 58.3125rem);
   background-color: white;
   height: 11vw;
+  height: clamp(6.25rem, 6.8608414239vw + 4.6419902913rem, 12.875rem);
   margin-left: 160px;
+  margin-left: clamp(0rem, 10.355987055vw - 2.427184466rem, 10rem);
   z-index: 1;
 }
 .p-home-fv__title {
@@ -709,11 +713,11 @@ a:hover img {
   font-weight: 500;
   font-size: 128px;
   line-height: 190px;
-  font-size: clamp(4rem, 4.142394822vw + 3.0291262136rem, 8rem);
+  font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
   line-height: 1.5em;
   text-align: center;
-  margin-top: -108px;
-  margin-left: -20px;
+  margin-top: -5.5vw;
+  margin-left: -1vw;
 }
 .p-home-fv__title--season {
   margin-left: 30px;
@@ -739,10 +743,10 @@ a:hover img {
 }
 .p-home-fv__deco-image {
   position: absolute;
-  top: -219%;
-  left: -58%;
-  width: 115%;
-  z-index: 1;
+  top: -5vw;
+  left: 1vw;
+  width: clamp(31.25rem, 37.2815533981vw + 22.5121359223rem, 67.25rem);
+  z-index: -1;
 }
 .p-home-fv__swiper-deco {
   position: absolute;
