@@ -1,76 +1,249 @@
+@use "./../../foundation/global" as *;
+
 .p-home-product {
-  margin-top: 100px;
-  &__main-contents-wrapper {
-    display: flex;
+  margin-top: fluid-size(50, 122);
+
+  .c-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
+    grid-template-rows: auto auto;
+    row-gap: 44px;
   }
+
+  &__text-wrapper {
+    grid-column: 4/-4;
+    grid-row: 1;
+  }
+  &__title {
+    @include headingFont;
+    font-size: fluid-size(50, 128);
+    line-height: fluid-size(60, 150);
+    margin-bottom: fluid-size(10, 40);
+  }
+  &__desc {
+    margin-top: fluid-size(25, 50);
+    @include japaneseFont;
+    font-weight: 500;
+    font-size: 22.5px;
+    line-height: 31px;
+    font-size: fluid-size(10, 22.5);
+    line-height: fluid-size(18, 31);
+  }
+  &__image {
+    grid-column: 4/-4;
+    width: 80%;
+    z-index: -1;
+    aspect-ratio: 634/950;
+    height: auto;
+  }
+
+  &__btn-wrapper {
+    grid-column: 4/-4;
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+    z-index: 2;
+    width: 90%;
+  }
+
   &__deco {
+    grid-column: 2/2;
+    grid-row: 1/3;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     writing-mode: vertical-rl;
-    gap: 19px;
-
+    gap: 20px;
     font-family: "Oswald";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    margin-top: fluid-size(50, 100);
+
+    height: 900px;
+    height: fluid-size(500, 900);
 
     &::before {
       content: "";
       display: block;
       background-color: black;
       width: 2px;
-      height: 557px;
-
+      height: 800px;
+      height: fluid-size(400, 800);
+      // height: 900px;
       justify-self: center;
     }
   }
+}
 
-  &__text-wrapper {
-    margin-left: 50px;
-  }
-  &__title {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 128px;
-    line-height: 146px;
-  }
-  &__desc {
-    margin-top: 50px;
-    font-family: "Noto Sans";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22.5px;
-    line-height: 31px;
-  }
-  &__image-wrapper {
-    margin-left: -250px;
-    z-index: -1;
-    margin-top: 150px;
-  }
-  &__image-left {
-    position: relative;
-    width: 634px;
-    height: 950px;
+@include mq("md-1500") {
+  .p-home-product {
+    .c-grid-wrapper {
+      // grid-template-columns: 70fr 704fr 35fr 628fr;
+      // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
+      grid-template-columns: 100fr 70fr 758fr 35fr 801fr 10fr;
+    }
 
-    &::after {
-      content: "";
-      display: block;
+    &__text-wrapper {
+      grid-column: 3/3;
+      grid-row: 1;
+    }
+
+    &__image {
+      grid-column: 5/5;
+      grid-row: 1;
+
+      position: relative;
+      width: 100%;
+      margin-left: -120px;
+      margin-top: 30px;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        // width: 634px;
+        width: 100%;
+        // height: 950px;
+        height: 100%;
+        background: #f1e8ff;
+        top: 0;
+        left: 167px;
+        left: fluid-size(43, 167);
+        left: 8vw;
+
+        z-index: -1;
+      }
+    }
+    &__btn-wrapper {
+      // grid-column: 5/5;
+      // grid-row: 2;
       position: absolute;
-      width: 634px;
-      height: 950px;
-      background: #f1e8ff;
-      top: 0;
-      left: 167px;
-      z-index: -1;
+      top: 100%;
+      left: -45%;
     }
   }
-  &__btn-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: -150px;
-    z-index: 2;
+}
+
+@include mq("1500") {
+  .p-home-product {
+    .c-grid-wrapper {
+      // grid-template-columns: 70fr 704fr 35fr 628fr;
+      // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
+      grid-template-columns: 247fr 70fr 758fr 35fr 801fr 236fr;
+    }
+
+    &__text-wrapper {
+      grid-column: 3/3;
+      grid-row: 1;
+      margin-right: -100px;
+    }
+
+    &__image {
+      grid-column: 5/5;
+      grid-row: 1;
+
+      position: relative;
+      width: 100%;
+      margin-left: -120px;
+      margin-top: 100px;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        // width: 634px;
+        width: 100%;
+        // height: 950px;
+        height: 100%;
+        background: #f1e8ff;
+        top: 0;
+        left: 167px;
+        left: fluid-size(43, 167);
+        left: 8vw;
+
+        z-index: -1;
+      }
+    }
+    &__btn-wrapper {
+      // grid-column: 5/5;
+      // grid-row: 2;
+      position: absolute;
+      top: 80%;
+      left: -45%;
+    }
   }
 }
+// .p-home-product {
+//   margin-top: 100px;
+//   &__main-contents-wrapper {
+//     display: flex;
+//   }
+//   &__deco {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     writing-mode: vertical-rl;
+//     gap: 19px;
+
+//     font-family: "Oswald";
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 24px;
+
+//     &::before {
+//       content: "";
+//       display: block;
+//       background-color: black;
+//       width: 2px;
+//       height: 557px;
+
+//       justify-self: center;
+//     }
+//   }
+
+//   &__text-wrapper {
+//     margin-left: 50px;
+//   }
+//   &__title {
+//     @include headingFont;
+//     font-size: fluid-size(60, 128);
+//     line-height: 146px;
+//   }
+//   &__desc {
+//     margin-top: 50px;
+//     font-family: "Noto Sans";
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 22.5px;
+//     line-height: 31px;
+//   }
+//   &__image-wrapper {
+//     margin-left: -250px;
+//     z-index: -1;
+//     margin-top: 150px;
+//   }
+//   &__image-left {
+//     position: relative;
+//     width: 634px;
+//     height: 950px;
+
+//     &::after {
+//       content: "";
+//       display: block;
+//       position: absolute;
+//       width: 634px;
+//       height: 950px;
+//       background: #f1e8ff;
+//       top: 0;
+//       left: 167px;
+//       z-index: -1;
+//     }
+//   }
+//   &__btn-wrapper {
+//     display: flex;
+//     justify-content: center;
+//     margin-top: -150px;
+//     z-index: 2;
+//   }
+// }

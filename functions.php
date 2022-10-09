@@ -27,3 +27,17 @@ function echo_category_link()
     $category = get_the_category();
     echo get_category_link($category[0]->term_id);
 }
+
+function echo_season()
+{
+    $m = get_the_date('m');
+    if ($m == 3 || $m == 4 || $m == 5) {
+        echo "spring";
+    } elseif ($m == 6 || $m == 7 || $m == 8) {
+        echo "summer";
+    } elseif ($m == 9 || $m == 10 || $m == 11) {
+        echo "autamn";
+    } else {
+        echo "winter";
+    }
+}

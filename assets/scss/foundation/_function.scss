@@ -1,6 +1,6 @@
 @function fluid-size($min-size, $max-size) {
   $min-viewport: 375;
-  $max-viewport: 1440;
+  $max-viewport: 1920;
 
   /* a 傾き */
   $slope: calc(($max-size - $min-size) / ($max-viewport - $min-viewport));
@@ -17,7 +17,7 @@
 
 @function fluid-margin($min-size, $max-size) {
   $min-viewport: 375;
-  $max-viewport: 1440;
+  $max-viewport: 1920;
 
   /* a 傾き */
   $slope: calc(($max-size - $min-size) / ($max-viewport - $min-viewport));

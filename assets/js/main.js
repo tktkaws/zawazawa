@@ -18,6 +18,21 @@ const mySwiper = new Swiper(".swiper", {
   //     el: ".swiper-scrollbar",
   //   },
 
-  slidesPerView: 3, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
-  spaceBetween: 44, // スライド間の余白（px）
+  slidesPerView: 1, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
+  spaceBetween: 22, // スライド間の余白（px）
+  // slidesPerView: auto, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
+
+  breakpoints: {
+    // ブレークポイント
+    768: {
+      // 画面幅768px以上で適用
+      slidesPerView: 2,
+      spaceBetween: 33,
+    },
+    1024: {
+      // 画面幅1024px以上で適用
+      slidesPerView: 3,
+      spaceBetween: 44,
+    },
+  },
 });

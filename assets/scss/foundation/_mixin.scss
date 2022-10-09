@@ -4,6 +4,9 @@ $breakpoints: (
   "lg": "(min-width: 1024px)",
   "xl": "(min-width: 1440px)",
   "md-lg": "(min-width: 768px) and (max-width: 1023px)",
+  "md-1500": "(min-width: 768px) and (max-width: 1500px)",
+  "1500": "(min-width: 1501px)",
+  "max-md": "(max-width: 767px)",
 );
 
 @mixin mq($breakpoint: md) {
@@ -11,3 +14,28 @@ $breakpoints: (
     @content;
   }
 }
+
+// @include mq(lg) {
+//   display: block;
+// }
+
+// @mixin headingFont() {
+//   font-family: "Oswald";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 128px;
+//   line-height: 190px;
+// }
+
+// @mixin japaneseFont() {
+//   font-family: "Noto Sans";
+//   font-style: normal;
+// }
+
+// @mixin baseFont() {
+//   font-family: "Oswald";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 24px;
+// }

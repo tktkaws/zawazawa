@@ -24,7 +24,8 @@
 
             <div class="p-category-list__card">
                 <div class="p-category-list__card-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/item CAP.png" alt="" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/<?php echo_category_name() ?>.png"
+                        alt="" />
                     <p class="p-category-list__card-date">
                         <?php the_title(); ?>
                     </p>

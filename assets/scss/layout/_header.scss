@@ -1,11 +1,18 @@
+// todo
+// ロゴ画像が荒い
+// ナビ画面
+// ロゴにリンク
+// gnavにリンク
+
 @use "./../foundation/global" as *;
 
 .l-header {
-  height: 187px;
+  // height: 187px;
+  height: fluid-size(98, 187);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 5vw;
+  padding-inline: 4vw;
 
   &::before {
     position: absolute;
@@ -26,30 +33,170 @@
   }
 
   &__logo {
-    width: 447px;
-    height: 59px;
+    img {
+      width: max(224px, 23.5vw);
+    }
+    // width: 447px;
+    // height: 59px;
+    // width: fluid-size(300, 447);
+    // height: fluid-size(29, 59);
+    // width: max(224px, 22.5vw);
+    // aspect-ratio: 447/59;
   }
   &__gnav {
+    display: none;
+    @include baseFont;
+
+    @include mq(lg) {
+      display: block;
+    }
   }
   &__lists {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 5vw;
+    margin-right: 0.5vw;
   }
   &__list {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
   }
   &__link {
     color: #000000;
   }
+
+  /* ハンバーガーボタン */
+  &__navbtn {
+    @include mq(lg) {
+      display: none;
+    }
+    all: unset;
+    outline: revert;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    // width: max(46px, var(--size1));
+    width: 46px;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    // color: var(--primary);
+    color: black;
+  }
+
+  &__navbtn-bar,
+  &__navbtn::before,
+  &__navbtn::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    grid-area: 1 / 1;
+    transition: transform 0.5s;
+  }
+  &__navbtn::before {
+    transform: translateY(-12px);
+  }
+  &__navbtn::after {
+    transform: translateY(12px);
+  }
+
+  /* スクリーンリーダー */
+  &__sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  /* ナビゲーションメニュー */
+  &__nav {
+    gap: 22px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: white;
+    opacity: 0.95;
+    // background: linear-gradient(
+    //   0.96deg,
+    //   rgba(84, 96, 63, 0.9) 0.35%,
+    //   rgba(162, 207, 79, 0.9) 182.75%
+    // );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+    transition: transform 0.5s;
+
+    &::before {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      content: "";
+      height: 7px;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        #9b92ec 2.07%,
+        #bdbbfc 28.68%,
+        #dfcbfd 55.01%,
+        #fb8cf0 79.8%,
+        #b233bc 101.2%
+      );
+    }
+  }
+
+  &__nav-logo {
+    margin-top: 20vw;
+    img {
+      width: max(242px, 80vw);
+      margin-left: -1vw;
+    }
+  }
+
+  &__nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include headingFont;
+    font-size: fluid-size(60, 128);
+    line-height: fluid-size(90, 190);
+    margin-bottom: fluid-size(10, 40);
+  }
 }
 
-// todo
-// 画像が荒い
-// 文字を大文字に
-// 高さ指定？
+.open .l-header {
+  &__navbtn-bar {
+    transform: scale(0);
+  }
+
+  &__navbtn::before {
+    transform: translateY(0) rotate(45deg);
+  }
+  &__navbtn::after {
+    transform: translateY(0) rotate(-45deg);
+  }
+  &__nav {
+    transform: translate(-100%, 0);
+  }
+  &__navbtn {
+    color: black;
+    z-index: 200;
+  }
+}
+
+.open {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
