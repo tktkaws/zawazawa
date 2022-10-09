@@ -451,10 +451,15 @@ a:hover img {
   background: linear-gradient(90deg, #9b92ec 2.07%, #bdbbfc 28.68%, #dfcbfd 55.01%, #fb8cf0 79.8%, #b233bc 101.2%);
 }
 .l-header__logo img {
-  width: max(224px, 22.5vw);
+  width: max(224px, 23.5vw);
 }
 .l-header__gnav {
   display: none;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 @media (min-width: 1024px) {
   .l-header__gnav {
@@ -465,15 +470,7 @@ a:hover img {
   display: flex;
   justify-content: space-between;
   gap: 5vw;
-  margin-right: 1.5em;
-}
-.l-header__list {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: uppercase;
+  margin-right: 0.5vw;
 }
 .l-header__link {
   color: #000000;
@@ -520,19 +517,52 @@ a:hover img {
   width: 1px;
 }
 .l-header__nav {
-  gap: 44px;
+  gap: 22px;
   position: fixed;
   top: 0;
   right: -100%;
   width: 100%;
   height: 100%;
   z-index: 100;
-  background: linear-gradient(0.96deg, rgba(84, 96, 63, 0.9) 0.35%, rgba(162, 207, 79, 0.9) 182.75%);
-  color: white;
+  background-color: white;
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
   transition: transform 0.5s;
 }
-.l-header__nav a {
-  color: white;
+.l-header__nav::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 7px;
+  width: 100%;
+  background: linear-gradient(90deg, #9b92ec 2.07%, #bdbbfc 28.68%, #dfcbfd 55.01%, #fb8cf0 79.8%, #b233bc 101.2%);
+}
+.l-header__nav-logo {
+  margin-top: 20vw;
+}
+.l-header__nav-logo img {
+  width: max(242px, 80vw);
+  margin-left: -1vw;
+}
+.l-header__nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 128px;
+  line-height: 190px;
+  font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
+  line-height: clamp(5.625rem, 6.4724919094vw + 4.1080097087rem, 11.875rem);
+  margin-bottom: clamp(0.625rem, 1.9417475728vw + 0.1699029126rem, 2.5rem);
 }
 
 .open .l-header__navbtn-bar {
@@ -548,7 +578,7 @@ a:hover img {
   transform: translate(-100%, 0);
 }
 .open .l-header__navbtn {
-  color: #ffffff;
+  color: black;
   z-index: 200;
 }
 

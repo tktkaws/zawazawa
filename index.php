@@ -76,7 +76,7 @@
             </div>
         </section>
 
-        <section class="p-home-about">
+        <section class="p-home-about" id="about">
             <div class="c-grid-wrapper">
                 <div class="p-home-about__text-wrapper">
                     <h2 class="p-home-about__title">company</h2>
@@ -101,7 +101,7 @@
             </div>
         </section>
 
-        <section class="p-home-news">
+        <section class="p-home-news" id="news">
             <div class="c-grid-wrapper">
                 <!-- <div class="p-home-news__main-contents-wrapper"></div> -->
                 <div class="p-home-news__title-wrapper">
@@ -149,7 +149,7 @@
             </div>
         </section>
 
-        <section class="p-home-product">
+        <section class="p-home-product" id="product">
             <div class="c-grid-wrapper">
 
 
@@ -241,7 +241,7 @@
                 </a>
             </div>
         </section>
-        <section class="p-home-info">
+        <section class="p-home-info" id="info">
             <div class="p-home-info__grid-wrapper">
                 <div class="p-home-info__aside-left">
                     <div class="p-home-info__deco">INFORMATION</div>

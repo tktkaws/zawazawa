@@ -34,7 +34,7 @@
 
   &__logo {
     img {
-      width: max(224px, 22.5vw);
+      width: max(224px, 23.5vw);
     }
     // width: 447px;
     // height: 59px;
@@ -45,6 +45,8 @@
   }
   &__gnav {
     display: none;
+    @include baseFont;
+
     @include mq(lg) {
       display: block;
     }
@@ -53,15 +55,9 @@
     display: flex;
     justify-content: space-between;
     gap: 5vw;
-    margin-right: 1.5em;
+    margin-right: 0.5vw;
   }
   &__list {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
   }
   &__link {
     color: #000000;
@@ -117,24 +113,65 @@
 
   /* ナビゲーションメニュー */
   &__nav {
-    gap: 44px;
+    gap: 22px;
     position: fixed;
     top: 0;
     right: -100%;
     width: 100%;
     height: 100%;
     z-index: 100;
-    background: linear-gradient(
-      0.96deg,
-      rgba(84, 96, 63, 0.9) 0.35%,
-      rgba(162, 207, 79, 0.9) 182.75%
-    );
+    background-color: white;
+    opacity: 0.95;
+    // background: linear-gradient(
+    //   0.96deg,
+    //   rgba(84, 96, 63, 0.9) 0.35%,
+    //   rgba(162, 207, 79, 0.9) 182.75%
+    // );
 
-    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
     transition: transform 0.5s;
-    a {
-      color: white;
+
+    &::before {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      content: "";
+      height: 7px;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        #9b92ec 2.07%,
+        #bdbbfc 28.68%,
+        #dfcbfd 55.01%,
+        #fb8cf0 79.8%,
+        #b233bc 101.2%
+      );
     }
+  }
+
+  &__nav-logo {
+    margin-top: 20vw;
+    img {
+      width: max(242px, 80vw);
+      margin-left: -1vw;
+    }
+  }
+
+  &__nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include headingFont;
+    font-size: fluid-size(60, 128);
+    line-height: fluid-size(90, 190);
+    margin-bottom: fluid-size(10, 40);
   }
 }
 
@@ -153,7 +190,7 @@
     transform: translate(-100%, 0);
   }
   &__navbtn {
-    color: $c-white;
+    color: black;
     z-index: 200;
   }
 }
