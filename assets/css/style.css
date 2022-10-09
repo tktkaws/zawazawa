@@ -613,10 +613,13 @@ a:hover img {
   font-weight: 500;
   background: #000000;
   color: #ffffff;
-  width: 20vw;
+  width: 403px;
   padding: 1.2em;
-  font-size: 1.2vw;
-  line-height: 1.5em;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
 }
 
 .c-button--large {
@@ -681,21 +684,23 @@ a:hover img {
   height: 100%;
   width: 100%;
 }
-.p-home-fv__deco-image {
+.p-home-fv__absolute-wrapper {
   position: absolute;
-  top: -200%;
-  left: -50%;
-  width: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 .p-home-fv__title-zone {
-  position: absolute;
-  top: 38%;
-  left: 28%;
+  position: relative;
+  width: 933px;
   background-color: white;
-  padding: 2.6vw;
-  width: 47vw;
   height: 11vw;
+  margin-left: 160px;
   z-index: 1;
 }
 .p-home-fv__title {
@@ -704,43 +709,53 @@ a:hover img {
   font-weight: 500;
   font-size: 128px;
   line-height: 190px;
-  margin-top: -7.5vw;
-  font-size: 7vw;
+  font-size: clamp(4rem, 4.142394822vw + 3.0291262136rem, 8rem);
   line-height: 1.5em;
-  border-bottom: solid 1px;
   text-align: center;
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin-top: -108px;
+  margin-left: -20px;
+}
+.p-home-fv__title--season {
+  margin-left: 30px;
+}
+.p-home-fv__divider {
+  border-top: 1px solid black;
+  width: 750px;
+  margin-left: 95px;
 }
 .p-home-fv__subtitle {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
-  line-height: 190px;
-  font-size: 0.8vw;
-  line-height: 1.5em;
-  margin-top: 1vw;
-  margin-left: 1vw;
-  margin-right: 1vw;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 25px;
+  margin-left: 100px;
 }
 .p-home-fv__btn-wrapper {
   position: absolute;
   top: 75%;
-  left: 60%;
+  left: 61%;
 }
-
-.swiper::after {
-  content: "";
-  display: block;
+.p-home-fv__deco-image {
+  position: absolute;
+  top: -219%;
+  left: -58%;
+  width: 115%;
+  z-index: 1;
+}
+.p-home-fv__swiper-deco {
   position: absolute;
   width: 100%;
+  width: 40.6vw;
+  width: 780px;
   height: 100%;
-  background: white;
-  top: 0;
+  top: 85%;
   left: 0;
   z-index: 1;
-  clip-path: polygon(0 85%, 0% 100%, 40% 100%);
+}
+.p-home-fv__swiper-deco img {
+  width: 100%;
 }
 
 .swiper-wrapper {
@@ -764,12 +779,12 @@ a:hover img {
 .swiper-button-prev {
   color: black;
   top: 95%;
-  left: 6%;
+  left: 5%;
 }
 .swiper-button-next {
   color: black;
   top: 95%;
-  left: 12.5%;
+  left: 11.5%;
 }
 
 /* 前へ次への矢印カスタマイズ */
