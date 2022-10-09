@@ -1,56 +1,19 @@
 @use "./../../foundation/global" as *;
 
-// .c-button {
-//   display: inline-block;
-//   padding: 3px 20px;
-//   color: $color-base;
-//   background-color: $color-accent;
-//   border: solid 2px $color-accent;
-//   border-radius: 50px;
-//   font-weight: bold;
-//   text-decoration: none;
-//   &:hover {
-//     color: $color-accent;
-//     background-color: $color-base;
-//   }
-// }
-
-// .c-button {
-//   display: inline-block;
-//   min-width: 403px;
-//   text-align: center;
-//   text-transform: uppercase;
-//   padding: 1.2em;
-//   font-family: "Oswald";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 24px;
-//   line-height: 36px;
-//   background: #000000;
-//   color: #ffffff;
-// }
-
 .c-button {
   display: inline-block;
-
-  text-align: center;
-  text-transform: uppercase;
-
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-
   background: #000000;
   color: #ffffff;
+  text-align: center;
 
-  // min-width: 403px;
   width: 403px;
+  width: fluid-size(200, 403);
   padding: 1.2em;
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
+  padding: fluid-size(8, 18);
+  @include baseFont;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 1.5em;
+  font-size: fluid-size(16, 24);
 }
 
 .c-button--large {
