@@ -1,24 +1,33 @@
 @use "./../../foundation/global" as *;
 
-.grid10 {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+@include mq("md") {
+  .grid10 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
 }
 
 .p-home-info {
   margin-top: fluid-size(50, 255);
-  // display: flex;
-  // gap: 100px;
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
+    grid-template-rows: auto auto;
+    row-gap: 44px;
+  }
   &__aside-left {
     grid-column: span 2;
     // margin-right: fluid-size(6, 12);
-
     // width: 369px;
     background-color: black;
+    display: flex;
+    justify-content: flex-end;
   }
-
   &__deco {
-    margin-left: fluid-size(110, 227);
+    // margin-left: fluid-size(5, 227);
+    grid-column: 2/2;
+    margin-right: fluid-size(10, 50);
+    margin-right: 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +39,10 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    font-size: fluid-size(10, 16);
+    line-height: fluid-size(15, 24);
     color: white;
+    height: fluid-size(500, 900);
 
     &::before {
       content: "";
@@ -38,21 +50,23 @@
       background-color: white;
       width: 2px;
       height: 557px;
+      height: fluid-size(400, 800);
 
       justify-self: center;
     }
   }
 
   &__main-wrapper {
-    grid-column: 4/8;
+    grid-column: 4/-4;
     margin-top: fluid-size(40, 80);
-    margin-left: -41px;
-    margin-left: -1.1vw;
+    // margin-left: -41px;
+    // margin-left: -1.1vw;
     // width: 684px;
   }
   &__title {
     @include headingFont;
-    font-size: fluid-size(60, 128);
+    font-size: fluid-size(50, 128);
+    line-height: fluid-size(60, 190);
   }
   &__desc {
     font-family: "Oswald";
@@ -68,12 +82,18 @@
     margin-left: fluid-size(5, 10);
   }
   &__map {
+    grid-column: 4/7;
+    aspect-ratio: 562/497;
+    width: 75%;
+    width: fluid-size(281, 562);
+    height: auto;
     margin-top: 100px;
     margin-bottom: 110px;
     margin-top: fluid-size(51, 103);
     margin-bottom: fluid-size(55, 110);
   }
   &__image {
+    display: none;
     position: relative;
     grid-column: 8/10;
     aspect-ratio: 434/652;
@@ -98,6 +118,62 @@
 
       // height: 652px;
       // clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 2% 10%);
+    }
+  }
+}
+
+@include mq("md-1500") {
+  .p-home-info {
+    &__aside-left {
+      grid-column: span 1;
+      // margin-right: fluid-size(6, 12);
+
+      // width: 369px;
+      background-color: black;
+    }
+    &__deco {
+      margin-right: fluid-size(10, 50);
+      margin-left: 0;
+    }
+
+    &__main-wrapper {
+      grid-column: 3/7;
+      margin-top: fluid-size(40, 80);
+      margin-left: -41px;
+      margin-left: -1.1vw;
+      // width: 684px;
+    }
+    &__image {
+      position: relative;
+      grid-column: 8/10;
+    }
+  }
+}
+
+@include mq("md") {
+  .p-home-info {
+    &__aside-left {
+      grid-column: span 1;
+      // margin-right: fluid-size(6, 12);
+
+      // width: 369px;
+      background-color: black;
+    }
+    &__deco {
+      margin-right: fluid-size(10, 50);
+      margin-left: 0;
+    }
+
+    &__main-wrapper {
+      grid-column: 3/7;
+      margin-top: fluid-size(40, 80);
+      margin-left: -41px;
+      margin-left: -1.1vw;
+      // width: 684px;
+    }
+    &__image {
+      position: relative;
+      grid-column: 8/10;
     }
   }
 }

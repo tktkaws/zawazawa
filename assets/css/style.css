@@ -1302,20 +1302,31 @@ a:hover img {
     grid-column: span 2;
   }
 }
-.grid10 {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+@media (min-width: 768px) {
+  .grid10 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
 }
-
 .p-home-info {
   margin-top: clamp(3.125rem, 13.2686084142vw + 0.0151699029rem, 15.9375rem);
+}
+.p-home-info__grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
+  grid-template-rows: auto auto;
+  row-gap: 44px;
 }
 .p-home-info__aside-left {
   grid-column: span 2;
   background-color: black;
+  display: flex;
+  justify-content: flex-end;
 }
 .p-home-info__deco {
-  margin-left: clamp(6.875rem, 7.572815534vw + 5.1001213592rem, 14.1875rem);
+  grid-column: 2/2;
+  margin-right: clamp(0.625rem, 2.5889967638vw + 0.0182038835rem, 3.125rem);
+  margin-right: 1vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1326,7 +1337,10 @@ a:hover img {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  font-size: clamp(0.625rem, 0.3883495146vw + 0.5339805825rem, 1rem);
+  line-height: clamp(0.9375rem, 0.5825242718vw + 0.8009708738rem, 1.5rem);
   color: white;
+  height: clamp(31.25rem, 25.8899676375vw + 25.182038835rem, 56.25rem);
 }
 .p-home-info__deco::before {
   content: "";
@@ -1334,13 +1348,12 @@ a:hover img {
   background-color: white;
   width: 2px;
   height: 557px;
+  height: clamp(25rem, 25.8899676375vw + 18.932038835rem, 50rem);
   justify-self: center;
 }
 .p-home-info__main-wrapper {
-  grid-column: 4/8;
+  grid-column: 4/-4;
   margin-top: clamp(2.5rem, 2.5889967638vw + 1.8932038835rem, 5rem);
-  margin-left: -41px;
-  margin-left: -1.1vw;
 }
 .p-home-info__title {
   font-family: "Oswald";
@@ -1348,7 +1361,8 @@ a:hover img {
   font-weight: 500;
   font-size: 128px;
   line-height: 190px;
-  font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
+  font-size: clamp(3.125rem, 5.0485436893vw + 1.9417475728rem, 8rem);
+  line-height: clamp(3.75rem, 8.4142394822vw + 1.7779126214rem, 11.875rem);
 }
 .p-home-info__desc {
   font-family: "Oswald";
@@ -1364,12 +1378,18 @@ a:hover img {
   margin-left: clamp(0.3125rem, 0.3236245955vw + 0.2366504854rem, 0.625rem);
 }
 .p-home-info__map {
+  grid-column: 4/7;
+  aspect-ratio: 562/497;
+  width: 75%;
+  width: clamp(17.5625rem, 18.1877022654vw + 13.2997572816rem, 35.125rem);
+  height: auto;
   margin-top: 100px;
   margin-bottom: 110px;
   margin-top: clamp(3.1875rem, 3.3656957929vw + 2.3986650485rem, 6.4375rem);
   margin-bottom: clamp(3.4375rem, 3.5598705502vw + 2.6031553398rem, 6.875rem);
 }
 .p-home-info__image {
+  display: none;
   position: relative;
   grid-column: 8/10;
   aspect-ratio: 434/652;
@@ -1393,6 +1413,46 @@ a:hover img {
   width: 100%;
 }
 
+@media (min-width: 768px) and (max-width: 1500px) {
+  .p-home-info__aside-left {
+    grid-column: span 1;
+    background-color: black;
+  }
+  .p-home-info__deco {
+    margin-right: clamp(0.625rem, 2.5889967638vw + 0.0182038835rem, 3.125rem);
+    margin-left: 0;
+  }
+  .p-home-info__main-wrapper {
+    grid-column: 3/7;
+    margin-top: clamp(2.5rem, 2.5889967638vw + 1.8932038835rem, 5rem);
+    margin-left: -41px;
+    margin-left: -1.1vw;
+  }
+  .p-home-info__image {
+    position: relative;
+    grid-column: 8/10;
+  }
+}
+@media (min-width: 768px) {
+  .p-home-info__aside-left {
+    grid-column: span 1;
+    background-color: black;
+  }
+  .p-home-info__deco {
+    margin-right: clamp(0.625rem, 2.5889967638vw + 0.0182038835rem, 3.125rem);
+    margin-left: 0;
+  }
+  .p-home-info__main-wrapper {
+    grid-column: 3/7;
+    margin-top: clamp(2.5rem, 2.5889967638vw + 1.8932038835rem, 5rem);
+    margin-left: -41px;
+    margin-left: -1.1vw;
+  }
+  .p-home-info__image {
+    position: relative;
+    grid-column: 8/10;
+  }
+}
 .p-category-list {
   display: flex;
 }

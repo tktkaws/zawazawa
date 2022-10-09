@@ -242,7 +242,7 @@
             </div>
         </section>
         <section class="p-home-info">
-            <div class="grid10">
+            <div class="p-home-info__grid-wrapper">
                 <div class="p-home-info__aside-left">
                     <div class="p-home-info__deco">INFORMATION</div>
                 </div>
