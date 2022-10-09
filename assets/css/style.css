@@ -1302,29 +1302,22 @@ a:hover img {
     grid-column: span 2;
   }
 }
-@media (min-width: 768px) {
-  .grid10 {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-  }
-}
 .p-home-info {
   margin-top: clamp(3.125rem, 13.2686084142vw + 0.0151699029rem, 15.9375rem);
 }
 .p-home-info__grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
-  grid-template-rows: auto auto;
-  row-gap: 44px;
+  grid-template-columns: 15vw 60vw;
+  column-gap: 5vw;
 }
 .p-home-info__aside-left {
-  grid-column: span 2;
+  grid-column: span 1;
   background-color: black;
   display: flex;
   justify-content: flex-end;
 }
 .p-home-info__deco {
-  grid-column: 2/2;
+  grid-column: 1/1;
   margin-right: clamp(0.625rem, 2.5889967638vw + 0.0182038835rem, 3.125rem);
   margin-right: 1vw;
   display: flex;
@@ -1352,7 +1345,7 @@ a:hover img {
   justify-self: center;
 }
 .p-home-info__main-wrapper {
-  grid-column: 4/-4;
+  grid-column: 3/-2;
   margin-top: clamp(2.5rem, 2.5889967638vw + 1.8932038835rem, 5rem);
 }
 .p-home-info__title {
@@ -1372,8 +1365,8 @@ a:hover img {
   line-height: 40px;
   margin-top: 45px;
   margin-left: 10px;
-  font-size: clamp(1rem, 0.5177993528vw + 0.8786407767rem, 1.5rem);
-  line-height: clamp(1.75rem, 0.7766990291vw + 1.567961165rem, 2.5rem);
+  font-size: clamp(0.75rem, 0.7766990291vw + 0.567961165rem, 1.5rem);
+  line-height: clamp(1.5rem, 1.0355987055vw + 1.2572815534rem, 2.5rem);
   margin-top: clamp(1.4375rem, 1.4239482201vw + 1.1037621359rem, 2.8125rem);
   margin-left: clamp(0.3125rem, 0.3236245955vw + 0.2366504854rem, 0.625rem);
 }
@@ -1389,7 +1382,6 @@ a:hover img {
   margin-bottom: clamp(3.4375rem, 3.5598705502vw + 2.6031553398rem, 6.875rem);
 }
 .p-home-info__image {
-  display: none;
   position: relative;
   grid-column: 8/10;
   aspect-ratio: 434/652;
@@ -1398,6 +1390,11 @@ a:hover img {
   height: auto;
   margin-top: 315px;
   margin-top: clamp(10rem, 10.0323624595vw + 7.6486650485rem, 19.6875rem);
+}
+@media (max-width: 767px) {
+  .p-home-info__image {
+    display: none;
+  }
 }
 .p-home-info__image::before {
   position: absolute;
@@ -1413,7 +1410,16 @@ a:hover img {
   width: 100%;
 }
 
-@media (min-width: 768px) and (max-width: 1500px) {
+@media (min-width: 768px) {
+  .p-home-info__grid-wrapper {
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: 15vw 30vw 30vw;
+    grid-template-columns: 15vw 43vw 25vw;
+    column-gap: 5vw;
+  }
   .p-home-info__aside-left {
     grid-column: span 1;
     background-color: black;
@@ -1423,34 +1429,57 @@ a:hover img {
     margin-left: 0;
   }
   .p-home-info__main-wrapper {
-    grid-column: 3/7;
+    grid-column: 2/-2;
     margin-top: clamp(2.5rem, 2.5889967638vw + 1.8932038835rem, 5rem);
     margin-left: -41px;
     margin-left: -1.1vw;
   }
   .p-home-info__image {
+    display: block;
     position: relative;
-    grid-column: 8/10;
+    width: 100%;
+    grid-column: 3/3;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  .p-home-info__grid-wrapper {
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: 15vw 30vw 30vw;
+    grid-template-columns: 15vw 43vw 25vw;
+    grid-template-columns: 19vw 29vw 23vw;
+    column-gap: 10vw;
+  }
   .p-home-info__aside-left {
     grid-column: span 1;
     background-color: black;
   }
   .p-home-info__deco {
+    justify-content: flex-start;
     margin-right: clamp(0.625rem, 2.5889967638vw + 0.0182038835rem, 3.125rem);
+    margin-right: 6vw;
     margin-left: 0;
   }
+  .p-home-info__deco::before {
+    height: 557px;
+    height: clamp(25rem, 25.8899676375vw + 18.932038835rem, 50rem);
+    height: 557px;
+    justify-self: center;
+    justify-content: center;
+  }
   .p-home-info__main-wrapper {
-    grid-column: 3/7;
+    grid-column: 2/-2;
     margin-top: clamp(2.5rem, 2.5889967638vw + 1.8932038835rem, 5rem);
     margin-left: -41px;
     margin-left: -1.1vw;
   }
   .p-home-info__image {
+    display: block;
     position: relative;
-    grid-column: 8/10;
+    margin-left: -1.1vw;
+    grid-column: 3/3;
   }
 }
 .p-category-list {
