@@ -446,6 +446,7 @@ a:hover img {
 @media (min-width: 768px) {
   .l-header {
     height: clamp(6.125rem, 5.7605177994vw + 4.7748786408rem, 11.6875rem);
+    height: 97px;
   }
 }
 .l-header::before {
@@ -619,6 +620,7 @@ a:hover img {
   text-align: center;
   width: 403px;
   width: clamp(12.5rem, 13.1391585761vw + 9.4205097087rem, 25.1875rem);
+  width: 100%;
   padding: 1.2em;
   padding: clamp(0.5rem, 0.6472491909vw + 0.3483009709rem, 1.125rem);
   font-family: "Oswald";
@@ -687,8 +689,6 @@ a:hover img {
 }
 .p-home-fv__slider-item {
   height: 957px;
-  height: clamp(39.5625rem, 20.9708737864vw + 34.6474514563rem, 59.8125rem);
-  height: 90vh;
   height: 600px;
 }
 .p-home-fv__slider-item img {
@@ -711,13 +711,15 @@ a:hover img {
   position: relative;
   width: 933px;
   width: clamp(20.3125rem, 39.3527508091vw + 11.0891990291rem, 58.3125rem);
+  width: 325px;
   background-color: white;
-  height: 11vw;
   height: clamp(5rem, 8.1553398058vw + 3.088592233rem, 12.875rem);
+  height: 80px;
   margin-left: 160px;
   margin-left: clamp(0rem, 10.355987055vw - 2.427184466rem, 10rem);
+  margin-left: 0;
   z-index: 1;
-  margin-top: -15vh;
+  margin-top: -50px;
 }
 .p-home-fv__title {
   font-family: "Oswald";
@@ -726,21 +728,23 @@ a:hover img {
   font-size: 128px;
   line-height: 190px;
   font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
+  font-size: 48px;
   line-height: 1.5em;
   text-align: center;
-  margin-top: -10.5vw;
+  margin-top: -40px;
   margin-left: -1vw;
 }
 .p-home-fv__title--season {
   margin-left: 30px;
   margin-left: clamp(0rem, 1.9417475728vw - 0.4550970874rem, 1.875rem);
+  margin-left: 5px;
 }
 .p-home-fv__divider {
   border-top: 1px solid black;
-  width: 750px;
-  margin-left: 95px;
   width: clamp(17.1875rem, 30.7443365696vw + 9.9817961165rem, 46.875rem);
   margin-left: clamp(1.5625rem, 4.5307443366vw + 0.5006067961rem, 5.9375rem);
+  width: 275px;
+  margin-left: 25px;
 }
 .p-home-fv__subtitle {
   font-family: "Oswald";
@@ -750,13 +754,14 @@ a:hover img {
   line-height: 24px;
   font-size: clamp(0.625rem, 0.3883495146vw + 0.5339805825rem, 1rem);
   line-height: 1.5em;
-  margin-top: 25px;
   margin-left: 100px;
-  margin-top: clamp(0.625rem, 0.9708737864vw + 0.3974514563rem, 1.5625rem);
   margin-left: clamp(1.5625rem, 4.854368932vw + 0.4247572816rem, 6.25rem);
+  margin-left: 25px;
+  margin-top: 10px;
 }
 .p-home-fv__btn-wrapper {
   position: absolute;
+  width: 200px;
   top: 84%;
   left: 43%;
 }
@@ -764,7 +769,10 @@ a:hover img {
   position: absolute;
   top: -10vw;
   left: 1vw;
+  top: 0;
+  left: 0;
   width: clamp(25rem, 43.7540453074vw + 14.7451456311rem, 67.25rem);
+  width: clamp(25rem, 17.8640776699vw + 20.8131067961rem, 42.25rem);
   z-index: -1;
 }
 .p-home-fv__swiper-deco {
@@ -785,60 +793,26 @@ a:hover img {
   width: 100%;
 }
 
-@media (min-width: 1024px) {
-  .p-home-fv {
-    position: relative;
-  }
+@media (min-width: 768px) {
   .p-home-fv__slider-item {
     height: 957px;
-    height: clamp(43.75rem, 16.6343042071vw + 39.8513349515rem, 59.8125rem);
-    object-fit: cover;
-  }
-  .p-home-fv__slider-item img {
-    height: 100%;
-    width: 100%;
-  }
-  .p-home-fv__absolute-wrapper {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    height: 780px;
   }
   .p-home-fv__title-zone {
-    position: relative;
-    width: 933px;
-    width: clamp(20.3125rem, 39.3527508091vw + 11.0891990291rem, 58.3125rem);
-    background-color: white;
-    height: 11vw;
-    height: clamp(6.25rem, 6.8608414239vw + 4.6419902913rem, 12.875rem);
-    margin-left: 160px;
-    margin-left: clamp(0rem, 10.355987055vw - 2.427184466rem, 10rem);
+    width: 425px;
+    height: 100px;
+    margin-left: 0;
     z-index: 1;
+    margin-top: -50px;
   }
   .p-home-fv__title {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 128px;
-    line-height: 190px;
-    font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
-    line-height: 1.5em;
-    text-align: center;
-    margin-top: -5.5vw;
+    font-size: 64px;
+    margin-top: -55px;
     margin-left: -1vw;
   }
-  .p-home-fv__title--season {
-    margin-left: 30px;
-  }
   .p-home-fv__divider {
-    border-top: 1px solid black;
-    width: 750px;
-    margin-left: 95px;
+    width: 375px;
+    margin-left: 25px;
   }
   .p-home-fv__subtitle {
     font-family: "Oswald";
@@ -846,28 +820,75 @@ a:hover img {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    margin-top: 25px;
+    font-size: clamp(0.625rem, 0.3883495146vw + 0.5339805825rem, 1rem);
+    line-height: 1.5em;
     margin-left: 100px;
+    margin-left: clamp(1.5625rem, 4.854368932vw + 0.4247572816rem, 6.25rem);
+    margin-left: 25px;
+    margin-top: 10px;
   }
   .p-home-fv__btn-wrapper {
     position: absolute;
-    top: 75%;
-    left: 61%;
+    width: 200px;
+    top: 84%;
+    left: 56%;
   }
   .p-home-fv__deco-image {
-    position: absolute;
-    top: -5vw;
-    left: 1vw;
-    width: clamp(31.25rem, 37.2815533981vw + 22.5121359223rem, 67.25rem);
+    top: 0;
+    left: 0;
+    width: clamp(25rem, 17.8640776699vw + 20.8131067961rem, 42.25rem);
     z-index: -1;
   }
   .p-home-fv__swiper-deco {
-    position: absolute;
+    width: 550px;
+    top: 87.5%;
+    left: 0;
+    z-index: 1;
+  }
+  .p-home-fv__swiper-deco img {
     width: 100%;
-    width: 40.6vw;
-    width: 780px;
-    height: 100%;
-    top: 85%;
+  }
+}
+@media (min-width: 1024px) {
+  .p-home-fv__slider-item {
+    height: 957px;
+  }
+  .p-home-fv__title-zone {
+    width: 525px;
+    height: 120px;
+    margin-left: 0;
+    z-index: 1;
+    margin-top: -50px;
+  }
+  .p-home-fv__title {
+    font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
+    font-size: 76px;
+    margin-top: -55px;
+    margin-left: -1vw;
+  }
+  .p-home-fv__divider {
+    width: 475px;
+    margin-left: 40px;
+  }
+  .p-home-fv__subtitle {
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+  .p-home-fv__btn-wrapper {
+    position: absolute;
+    width: 250px;
+    top: 84%;
+    left: 56%;
+  }
+  .p-home-fv__deco-image {
+    top: 0;
+    left: 0;
+    width: clamp(25rem, 30.8090614887vw + 17.7791262136rem, 54.75rem);
+    z-index: -1;
+  }
+  .p-home-fv__swiper-deco {
+    width: 650px;
+    top: 87.5%;
     left: 0;
     z-index: 1;
   }
