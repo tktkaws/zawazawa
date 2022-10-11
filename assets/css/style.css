@@ -684,121 +684,118 @@ a:hover img {
   height: 1px;
 }
 
-@media (min-width: 375px) {
-  .p-home-fv {
-    position: relative;
-  }
-  .p-home-fv__slider-item {
-    height: 957px;
-    height: clamp(43.75rem, 16.6343042071vw + 39.8513349515rem, 59.8125rem);
-    object-fit: cover;
-  }
-  .p-home-fv__slider-item img {
-    height: 100%;
-    width: 100%;
-  }
-  .p-home-fv__absolute-wrapper {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  .p-home-fv__title-zone {
-    position: relative;
-    width: 933px;
-    width: clamp(20.3125rem, 39.3527508091vw + 11.0891990291rem, 58.3125rem);
-    background-color: white;
-    height: 11vw;
-    height: clamp(6.25rem, 6.8608414239vw + 4.6419902913rem, 12.875rem);
-    margin-left: 160px;
-    margin-left: clamp(0rem, 10.355987055vw - 2.427184466rem, 10rem);
-    z-index: 1;
-  }
-  .p-home-fv__title {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 128px;
-    line-height: 190px;
-    font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
-    line-height: 1.5em;
-    text-align: center;
-    margin-top: -0.8em;
-    margin-left: -1vw;
-  }
-  .p-home-fv__title--season {
-    margin-left: 30px;
-    margin-left: clamp(0.625rem, 1.2944983819vw + 0.3216019417rem, 1.875rem);
-  }
-  .p-home-fv__divider {
-    border-top: 1px solid black;
-    width: 750px;
-    width: clamp(17.1875rem, 30.7443365696vw + 9.9817961165rem, 46.875rem);
-    margin-left: 95px;
-    margin-left: clamp(1.5625rem, 4.5307443366vw + 0.5006067961rem, 5.9375rem);
-  }
-  .p-home-fv__subtitle {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    font-size: 0.8vw;
-    font-size: clamp(0.625rem, 0.3883495146vw + 0.5339805825rem, 1rem);
-    line-height: 1.5em;
-    margin-top: 25px;
-    margin-left: 100px;
-    margin-top: clamp(0.3125rem, 1.2944983819vw + 0.0091019417rem, 1.5625rem);
-    margin-left: clamp(1.5625rem, 4.5307443366vw + 0.5006067961rem, 5.9375rem);
-  }
-  .p-home-fv__btn-wrapper {
-    position: absolute;
-    padding-left: 50%;
-    width: 100%;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-  .p-home-fv__deco-image {
-    position: absolute;
-    top: -5vw;
-    left: 1vw;
-    width: clamp(31.25rem, 37.2815533981vw + 22.5121359223rem, 67.25rem);
-    z-index: -1;
-  }
-  .p-home-fv__swiper-deco {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding-right: 10%;
-    z-index: 1;
-  }
+.p-home-fv {
+  position: relative;
 }
-@media (min-width: 375px) and (min-width: 768px) {
-  .p-home-fv__swiper-deco {
-    padding-right: 20%;
-  }
+.p-home-fv__slider-item {
+  height: 957px;
+  height: clamp(43.75rem, 16.6343042071vw + 39.8513349515rem, 59.8125rem);
+  object-fit: cover;
 }
-@media (min-width: 375px) and (min-width: 1024px) {
+.p-home-fv__slider-item img {
+  height: 100%;
+  width: 100%;
+}
+.p-home-fv__absolute-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.p-home-fv__title-zone {
+  position: relative;
+  width: 933px;
+  width: clamp(20.3125rem, 39.3527508091vw + 11.0891990291rem, 58.3125rem);
+  background-color: white;
+  height: 11vw;
+  height: clamp(6.25rem, 6.8608414239vw + 4.6419902913rem, 12.875rem);
+  margin-left: 160px;
+  margin-left: clamp(0rem, 10.355987055vw - 2.427184466rem, 10rem);
+  z-index: 1;
+}
+.p-home-fv__title {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 128px;
+  line-height: 190px;
+  font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
+  line-height: 1.5em;
+  text-align: center;
+  margin-top: -0.8em;
+  margin-left: -1vw;
+}
+.p-home-fv__title--season {
+  margin-left: 30px;
+  margin-left: clamp(0.625rem, 1.2944983819vw + 0.3216019417rem, 1.875rem);
+}
+.p-home-fv__divider {
+  border-top: 1px solid black;
+  width: 750px;
+  width: clamp(17.1875rem, 30.7443365696vw + 9.9817961165rem, 46.875rem);
+  margin-left: 95px;
+  margin-left: clamp(1.5625rem, 4.5307443366vw + 0.5006067961rem, 5.9375rem);
+}
+.p-home-fv__subtitle {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 0.8vw;
+  font-size: clamp(0.625rem, 0.3883495146vw + 0.5339805825rem, 1rem);
+  line-height: 1.5em;
+  margin-top: 25px;
+  margin-left: 100px;
+  margin-top: clamp(0.3125rem, 1.2944983819vw + 0.0091019417rem, 1.5625rem);
+  margin-left: clamp(1.5625rem, 4.5307443366vw + 0.5006067961rem, 5.9375rem);
+}
+.p-home-fv__btn-wrapper {
+  position: absolute;
+  padding-left: 50%;
+  width: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.p-home-fv__deco-image {
+  position: absolute;
+  top: -5vw;
+  left: 1vw;
+  width: clamp(25rem, 43.7540453074vw + 14.7451456311rem, 67.25rem);
+  z-index: -1;
+}
+.p-home-fv__swiper-deco {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-right: 20%;
+  z-index: 1;
+}
+@media (min-width: 768px) {
   .p-home-fv__swiper-deco {
     padding-right: 30%;
   }
 }
-@media (min-width: 375px) and (min-width: 1440px) {
+@media (min-width: 1024px) {
+  .p-home-fv__swiper-deco {
+    padding-right: 40%;
+  }
+}
+@media (min-width: 1440px) {
   .p-home-fv__swiper-deco {
     padding-right: 60%;
   }
 }
-@media (min-width: 375px) {
-  .p-home-fv__swiper-deco img {
-    width: 100%;
-  }
+.p-home-fv__swiper-deco img {
+  width: 100%;
 }
+
 .swiper-wrapper {
   display: flex;
 }
@@ -820,9 +817,9 @@ a:hover img {
 .swiper-button-prev {
   color: black;
   top: 97%;
-  left: 0%;
+  left: 2%;
 }
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .swiper-button-prev {
     top: 95%;
     left: 5%;
@@ -831,9 +828,9 @@ a:hover img {
 .swiper-button-next {
   color: black;
   top: 97%;
-  left: 6.5%;
+  left: 8.5%;
 }
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .swiper-button-next {
     top: 95%;
     left: 11.5%;
