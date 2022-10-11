@@ -1,351 +1,180 @@
 // todo
-// clippathレスポンシブ
-// clippath下の余白
 // swiperボタン　レスポンシブ
 // メディアクエリ　スマホサイズ
 
 @use "./../../foundation/global" as *;
 
-.p-home-fv {
-  position: relative;
-  &__slider {
-  }
-  &__slider-item {
-    // 1920サイズ
-    height: 957px;
-    // スマホ・タブレット
-    height: 600px;
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-
-  &__absolute-wrapper {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // grid-template-columns: 564fr 933fr 423fr;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  &__title-zone {
-    position: relative;
-    width: 933px;
-    width: fluid-size(325, 933);
-    width: 325px;
-    background-color: white;
-    height: fluid-size(80, 206);
-    height: 80px;
-    margin-left: 160px;
-    margin-left: fluid-size(0, 160);
-    margin-left: 0;
-    z-index: 1;
-
-    // margin-top: -15vh;
-    margin-top: -50px;
-  }
-  &__title {
-    @include headingFont;
-    font-size: fluid-size(48, 128);
-    font-size: 48px;
-    // font-size: fluid-size(48, 96);
-    line-height: 1.5em;
-    text-align: center;
-    margin-top: -40px;
-    margin-left: -1vw;
-  }
-  &__title--season {
-    margin-left: 30px;
-    margin-left: fluid-size(0, 30);
-    margin-left: 5px;
-  }
-  &__divider {
-    border-top: 1px solid black;
-    width: fluid-size(275, 750);
-    margin-left: fluid-size(25, 95);
-    width: 275px;
-    margin-left: 25px;
-  }
-  &__subtitle {
-    @include baseFont;
-    font-size: fluid-size(10, 16);
-    line-height: 1.5em;
-    margin-left: 100px;
-    margin-left: fluid-size(25, 100);
-    margin-left: 25px;
-    // margin-top: fluid-size(10, 25);
-    margin-top: 10px;
-  }
-  &__btn-wrapper {
-    position: absolute;
-    width: 200px;
-    top: 84%;
-    left: 43%;
-  }
-
-  &__deco-image {
-    position: absolute;
-    top: -10vw;
-    left: 1vw;
-    top: 0;
-    left: 0;
-    width: fluid-size(400, 1076);
-    width: fluid-size(400, 676);
-    z-index: -1;
-  }
-
-  &__swiper-deco {
-    position: absolute;
-    width: 100%;
-
-    width: 780px;
-    width: fluid-size(200, 780);
-    width: 40.6vw;
-    width: fluid-size(275, 780);
-    width: 60vw;
-    width: 450px;
-    height: 100%;
-    top: 87.5%;
-    left: 0;
-    z-index: 1;
-    img {
-      width: 100%;
-    }
-  }
-}
-
-@include mq(md) {
-  .p-home-fv {
-    &__slider-item {
-      // 1920サイズ
-      height: 957px;
-      // スマホ・タブレット
-      height: 780px;
-      img {
-      }
-    }
-    &__absolute-wrapper {
-    }
-    &__title-zone {
-      width: 425px;
-      height: 100px;
-      margin-left: 0;
-      z-index: 1;
-      margin-top: -50px;
-    }
-    &__title {
-      font-size: 64px;
-      margin-top: -55px;
-      margin-left: -1vw;
-    }
-    &__title--season {
-    }
-    &__divider {
-      width: 375px;
-      margin-left: 25px;
-    }
-    &__subtitle {
-      @include baseFont;
-      font-size: fluid-size(10, 16);
-      line-height: 1.5em;
-      margin-left: 100px;
-      margin-left: fluid-size(25, 100);
-      margin-left: 25px;
-      // margin-top: fluid-size(10, 25);
-      margin-top: 10px;
-    }
-    &__btn-wrapper {
-      position: absolute;
-      width: 200px;
-      top: 84%;
-      left: 56%;
-    }
-
-    &__deco-image {
-      top: 0;
-      left: 0;
-      width: fluid-size(400, 676);
-      z-index: -1;
-    }
-
-    &__swiper-deco {
-      width: 550px;
-      top: 87.5%;
-      left: 0;
-      z-index: 1;
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-@include mq(lg) {
-  .p-home-fv {
-    &__slider-item {
-      // 1920サイズ
-      height: 957px;
-      img {
-      }
-    }
-    &__absolute-wrapper {
-    }
-    &__title-zone {
-      width: 525px;
-      height: 120px;
-      margin-left: 0;
-      z-index: 1;
-      margin-top: -50px;
-    }
-    &__title {
-      font-size: fluid-size(48, 128);
-      font-size: 76px;
-      margin-top: -55px;
-      margin-left: -1vw;
-    }
-    &__title--season {
-    }
-    &__divider {
-      width: 475px;
-      margin-left: 40px;
-    }
-    &__subtitle {
-      margin-left: 40px;
-      margin-top: 10px;
-    }
-    &__btn-wrapper {
-      position: absolute;
-      width: 250px;
-      top: 84%;
-      left: 56%;
-    }
-
-    &__deco-image {
-      top: 0;
-      left: 0;
-      width: fluid-size(400, 876);
-      z-index: -1;
-    }
-
-    &__swiper-deco {
-      width: 650px;
-      top: 87.5%;
-      left: 0;
-      z-index: 1;
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-// 1920ありき
-// @include mq(xl) {
-//   .p-home-fv {
-//     position: relative;
-//     &__slider {
-//     }
-//     &__slider-item {
-//       height: 957px;
-//       height: fluid-size(700, 957);
+// .p-home-fv {
+//   position: relative;
+//   &__slider {
+//   }
+//   &__slider-item {
+//     // 1920サイズ
+//     height: 957px;
+//     // スマホ・タブレット
+//     height: 600px;
+//     img {
+//       height: 100%;
+//       width: 100%;
 //       object-fit: cover;
+//     }
+//   }
+
+//   &__absolute-wrapper {
+//     position: absolute;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     // grid-template-columns: 564fr 933fr 423fr;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     z-index: 1;
+//   }
+//   &__title-zone {
+//     position: relative;
+//     width: 933px;
+//     width: fluid-size(325, 933);
+//     width: 325px;
+//     background-color: white;
+//     height: fluid-size(80, 206);
+//     height: 80px;
+//     margin-left: 160px;
+//     margin-left: fluid-size(0, 160);
+//     margin-left: 0;
+//     z-index: 1;
+
+//     // margin-top: -15vh;
+//     margin-top: -50px;
+//   }
+//   &__title {
+//     @include headingFont;
+//     font-size: fluid-size(48, 128);
+//     font-size: 48px;
+//     // font-size: fluid-size(48, 96);
+//     line-height: 1.5em;
+//     text-align: center;
+//     margin-top: -40px;
+//     margin-left: -1vw;
+//   }
+//   &__title--season {
+//     margin-left: 30px;
+//     margin-left: fluid-size(0, 30);
+//     margin-left: 5px;
+//   }
+//   &__divider {
+//     border-top: 1px solid black;
+//     width: fluid-size(275, 750);
+//     margin-left: fluid-size(25, 95);
+//     width: 275px;
+//     margin-left: 25px;
+//   }
+//   &__subtitle {
+//     @include baseFont;
+//     font-size: fluid-size(10, 16);
+//     line-height: 1.5em;
+//     margin-left: 100px;
+//     margin-left: fluid-size(25, 100);
+//     margin-left: 25px;
+//     // margin-top: fluid-size(10, 25);
+//     margin-top: 10px;
+//   }
+//   &__btn-wrapper {
+//     position: absolute;
+//     width: 200px;
+//     top: 84%;
+//     left: 43%;
+//   }
+
+//   &__deco-image {
+//     position: absolute;
+//     top: -10vw;
+//     left: 1vw;
+//     top: 0;
+//     left: 0;
+//     width: fluid-size(400, 1076);
+//     width: fluid-size(400, 676);
+//     z-index: -1;
+//   }
+
+//   &__swiper-deco {
+//     position: absolute;
+//     width: 100%;
+
+//     width: 780px;
+//     width: fluid-size(200, 780);
+//     width: 40.6vw;
+//     width: fluid-size(275, 780);
+//     width: 60vw;
+//     width: 450px;
+//     height: 100%;
+//     top: 87.5%;
+//     left: 0;
+//     z-index: 1;
+//     img {
+//       width: 100%;
+//     }
+//   }
+// }
+
+// @include mq(md) {
+//   .p-home-fv {
+//     &__slider-item {
+//       // 1920サイズ
+//       height: 957px;
+//       // スマホ・タブレット
+//       height: 780px;
 //       img {
-//         height: 100%;
-//         width: 100%;
 //       }
 //     }
-
 //     &__absolute-wrapper {
-//       position: absolute;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       // grid-template-columns: 564fr 933fr 423fr;
-//       width: 100%;
-//       height: 100%;
-//       top: 0;
-//       left: 0;
-//       z-index: 1;
 //     }
 //     &__title-zone {
-//       // grid-column: 2/2;
-//       // margin-top: 371px;
-//       // position: absolute;
-//       position: relative;
-//       width: 933px;
-//       width: fluid-size(325, 933);
-//       background-color: white;
-//       // padding: 50px;
-//       // width: 900px;
-//       // height: 206px;
-//       // padding: 2.6vw;
-//       // width: 49vw;
-//       height: 11vw;
-//       height: fluid-size(100, 206);
-//       // margin-left: 8vw;
-//       margin-left: 160px;
-//       margin-left: fluid-size(0, 160);
-
-//       // padding: fluid-size(25, 50);
-//       // width: fluid-size(450, 900);
-//       // height: fluid-size(103, 206);
-
+//       width: 425px;
+//       height: 100px;
+//       margin-left: 0;
 //       z-index: 1;
+//       margin-top: -50px;
 //     }
 //     &__title {
-//       // position: absolute;
-//       // top: 0;
-//       // left: 0;
-//       @include headingFont;
-//       font-size: fluid-size(48, 128);
-//       line-height: 1.5em;
-//       text-align: center;
-//       // margin-top: -108px;
-//       margin-top: -5.5vw;
+//       font-size: 64px;
+//       margin-top: -55px;
 //       margin-left: -1vw;
 //     }
 //     &__title--season {
-//       margin-left: 30px;
 //     }
 //     &__divider {
-//       border-top: 1px solid black;
-//       width: 750px;
-//       margin-left: 95px;
+//       width: 375px;
+//       margin-left: 25px;
 //     }
 //     &__subtitle {
 //       @include baseFont;
-//       // font-size: 0.8vw;
-//       // line-height: 1.5em;
-//       margin-top: 25px;
+//       font-size: fluid-size(10, 16);
+//       line-height: 1.5em;
 //       margin-left: 100px;
+//       margin-left: fluid-size(25, 100);
+//       margin-left: 25px;
+//       // margin-top: fluid-size(10, 25);
+//       margin-top: 10px;
 //     }
 //     &__btn-wrapper {
 //       position: absolute;
-//       top: 75%;
-//       left: 61%;
+//       width: 200px;
+//       top: 84%;
+//       left: 56%;
 //     }
 
 //     &__deco-image {
-//       position: absolute;
-//       top: -5vw;
-//       left: 1vw;
-//       width: fluid-size(500, 1076);
+//       top: 0;
+//       left: 0;
+//       width: fluid-size(400, 676);
 //       z-index: -1;
 //     }
 
 //     &__swiper-deco {
-//       position: absolute;
-//       width: 100%;
-//       width: 40.6vw;
-//       width: 780px;
-//       height: 100%;
-//       top: 85%;
+//       width: 550px;
+//       top: 87.5%;
 //       left: 0;
 //       z-index: 1;
 //       img {
@@ -354,6 +183,260 @@
 //     }
 //   }
 // }
+
+// @include mq(lg) {
+//   .p-home-fv {
+//     &__slider-item {
+//       // 1920サイズ
+//       height: 957px;
+//       img {
+//       }
+//     }
+//     &__absolute-wrapper {
+//     }
+//     &__title-zone {
+//       width: 525px;
+//       height: 120px;
+//       margin-left: 0;
+//       z-index: 1;
+//       margin-top: -50px;
+//     }
+//     &__title {
+//       font-size: fluid-size(48, 128);
+//       font-size: 76px;
+//       margin-top: -55px;
+//       margin-left: -1vw;
+//     }
+//     &__title--season {
+//     }
+//     &__divider {
+//       width: 475px;
+//       margin-left: 40px;
+//     }
+//     &__subtitle {
+//       margin-left: 40px;
+//       margin-top: 10px;
+//     }
+//     &__btn-wrapper {
+//       position: absolute;
+//       width: 250px;
+//       top: 84%;
+//       left: 56%;
+//     }
+
+//     &__deco-image {
+//       top: 0;
+//       left: 0;
+//       width: fluid-size(400, 876);
+//       z-index: -1;
+//     }
+
+//     &__swiper-deco {
+//       width: 650px;
+//       top: 87.5%;
+//       left: 0;
+//       z-index: 1;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+// @include mq(xl) {
+//   .p-home-fv {
+//     &__slider-item {
+//       // 1920サイズ
+//       height: 957px;
+//       img {
+//       }
+//     }
+//     &__absolute-wrapper {
+//     }
+//     &__title-zone {
+//       width: 933px;
+//       height: 120px;
+//       margin-left: 0;
+//       z-index: 1;
+//       margin-top: -50px;
+//     }
+//     &__title {
+//       font-size: fluid-size(48, 128);
+//       font-size: 76px;
+//       margin-top: -55px;
+//       margin-left: -1vw;
+//     }
+//     &__title--season {
+//     }
+//     &__divider {
+//       width: 475px;
+//       margin-left: 40px;
+//     }
+//     &__subtitle {
+//       margin-left: 40px;
+//       margin-top: 10px;
+//     }
+//     &__btn-wrapper {
+//       position: absolute;
+//       width: 250px;
+//       top: 84%;
+//       left: 56%;
+//     }
+
+//     &__deco-image {
+//       top: 0;
+//       left: 0;
+//       width: fluid-size(400, 876);
+//       z-index: -1;
+//     }
+
+//     &__swiper-deco {
+//       width: 650px;
+//       top: 87.5%;
+//       left: 0;
+//       z-index: 1;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+@include mq(sm) {
+  .p-home-fv {
+    position: relative;
+    &__slider {
+    }
+    &__slider-item {
+      height: 957px;
+      height: fluid-size(700, 957);
+      object-fit: cover;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &__absolute-wrapper {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // grid-template-columns: 564fr 933fr 423fr;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    &__title-zone {
+      // grid-column: 2/2;
+      // margin-top: 371px;
+      // position: absolute;
+      position: relative;
+      width: 933px;
+      width: fluid-size(325, 933);
+      background-color: white;
+      // padding: 50px;
+      // width: 900px;
+      // height: 206px;
+      // padding: 2.6vw;
+      // width: 49vw;
+      height: 11vw;
+      height: fluid-size(100, 206);
+      // margin-left: 8vw;
+      margin-left: 160px;
+      margin-left: fluid-size(0, 160);
+
+      // padding: fluid-size(25, 50);
+      // width: fluid-size(450, 900);
+      // height: fluid-size(103, 206);
+
+      z-index: 1;
+    }
+    &__title {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      @include headingFont;
+      font-size: fluid-size(48, 128);
+      line-height: 1.5em;
+      text-align: center;
+      // margin-top: -108px;
+      // margin-top: -5.5vw;
+      // margin-top: -40px;
+      // margin-top: -100px;
+      margin-top: -0.8em;
+      // margin-top: clamp(-40px, -5vw, -100px);
+
+      margin-left: -1vw;
+    }
+    &__title--season {
+      margin-left: 30px;
+      margin-left: fluid-size(10, 30);
+    }
+    &__divider {
+      border-top: 1px solid black;
+      width: 750px;
+      width: fluid-size(275, 750);
+      margin-left: 95px;
+      margin-left: fluid-size(25, 95);
+    }
+    &__subtitle {
+      @include baseFont;
+      font-size: 0.8vw;
+      font-size: fluid-size(10, 16);
+      line-height: 1.5em;
+      margin-top: 25px;
+      margin-left: 100px;
+      margin-top: fluid-size(5, 25);
+      margin-left: fluid-size(25, 95);
+    }
+    &__btn-wrapper {
+      position: absolute;
+      // width: fluid-size(100, 403);
+      // top: 75%;
+      // left: 61%;
+      padding-left: 50%;
+      width: 100%;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    &__deco-image {
+      position: absolute;
+      top: -5vw;
+      left: 1vw;
+      width: fluid-size(500, 1076);
+      z-index: -1;
+    }
+
+    &__swiper-deco {
+      position: absolute;
+      // width: 100%;
+      // width: 40.6vw;
+      // width: 780px;
+      // height: 100%;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding-right: 10%;
+      @include mq(md) {
+        padding-right: 20%;
+      }
+      @include mq(lg) {
+        padding-right: 30%;
+      }
+      @include mq(xl) {
+        padding-right: 60%;
+      }
+      z-index: 1;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
 
 // リファクタリング
 .swiper {
@@ -382,13 +465,29 @@
 .swiper-button {
   &-prev {
     color: black;
-    top: 95%;
-    left: 5%;
+    top: 97%;
+    left: 0%;
+    @include mq(md) {
+    }
+    @include mq(lg) {
+    }
+    @include mq(xl) {
+      top: 95%;
+      left: 5%;
+    }
   }
   &-next {
     color: black;
-    top: 95%;
-    left: 11.5%;
+    top: 97%;
+    left: 6.5%;
+    @include mq(md) {
+    }
+    @include mq(lg) {
+    }
+    @include mq(xl) {
+      top: 95%;
+      left: 11.5%;
+    }
   }
 }
 
