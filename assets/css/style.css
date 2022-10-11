@@ -962,6 +962,12 @@ a:hover img {
   margin-top: 0vw;
 }
 
+@media (min-width: 768px) {
+  .rayout-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 768px) and (max-width: 1500px) {
   .c-grid-wrapper {
     grid-template-columns: 100fr 70fr 704fr 35fr 628fr 10fr;
