@@ -7,14 +7,9 @@
 @use "./../foundation/global" as *;
 
 .l-header {
-  // height: 187px;
-  height: fluid-size(78, 187);
-  height: 10vh;
-  height: fluid-size(67, 187);
   height: 67px;
   @include mq(md) {
     height: fluid-size(98, 187);
-    height: 97px;
   }
   display: flex;
   justify-content: space-between;

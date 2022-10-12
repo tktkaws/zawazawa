@@ -9,8 +9,9 @@
   width: 403px;
   width: fluid-size(200, 403);
   width: 100%;
-  padding: 1.2em;
   padding: fluid-size(8, 18);
+  padding: 1.2em;
+
   @include baseFont;
   font-size: 24px;
   line-height: 1.5em;

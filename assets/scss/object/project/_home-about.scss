@@ -1,3 +1,7 @@
+// todo
+// 画像のサイズ位置
+// gridのmarginleft
+
 @use "./../../foundation/global" as *;
 
 .c-grid-wrapper {
@@ -22,21 +26,28 @@
     font-size: fluid-size(60, 128);
     line-height: fluid-size(90, 190);
     margin-bottom: fluid-size(10, 40);
+
+    @include headingFont;
+    font-size: fluid-size(48, 128);
+    line-height: 1.5em;
+    margin-top: -15px;
   }
   &__subtitle {
     display: inline-block;
     @include japaneseFont;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 49px;
+
     margin-bottom: 11px;
-    font-size: fluid-size(14, 36);
+
     line-height: fluid-size(25, 49);
+    font-size: 36px;
+    font-size: fluid-size(14, 36);
+    line-height: 2em;
     margin-bottom: fluid-size(6, 11);
+    padding-inline: 0.5em;
 
     color: #ffffff;
     background-color: black;
-    padding: 0.8em;
   }
   &__desc {
     margin-top: 32px;
@@ -100,63 +111,64 @@
   }
 }
 
+// @include mq("md-1500") {
+//   .c-grid-wrapper {
+//     // grid-template-columns: 70fr 704fr 35fr 628fr;
+//     // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
+//     grid-template-columns: 100fr 70fr 704fr 35fr 628fr 10fr;
+//   }
+//   .p-home-about {
+//     &__text-wrapper {
+//       grid-column: 3/3;
+//       grid-row: 1;
+//     }
+//     &__title {
+//     }
+//     &__subtitle {
+//     }
+//     &__desc {
+//     }
+//     &__deco {
+//       grid-column: 2/2;
+//       grid-row: 1;
+//       height: fluid-size(400, 657);
+//       margin-left: 0vw;
+//       &::before {
+//         height: fluid-size(300, 557);
+//       }
+//     }
+//     &__image-left {
+//       grid-column: 5/5;
+//       grid-row: 1;
+//       width: 25vw;
+//       width: fluid-size(190, 385);
+//     }
+//     &__image-right {
+//       grid-column: 5/5;
+//       grid-row: 1;
+//       width: 25vw;
+//       width: fluid-size(189, 378);
+//       margin-left: 10vw;
+//     }
+//   }
+// }
+
 @include mq("md") {
   .rayout-wrapper {
     max-width: 1500px;
     margin: 0 auto;
   }
-}
 
-@include mq("md-1500") {
-  .c-grid-wrapper {
-    // grid-template-columns: 70fr 704fr 35fr 628fr;
-    // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
-    grid-template-columns: 100fr 70fr 704fr 35fr 628fr 10fr;
-  }
-  .p-home-about {
-    &__text-wrapper {
-      grid-column: 3/3;
-      grid-row: 1;
-    }
-    &__title {
-    }
-    &__subtitle {
-    }
-    &__desc {
-    }
-    &__deco {
-      grid-column: 2/2;
-      grid-row: 1;
-      height: fluid-size(400, 657);
-      margin-left: 0vw;
-      &::before {
-        height: fluid-size(300, 557);
-      }
-    }
-    &__image-left {
-      grid-column: 5/5;
-      grid-row: 1;
-      width: 25vw;
-      width: fluid-size(190, 385);
-    }
-    &__image-right {
-      grid-column: 5/5;
-      grid-row: 1;
-      width: 25vw;
-      width: fluid-size(189, 378);
-      margin-left: 10vw;
-    }
-  }
-}
-
-@include mq("1500") {
   .c-grid-wrapper {
     grid-template-columns: 247fr 70fr 704fr 35fr 628fr 236fr;
+    grid-template-columns: 24fr 704fr 628fr;
+    column-gap: 40px;
+    margin-left: 50px;
   }
 
   .p-home-about {
     &__text-wrapper {
-      grid-column: 3/3;
+      grid-column: 2/2;
       grid-row: 1;
     }
     &__title {
@@ -167,7 +179,7 @@
     }
 
     &__deco {
-      grid-column: 2/2;
+      grid-column: 1/1;
       grid-row: 1;
       margin-top: fluid-size(12.5, 25);
 
@@ -180,13 +192,13 @@
     }
 
     &__image-left {
-      grid-column: 5/5;
+      grid-column: 3/3;
       grid-row: 1;
       width: 25vw;
       width: fluid-size(190, 385);
     }
     &__image-right {
-      grid-column: 5/5;
+      grid-column: 3/3;
       grid-row: 1;
       width: 25vw;
       width: fluid-size(189, 378);
