@@ -83,8 +83,7 @@
         </section>
 
         <section class="p-home-about" id="about">
-            <div class="rayout-wrapper">
-
+            <div class="c-contents-wrapper">
                 <div class="c-grid-wrapper">
                     <div class="p-home-about__text-wrapper">
                         <h2 class="p-home-about__title">company</h2>
