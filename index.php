@@ -110,49 +110,48 @@
         </section>
 
         <section class="p-home-news" id="news">
-            <div class="c-grid-wrapper">
-                <!-- <div class="p-home-news__main-contents-wrapper"></div> -->
-                <div class="p-home-news__title-wrapper">
-                    <h2 class="p-home-news__title">latest</h2>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
-                        class="p-home-news__title-image" />
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
-                        class="p-home-news__title-image" />
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
-                        class="p-home-news__title-image" />
-                </div>
-                <div class="p-home-news__card-wrapper">
-                    <?php
-                    $posts = array(
-                        'post_type' => 'post',
-                        'posts_per_page' => 3,
-                    );
-                    $the_query = new WP_Query($posts);
-                    if ($the_query->have_posts()) :
-                    ?>
-                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <div class="p-home-news__card">
-                        <a href="<?php echo_category_link(); ?>">
-                            <div class="p-home-news__card-image">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/<?php echo_category_name() ?>.png"
-                                    alt="" />
-                                <p class="p-home-news__card-date">
-                                    <?php echo get_the_date(); ?>
-                                </p>
-                            </div>
-                            <div class="p-home-news__card-title">new <?php echo_category_name() ?> release</div>
-                            <div class="p-home-news__card-subtitle">read more</div>
-                        </a>
+            <div class="c-contents-wrapper">
+                <div class="p-home-news__grid-wrapper">
+                    <!-- <div class="p-home-news__main-contents-wrapper"></div> -->
+                    <div class="p-home-news__title-wrapper">
+                        <h2 class="p-home-news__title">latest</h2>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                            class="p-home-news__title-image" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                            class="p-home-news__title-image" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sankaku.svg" alt=""
+                            class="p-home-news__title-image" />
                     </div>
-                    <?php endwhile; ?>
-                    <?php wp_reset_postdata(); ?>
-                    <?php endif; ?>
-                </div>
-
-
-
-                <div class="p-home-news__btn-wrapper">
-                    <button class="c-button--responsive">read more</button>
+                    <div class="p-home-news__card-wrapper">
+                        <?php
+                        $posts = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 3,
+                        );
+                        $the_query = new WP_Query($posts);
+                        if ($the_query->have_posts()) :
+                        ?>
+                        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <div class="p-home-news__card">
+                            <a href="<?php echo_category_link(); ?>">
+                                <div class="p-home-news__card-image">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/<?php echo_category_name() ?>.png"
+                                        alt="" />
+                                    <p class="p-home-news__card-date">
+                                        <?php echo get_the_date(); ?>
+                                    </p>
+                                </div>
+                                <div class="p-home-news__card-title">new <?php echo_category_name() ?> release</div>
+                                <div class="p-home-news__card-subtitle">read more</div>
+                            </a>
+                        </div>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                        <?php endif; ?>
+                    </div>
+                    <div class="p-home-news__btn-wrapper">
+                        <button class="c-button--responsive">read more</button>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,3 +1,5 @@
+// ジャーナルのフォントサイズ　1500サイズでは一定にしたい　clamp
+
 @use "./../../foundation/global" as *;
 
 .p-home-news {
@@ -5,15 +7,14 @@
   margin-bottom: 97px;
   position: relative;
 
-  &__card-wrapper {
-    display: flex;
-    flex-direction: column;
-    grid-column: 4/-4;
-    grid-row: 1;
-
-    gap: 60px;
-    margin-top: 30px;
-
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
+    grid-template-rows: auto auto;
+    row-gap: 44px;
+    & > * {
+      grid-column: 2/-2;
+    }
     &::before {
       position: absolute;
       content: "journal";
@@ -35,6 +36,16 @@
       left: 0;
       left: 35%;
     }
+  }
+
+  &__card-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-column: 4/-4;
+    grid-row: 1;
+
+    gap: 60px;
+    margin-top: 30px;
   }
   &__card {
     display: inline-block;
@@ -130,10 +141,16 @@
 
 @include mq(md) {
   .p-home-news {
-    .c-grid-wrapper {
-      // grid-template-columns: 70fr 704fr 35fr 628fr;
-      // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
-      grid-template-columns: 270fr 1500fr 270fr;
+    &__grid-wrapper {
+      grid-template-columns: 5vw 68vw 5vw;
+      grid-template-columns: 100fr 1300fr 100fr;
+      margin-left: fluid-size(0, 50);
+
+      &::before {
+        writing-mode: lr;
+        top: -10%;
+        left: 16%;
+      }
     }
 
     &__card-wrapper {
@@ -142,21 +159,19 @@
       flex-direction: row;
 
       margin-left: 125px;
-      margin-top: 6px;
-
-      &::before {
-        writing-mode: lr;
-        top: -19%;
-        left: 16%;
-      }
+      margin-left: 4.5em;
+      // margin-top: 6px;
+      gap: 77px;
     }
 
     &__title-wrapper {
       grid-column: 3/3;
       // grid-column: 4/-4;
       grid-row: 1;
-      margin-left: -15vw;
-      margin-top: -3vw;
+      // margin-left: -15vw;
+      // margin-top: -3vw;
+      margin-left: -1.5em;
+      margin-top: -1.5em;
     }
 
     &__btn-wrapper {
@@ -174,117 +189,3 @@
     }
   }
 }
-
-// .p-home-news {
-//   margin-top: 97px;
-//   position: relative;
-//   &__main-contents-wrapper {
-//     &::before {
-//       position: absolute;
-//       content: "journal";
-//       display: block;
-//       font-family: "Oswald";
-//       font-style: normal;
-//       font-weight: 700;
-//       // font-size: 400px;
-//       // line-height: 593px;
-//       font-size: 27vw;
-//       line-height: 34vw;
-//       color: #f4f4f4;
-//       z-index: -1;
-//       top: 0;
-//       left: 0;
-//     }
-
-//     display: flex;
-//     justify-content: space-evenly;
-//     height: 400px;
-//   }
-
-//   &__card-wrapper {
-//     display: flex;
-
-//     gap: 120px;
-//     margin-top: 90px;
-//   }
-//   &__card {
-//   }
-//   &__card-image {
-//     width: 238px;
-//     height: 199px;
-//     position: relative;
-
-//     img {
-//       width: 100%;
-//       height: 100%;
-//     }
-
-//     &::after {
-//       position: absolute;
-//       top: 10%;
-//       left: 10%;
-//       content: "";
-//       width: 238px;
-//       height: 199px;
-//       background: linear-gradient(
-//         90deg,
-//         #9b92ec 2.07%,
-//         #bdbbfc 28.68%,
-//         #dfcbfd 55.01%,
-//         #fb8cf0 79.8%,
-//         #b233bc 101.2%
-//       );
-//       transform: matrix(1, 0, 0, -1, 0, 0);
-//       z-index: -1;
-//     }
-//   }
-//   &__card-date {
-//     position: absolute;
-//     top: 10%;
-//     left: 10%;
-//     color: #d058d1;
-//   }
-//   &__card-title {
-//     font-family: "Oswald";
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 34px;
-//     line-height: 50px;
-//     border-bottom: 1px solid;
-//     margin-top: 30px;
-//   }
-//   &__card-subtitle {
-//     font-family: "Oswald";
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 20px;
-//     line-height: 30px;
-//     margin-top: 10px;
-//   }
-
-//   &__title-wrapper {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     gap: 10px;
-//   }
-//   &__title {
-//     writing-mode: vertical-rl;
-
-//     font-family: "Oswald";
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 64px;
-//     line-height: 95px;
-//   }
-//   &__title-image {
-//     // width: 50px;
-//   }
-//   &__btn-wrapper {
-//     margin-top: 150px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-// }
