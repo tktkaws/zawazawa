@@ -1303,7 +1303,7 @@ a:hover img {
   }
 }
 .p-home-category {
-  margin-top: clamp(0.3125rem, 0.6472491909vw + 0.1608009709rem, 0.9375rem);
+  margin-top: clamp(3.125rem, 4.2718446602vw + 2.1237864078rem, 7.25rem);
 }
 .p-home-category__link {
   width: 100%;
@@ -1326,28 +1326,33 @@ a:hover img {
 .p-home-category__card-image img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 .p-home-category__card-text {
   text-align: center;
+  margin-bottom: clamp(0.625rem, 0.6472491909vw + 0.4733009709rem, 1.25rem);
 }
 .p-home-category__card-title {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 64px;
-  line-height: 95px;
+  font-size: 16px;
+  line-height: 24px;
   font-size: clamp(2rem, 2.071197411vw + 1.5145631068rem, 4rem);
   line-height: clamp(3rem, 3.0420711974vw + 2.2870145631rem, 5.9375rem);
   border-bottom: 1px solid #000;
   width: 60%;
   margin: 0 auto;
+  margin-top: clamp(1.0625rem, 1.1650485437vw + 0.7894417476rem, 2.1875rem);
 }
 .p-home-category__card-subtitle {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: clamp(1rem, 0.5177993528vw + 0.8786407767rem, 1.5rem);
+  line-height: clamp(1.5rem, 0.7766990291vw + 1.317961165rem, 2.25rem);
 }
 
 @media (min-width: 375px) {
@@ -1383,6 +1388,9 @@ a:hover img {
   .p-home-category__link {
     width: 100%;
     grid-column: span 2;
+  }
+  .p-home-category__link:nth-of-type(odd) .p-home-category__card {
+    flex-direction: column-reverse;
   }
 }
 .p-home-info {

@@ -1,8 +1,7 @@
 @use "./../../foundation/global" as *;
 
 .p-home-category {
-  margin-top: fluid-size(5, 15);
-  // display: flex;
+  margin-top: fluid-size(50, 116);
 
   &__link {
     width: 100%;
@@ -12,7 +11,6 @@
     flex-direction: column;
     gap: 10px;
   }
-
   &__card--reverse {
     display: flex;
     flex-direction: column-reverse;
@@ -20,35 +18,31 @@
   }
   &__card-image {
     width: 100%;
-    // height: 593px;
     height: fluid-size(300, 593);
     aspect-ratio: 384/593;
     img {
       height: 100%;
       width: 100%;
+      object-fit: cover;
     }
   }
   &__card-text {
     text-align: center;
+    margin-bottom: fluid-size(10, 20);
   }
   &__card-title {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 64px;
-    line-height: 95px;
+    @include baseFont;
     font-size: fluid-size(32, 64);
     line-height: fluid-size(48, 95);
     border-bottom: 1px solid #000;
     width: 60%;
     margin: 0 auto;
+    margin-top: fluid-size(17, 35);
   }
   &__card-subtitle {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
+    @include baseFont;
+    font-size: fluid-size(16, 24);
+    line-height: fluid-size(24, 36);
   }
 }
 
@@ -90,20 +84,6 @@
   }
 }
 
-// @include mq(lg) {
-//   .p-home-category {
-//     .grid10 {
-//       display: grid;
-//       grid-template-columns: repeat(10, 1fr);
-//     }
-
-//     &__link {
-//       width: 100%;
-//       grid-column: span 2;
-//     }
-//   }
-// }
-
 @include mq(xl) {
   .p-home-category {
     .grid10 {
@@ -114,6 +94,11 @@
     &__link {
       width: 100%;
       grid-column: span 2;
+    }
+    &__link:nth-of-type(odd) {
+      .p-home-category__card {
+        flex-direction: column-reverse;
+      }
     }
   }
 }

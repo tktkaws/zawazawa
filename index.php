@@ -183,8 +183,6 @@
                 </div>
             </div>
         </section>
-
-
         <section class="p-home-category">
             <div class="grid10">
                 <a href="/category/cap/" class="p-home-category__link">
@@ -198,7 +196,6 @@
                         </div>
                     </div>
                 </a>
-
                 <a href="/category/t-shirt/" class="p-home-category__link">
                     <div class="p-home-category__card">
                         <div class="p-home-category__card-image">
@@ -210,7 +207,6 @@
                         </div>
                     </div>
                 </a>
-
                 <a href="/category/towel/" class="p-home-category__link">
                     <div class="p-home-category__card">
                         <div class="p-home-category__card-image">
@@ -222,7 +218,6 @@
                         </div>
                     </div>
                 </a>
-
                 <a href="/category/bag/" class="p-home-category__link">
                     <div class="p-home-category__card">
                         <div class="p-home-category__card-image">
