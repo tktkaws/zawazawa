@@ -385,7 +385,6 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   min-width: 350px;
   width: 100%;
   margin: 0 auto;
@@ -597,14 +596,27 @@ a:hover img {
 .l-footer {
   display: flex;
   justify-content: flex-end;
-  margin-top: -100px;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
   font-size: 24px;
-  line-height: 36px;
+  font-size: clamp(1rem, 0.5177993528vw + 0.8786407767rem, 1.5rem);
+  line-height: 1.5em;
+  margin-top: -30px;
+}
+.l-footer__subtext {
+  text-transform: capitalize;
 }
 
+@media (min-width: 768px) {
+  .l-footer {
+    margin-top: -4vw;
+    margin-right: 1.5vw;
+  }
+}
 .c-contents-wrapper {
   max-width: 1500px;
   margin: 0 auto;
@@ -1394,7 +1406,7 @@ a:hover img {
   }
 }
 .p-home-info {
-  margin-top: clamp(3.125rem, 13.2686084142vw + 0.0151699029rem, 15.9375rem);
+  margin-top: clamp(3.125rem, 9.7087378641vw + 0.8495145631rem, 12.5rem);
 }
 .p-home-info__grid-wrapper {
   display: grid;
@@ -1535,14 +1547,8 @@ a:hover img {
 @media (min-width: 1024px) {
   .p-home-info__grid-wrapper {
     display: grid;
-    grid-template-columns: 15vw 15vw 15vw;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-columns: 15vw 30vw 30vw;
-    grid-template-columns: 15vw 43vw 25vw;
-    grid-template-columns: 19vw 29vw 23vw;
-    column-gap: 10vw;
-    column-gap: 35px;
+    grid-template-columns: 20vw 29vw 22.5vw;
+    column-gap: 5vw;
   }
   .p-home-info__aside-left {
     grid-column: span 1;
@@ -1550,8 +1556,7 @@ a:hover img {
   }
   .p-home-info__deco {
     justify-content: flex-start;
-    margin-right: clamp(0.625rem, 2.5889967638vw + 0.0182038835rem, 3.125rem);
-    margin-right: 6vw;
+    margin-right: 7vw;
     margin-left: 0;
   }
   .p-home-info__deco::before {
@@ -1564,14 +1569,21 @@ a:hover img {
   .p-home-info__main-wrapper {
     grid-column: 2/-2;
     margin-top: clamp(2.5rem, 2.5889967638vw + 1.8932038835rem, 5rem);
-    margin-left: -41px;
     margin-left: -1.1vw;
   }
   .p-home-info__image {
     display: block;
     position: relative;
-    margin-left: -1.1vw;
+    margin-left: 8vw;
     grid-column: 3/3;
+  }
+}
+@media (min-width: 1440px) {
+  .p-home-info__grid-wrapper {
+    column-gap: 9vw;
+  }
+  .p-home-info__image {
+    margin-left: -1.1vw;
   }
 }
 .p-category-list {

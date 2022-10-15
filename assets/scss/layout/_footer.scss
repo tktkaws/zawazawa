@@ -1,10 +1,25 @@
+@use "./../foundation/global" as *;
+
 .l-footer {
   display: flex;
   justify-content: flex-end;
-  margin-top: -100px;
-  font-family: "Oswald";
-  font-style: normal;
+  @include baseFont;
   font-weight: 500;
   font-size: 24px;
-  line-height: 36px;
+  font-size: fluid-size(16, 24);
+  line-height: 1.5em;
+  margin-top: -30px;
+  &__subtext {
+    text-transform: capitalize;
+  }
+}
+@include mq(md) {
+  .l-footer {
+    margin-top: -4vw;
+    margin-right: 1.5vw;
+  }
+}
+@include mq(lg) {
+}
+@include mq(xl) {
 }

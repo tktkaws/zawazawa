@@ -1,7 +1,7 @@
 @use "./../../foundation/global" as *;
 
 .p-home-info {
-  margin-top: fluid-size(50, 255);
+  margin-top: fluid-size(50, 200);
   &__grid-wrapper {
     display: grid;
     // grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
@@ -172,34 +172,17 @@
   .p-home-info {
     &__grid-wrapper {
       display: grid;
-      // grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
-      // grid-template-columns: 369fr 1fr 562fr 1fr 434fr 1fr;
-      // grid-template-columns: 10vw 1fr 562fr 1fr 434fr 1fr;
-      grid-template-columns: 15vw 15vw 15vw;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-columns: repeat(10, 1fr);
-      grid-template-columns: 15vw 30vw 30vw;
-      grid-template-columns: 15vw 43vw 25vw;
-      grid-template-columns: 19vw 29vw 23vw;
-
-      // grid-template-rows: auto auto;
-      // row-gap: 44px;
-      // column-gap: fluid-size(20, 100);
-      column-gap: 10vw;
-      column-gap: 35px;
+      grid-template-columns: 20vw 29vw 22.5vw;
+      column-gap: 5vw;
     }
 
     &__aside-left {
       grid-column: span 1;
-      // margin-right: fluid-size(6, 12);
-
-      // width: 369px;
       background-color: black;
     }
     &__deco {
       justify-content: flex-start;
-      margin-right: fluid-size(10, 50);
-      margin-right: 6vw;
+      margin-right: 7vw;
       margin-left: 0;
       &::before {
         height: 557px;
@@ -214,16 +197,26 @@
     &__main-wrapper {
       grid-column: 2/-2;
       margin-top: fluid-size(40, 80);
-      margin-left: -41px;
       margin-left: -1.1vw;
       // width: 684px;
     }
     &__image {
       display: block;
       position: relative;
-      margin-left: -1.1vw;
+      margin-left: 8vw;
       // width: 100%;
       grid-column: 3/3;
+    }
+  }
+}
+
+@include mq("xl") {
+  .p-home-info {
+    &__grid-wrapper {
+      column-gap: 9vw;
+    }
+    &__image {
+      margin-left: -1.1vw;
     }
   }
 }
