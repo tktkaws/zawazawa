@@ -655,7 +655,7 @@ a:hover img {
 
 .c-button--responsive {
   position: relative;
-  width: clamp(18.75rem, 19.6763754045vw + 14.1383495146rem, 37.75rem);
+  width: clamp(12.5rem, 26.1488673139vw + 6.3713592233rem, 37.75rem);
   height: 92px;
   height: clamp(2.875rem, 2.9773462783vw + 2.177184466rem, 5.75rem);
   background-color: black;
@@ -924,13 +924,14 @@ a:hover img {
   justify-content: flex-start;
   writing-mode: vertical-rl;
   gap: 20px;
+  gap: clamp(0.625rem, 0.6472491909vw + 0.4733009709rem, 1.25rem);
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  margin-top: clamp(3.125rem, 3.2362459547vw + 2.3665048544rem, 6.25rem);
   height: clamp(31.25rem, 25.8899676375vw + 25.182038835rem, 56.25rem);
+  height: 100%;
 }
 .p-home-about__deco::before {
   content: "";
@@ -938,6 +939,7 @@ a:hover img {
   background-color: black;
   width: 2px;
   height: clamp(25rem, 25.8899676375vw + 18.932038835rem, 50rem);
+  height: 80%;
   justify-self: center;
 }
 .p-home-about__image-left {
@@ -975,10 +977,12 @@ a:hover img {
     grid-row: 1;
     margin-top: clamp(0.78125rem, 0.8090614887vw + 0.5916262136rem, 1.5625rem);
     height: clamp(34.375rem, 10.1618122977vw + 31.9933252427rem, 44.1875rem);
+    height: 100%;
     margin-left: 0vw;
   }
   .p-home-about__deco::before {
     height: clamp(25rem, 10.1618122977vw + 22.6183252427rem, 34.8125rem);
+    height: 77%;
   }
   .p-home-about__image-left {
     grid-column: 3/3;
@@ -995,8 +999,7 @@ a:hover img {
   }
 }
 .p-home-news {
-  margin-top: 97px;
-  margin-top: clamp(3.125rem, 3.0420711974vw + 2.4120145631rem, 6.0625rem);
+  margin-top: clamp(3.125rem, 3.7540453074vw + 2.2451456311rem, 6.75rem);
   position: relative;
 }
 .p-home-news__grid-wrapper {
@@ -1016,10 +1019,10 @@ a:hover img {
   writing-mode: vertical-rl;
   font-family: "Oswald";
   font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 700;
-  font-size: 27vw;
-  line-height: 34vw;
-  font-size: clamp(12.5rem, 12.9449838188vw + 9.4660194175rem, 25rem);
   line-height: clamp(20rem, 17.6699029126vw + 15.8586165049rem, 37.0625rem);
   letter-spacing: clamp(0.3125rem, 0.3883495146vw + 0.2214805825rem, 0.6875rem);
   font-size: min(26vw, 400px);
@@ -1034,10 +1037,9 @@ a:hover img {
   flex-direction: column;
   grid-column: 4/-4;
   grid-row: 1;
-  gap: 60px;
-  margin-top: 30px;
   gap: clamp(0.625rem, 3.2362459547vw - 0.1334951456rem, 3.75rem);
   margin-top: clamp(0.625rem, 1.2944983819vw + 0.3216019417rem, 1.875rem);
+  width: 50%;
 }
 .p-home-news__card {
   display: inline-block;
@@ -1045,13 +1047,13 @@ a:hover img {
 .p-home-news__card-image {
   aspect-ratio: 238/199;
   object-fit: cover;
-  width: 50%;
-  width: clamp(7.25rem, 7.8964401294vw + 5.3992718447rem, 14.875rem);
+  width: 100%;
   position: relative;
 }
 .p-home-news__card-image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .p-home-news__card-image::after {
   position: absolute;
@@ -1075,6 +1077,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
   font-size: clamp(1rem, 1.1650485437vw + 0.7269417476rem, 2.125rem);
   line-height: clamp(1.4375rem, 1.7475728155vw + 1.0279126214rem, 3.125rem);
   border-bottom: 1px solid;
@@ -1083,6 +1087,9 @@ a:hover img {
 .p-home-news__card-subtitle {
   font-family: "Oswald";
   font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
@@ -1096,12 +1103,15 @@ a:hover img {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  margin-right: 1vw;
 }
 .p-home-news__title {
   writing-mode: vertical-rl;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
   font-size: 64px;
   line-height: 95px;
   margin-bottom: 3px;
@@ -1119,7 +1129,6 @@ a:hover img {
 
 @media (min-width: 768px) {
   .p-home-news__grid-wrapper {
-    grid-template-columns: 5vw 68vw 5vw;
     grid-template-columns: 100fr 1300fr 100fr;
     margin-left: clamp(0rem, 3.2362459547vw - 0.7584951456rem, 3.125rem);
   }
@@ -1132,20 +1141,20 @@ a:hover img {
     grid-column: 2/2;
     grid-row: 1;
     flex-direction: row;
-    margin-left: 125px;
-    margin-left: 4.5em;
-    gap: 77px;
-    margin-left: 27px;
-    margin-top: 39px;
+    width: 100%;
     gap: clamp(0.625rem, 4.3365695793vw - 0.3913834951rem, 4.8125rem);
     margin-left: clamp(0rem, 1.7475728155vw - 0.4095873786rem, 1.6875rem);
     margin-top: clamp(0rem, 2.5242718447vw - 0.5916262136rem, 2.4375rem);
+  }
+  .p-home-news__card-image {
+    width: clamp(7.25rem, 7.8964401294vw + 5.3992718447rem, 14.875rem);
   }
   .p-home-news__title-wrapper {
     grid-column: 3/3;
     grid-row: 1;
     margin-left: -1.5em;
     margin-top: -1.5em;
+    margin-right: 0;
   }
   .p-home-news__btn-wrapper {
     grid-column: 2/2;
@@ -1154,7 +1163,6 @@ a:hover img {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 76px;
     margin-top: clamp(1.25rem, 3.6245954693vw + 0.4004854369rem, 4.75rem);
   }
   .p-home-news__btn-wrapper > * {

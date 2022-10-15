@@ -53,9 +53,11 @@
     justify-content: flex-start;
     writing-mode: vertical-rl;
     gap: 20px;
+    gap: fluid-size(10, 20);
     @include baseFont;
-    margin-top: fluid-size(50, 100);
+    // margin-top: fluid-size(50, 100);
     height: fluid-size(500, 900);
+    height: 100%;
 
     &::before {
       content: "";
@@ -63,6 +65,7 @@
       background-color: black;
       width: 2px;
       height: fluid-size(400, 800);
+      height: 80%;
       justify-self: center;
     }
   }
@@ -103,9 +106,11 @@
       grid-row: 1;
       margin-top: fluid-size(12.5, 25);
       height: fluid-size(550, 707);
+      height: 100%;
       margin-left: 0vw;
       &::before {
         height: fluid-size(400, 557);
+        height: 77%;
       }
     }
     &__image-left {
