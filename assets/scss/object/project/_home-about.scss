@@ -52,11 +52,8 @@
     align-items: center;
     justify-content: flex-start;
     writing-mode: vertical-rl;
-    gap: 20px;
     gap: fluid-size(10, 20);
     @include baseFont;
-    // margin-top: fluid-size(50, 100);
-    height: fluid-size(500, 900);
     height: 100%;
 
     &::before {
@@ -64,7 +61,6 @@
       display: block;
       background-color: black;
       width: 2px;
-      height: fluid-size(400, 800);
       height: 80%;
       justify-self: center;
     }

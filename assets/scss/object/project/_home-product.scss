@@ -17,8 +17,9 @@
   &__title {
     @include headingFont;
     font-size: fluid-size(50, 128);
-    line-height: fluid-size(60, 150);
+    line-height: fluid-size(60, 143);
     margin-bottom: fluid-size(10, 40);
+    letter-spacing: 1px;
   }
   &__desc {
     margin-top: fluid-size(25, 50);
@@ -43,7 +44,7 @@
     justify-content: center;
     margin-top: -50px;
     z-index: 2;
-    width: 90%;
+    width: 100%;
   }
 
   &__deco {
@@ -53,51 +54,71 @@
     align-items: center;
     justify-content: flex-start;
     writing-mode: vertical-rl;
-    gap: 20px;
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: fluid-size(50, 100);
-
-    height: 900px;
-    height: fluid-size(500, 900);
+    gap: fluid-size(10, 20);
+    @include baseFont;
+    height: 100%;
 
     &::before {
       content: "";
       display: block;
       background-color: black;
       width: 2px;
-      height: 800px;
-      height: fluid-size(400, 800);
-      // height: 900px;
+      height: 80%;
       justify-self: center;
     }
   }
+
+  &__btn-wrapper {
+    grid-column: 4/-4;
+    grid-row: 3;
+    margin-top: -100px;
+  }
 }
 
-@include mq("md-1500") {
+@include mq("md") {
   .p-home-product {
     .c-grid-wrapper {
       // grid-template-columns: 70fr 704fr 35fr 628fr;
       // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
       grid-template-columns: 100fr 70fr 758fr 35fr 801fr 10fr;
+      grid-template-columns: 24fr 704fr 628fr;
+      grid-template-columns: 24fr 469fr 801fr;
+      column-gap: 60px;
+      column-gap: fluid-size(40, 60);
+      margin-left: fluid-size(0, 50);
+    }
+
+    &__deco {
+      grid-column: 1/1;
+      grid-row: 1;
+      margin-top: fluid-size(12.5, 25);
+      height: 100%;
+      margin-left: -6px;
+      &::before {
+        height: 54.5%;
+      }
     }
 
     &__text-wrapper {
-      grid-column: 3/3;
+      grid-column: 2/4;
       grid-row: 1;
+    }
+    &__desc {
+      margin-top: 78px;
+      margin-left: 30px;
+      margin-top: fluid-size(36, 78);
+      margin-left: fluid-size(15, 30);
     }
 
     &__image {
-      grid-column: 5/5;
+      grid-column: 3/3;
       grid-row: 1;
 
       position: relative;
       width: 100%;
-      margin-left: -120px;
-      margin-top: 30px;
+      width: 33vw;
+      margin-left: 0px;
+      margin-top: 66px;
       &::after {
         content: "";
         display: block;
@@ -110,140 +131,66 @@
         top: 0;
         left: 167px;
         left: fluid-size(43, 167);
-        left: 8vw;
+        left: 8.8vw;
 
         z-index: -1;
       }
     }
     &__btn-wrapper {
-      // grid-column: 5/5;
+      // grid-column: 2/2;
       // grid-row: 2;
-      position: absolute;
-      top: 100%;
-      left: -45%;
+      margin-top: -16.7vw;
+      margin-left: 16.4vw;
+      justify-content: flex-start;
     }
   }
 }
 
-@include mq("1500") {
-  .p-home-product {
-    .c-grid-wrapper {
-      // grid-template-columns: 70fr 704fr 35fr 628fr;
-      // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
-      grid-template-columns: 247fr 70fr 758fr 35fr 801fr 236fr;
-    }
-
-    &__text-wrapper {
-      grid-column: 3/3;
-      grid-row: 1;
-      margin-right: -100px;
-    }
-
-    &__image {
-      grid-column: 5/5;
-      grid-row: 1;
-
-      position: relative;
-      width: 100%;
-      margin-left: -120px;
-      margin-top: 100px;
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        // width: 634px;
-        width: 100%;
-        // height: 950px;
-        height: 100%;
-        background: #f1e8ff;
-        top: 0;
-        left: 167px;
-        left: fluid-size(43, 167);
-        left: 8vw;
-
-        z-index: -1;
-      }
-    }
-    &__btn-wrapper {
-      // grid-column: 5/5;
-      // grid-row: 2;
-      position: absolute;
-      top: 80%;
-      left: -45%;
-    }
-  }
-}
-// .p-home-product {
-//   margin-top: 100px;
-//   &__main-contents-wrapper {
-//     display: flex;
-//   }
-//   &__deco {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     writing-mode: vertical-rl;
-//     gap: 19px;
-
-//     font-family: "Oswald";
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 24px;
-
-//     &::before {
-//       content: "";
-//       display: block;
-//       background-color: black;
-//       width: 2px;
-//       height: 557px;
-
-//       justify-self: center;
+// @include mq("1500") {
+//   .p-home-product {
+//     .c-grid-wrapper {
+//       // grid-template-columns: 70fr 704fr 35fr 628fr;
+//       // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
+//       grid-template-columns: 247fr 70fr 758fr 35fr 801fr 236fr;
 //     }
-//   }
 
-//   &__text-wrapper {
-//     margin-left: 50px;
-//   }
-//   &__title {
-//     @include headingFont;
-//     font-size: fluid-size(60, 128);
-//     line-height: 146px;
-//   }
-//   &__desc {
-//     margin-top: 50px;
-//     font-family: "Noto Sans";
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 22.5px;
-//     line-height: 31px;
-//   }
-//   &__image-wrapper {
-//     margin-left: -250px;
-//     z-index: -1;
-//     margin-top: 150px;
-//   }
-//   &__image-left {
-//     position: relative;
-//     width: 634px;
-//     height: 950px;
+//     &__text-wrapper {
+//       grid-column: 3/3;
+//       grid-row: 1;
+//       margin-right: -100px;
+//     }
 
-//     &::after {
-//       content: "";
-//       display: block;
+//     &__image {
+//       grid-column: 5/5;
+//       grid-row: 1;
+
+//       position: relative;
+//       width: 100%;
+//       margin-left: -120px;
+//       margin-top: 100px;
+//       &::after {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         // width: 634px;
+//         width: 100%;
+//         // height: 950px;
+//         height: 100%;
+//         background: #f1e8ff;
+//         top: 0;
+//         left: 167px;
+//         left: fluid-size(43, 167);
+//         left: 8vw;
+
+//         z-index: -1;
+//       }
+//     }
+//     &__btn-wrapper {
+//       // grid-column: 5/5;
+//       // grid-row: 2;
 //       position: absolute;
-//       width: 634px;
-//       height: 950px;
-//       background: #f1e8ff;
-//       top: 0;
-//       left: 167px;
-//       z-index: -1;
+//       top: 80%;
+//       left: -45%;
 //     }
-//   }
-//   &__btn-wrapper {
-//     display: flex;
-//     justify-content: center;
-//     margin-top: -150px;
-//     z-index: 2;
 //   }
 // }

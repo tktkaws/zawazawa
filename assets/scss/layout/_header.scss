@@ -10,6 +10,7 @@
   height: 67px;
   @include mq(md) {
     height: fluid-size(98, 187);
+    height: 187px;
   }
   display: flex;
   justify-content: space-between;

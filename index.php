@@ -157,31 +157,30 @@
         </section>
 
         <section class="p-home-product" id="product">
-            <div class="c-grid-wrapper">
-
-
-                <div class="p-home-product__text-wrapper">
-                    <h2 class="p-home-product__title">
-                        BASIC,MANISH,<br />
-                        TREND,AND<br />
-                        QUALITY.
-                    </h2>
-                    <p class="p-home-product__desc">
-                        株式会社ZAWA-ZAWAはカルチャーとファッ<br />
-                        ションを楽しみ、提供する会社です。<br />
-                        Ｔシャツ・タオル・バッグやポーチなど様々<br />
-                        なアイテムを取り扱っています。
-                    </p>
-                </div>
-                <div class="p-home-product__image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/product.png" alt="" />
+            <div class="c-contents-wrapper">
+                <div class="c-grid-wrapper">
+                    <div class="p-home-product__text-wrapper">
+                        <h2 class="p-home-product__title">
+                            BASIC,MANISH,<br />
+                            TREND,AND<br />
+                            QUALITY.
+                        </h2>
+                        <p class="p-home-product__desc">
+                            株式会社ZAWA-ZAWAはカルチャーとファッ<br />
+                            ションを楽しみ、提供する会社です。<br />
+                            Ｔシャツ・タオル・バッグやポーチなど様々<br />
+                            なアイテムを取り扱っています。
+                        </p>
+                    </div>
                     <div class="p-home-product__btn-wrapper">
                         <button class="c-button--responsive">read more</button>
                     </div>
+
+                    <div class="p-home-product__image">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/product.png" alt="" />
+                    </div>
+                    <div class="p-home-product__deco">product</div>
                 </div>
-                <div class="p-home-product__deco">product</div>
-
-
             </div>
         </section>
 
