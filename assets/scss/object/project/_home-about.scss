@@ -1,29 +1,26 @@
 @use "./../../foundation/global" as *;
 
-.c-grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
-  grid-template-rows: auto auto;
-  row-gap: 44px;
-  & > * {
-    grid-column: 2/-2;
-  }
-}
 .p-home-about {
   margin-top: fluid-size(50, 200);
+
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
+    grid-template-rows: auto auto;
+    row-gap: 44px;
+    & > * {
+      grid-column: 2/-2;
+    }
+  }
   &__text-wrapper {
     grid-column: 4/-4;
     grid-row: 1;
   }
   &__title {
     @include headingFont;
-    font-size: fluid-size(60, 128);
-    line-height: fluid-size(90, 190);
-    margin-bottom: fluid-size(10, 40);
-
-    @include headingFont;
     font-size: fluid-size(48, 128);
     line-height: 1.5em;
+    margin-bottom: fluid-size(10, 40);
     margin-top: -15px;
   }
   &__subtitle {
@@ -42,7 +39,6 @@
     @include japaneseFont;
     font-weight: 500;
     font-size: fluid-size(10, 22.5);
-    line-height: 31px;
     line-height: fluid-size(18, 31);
   }
   &__deco {
@@ -65,7 +61,6 @@
       justify-self: center;
     }
   }
-
   &__image-left {
     grid-column: 4/-4;
     grid-row: 2;
@@ -87,12 +82,12 @@
   }
 }
 @include mq("md") {
-  .c-grid-wrapper {
-    grid-template-columns: 24fr 704fr 628fr;
-    column-gap: 40px;
-    margin-left: fluid-size(0, 50);
-  }
   .p-home-about {
+    &__grid-wrapper {
+      grid-template-columns: 24fr 704fr 628fr;
+      column-gap: 40px;
+      margin-left: fluid-size(0, 50);
+    }
     &__text-wrapper {
       grid-column: 2/2;
       grid-row: 1;
@@ -101,11 +96,9 @@
       grid-column: 1/1;
       grid-row: 1;
       margin-top: fluid-size(12.5, 25);
-      height: fluid-size(550, 707);
       height: 100%;
       margin-left: 0vw;
       &::before {
-        height: fluid-size(400, 557);
         height: 77%;
       }
     }

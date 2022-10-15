@@ -1,8 +1,6 @@
 @use "./../../foundation/global" as *;
-
 .p-home-category {
   margin-top: fluid-size(50, 116);
-
   &__link {
     width: 100%;
   }
@@ -45,52 +43,43 @@
     line-height: fluid-size(24, 36);
   }
 }
-
 @include mq(sm) {
   .p-home-category {
     .grid10 {
       display: grid;
       grid-template-columns: repeat(10, 1fr);
     }
-
     &__link {
       width: 100%;
       grid-column: span 5;
     }
   }
 }
-
 @include mq(md) {
   .p-home-category {
     .grid10 {
       display: grid;
       grid-template-columns: repeat(9, 1fr);
     }
-
     &__link {
       width: 100%;
       grid-column: span 3;
     }
-
     &__card {
       display: flex;
       flex-direction: column;
-      // flex-direction: column-reverse;
       gap: 10px;
     }
-
     &__card--reverse {
     }
   }
 }
-
 @include mq(xl) {
   .p-home-category {
     .grid10 {
       display: grid;
       grid-template-columns: repeat(10, 1fr);
     }
-
     &__link {
       width: 100%;
       grid-column: span 2;

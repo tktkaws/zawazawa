@@ -18,33 +18,6 @@
   font-size: fluid-size(16, 24);
 }
 
-.c-button--large {
-  position: relative;
-  width: 651px;
-  height: 92px;
-  background-color: black;
-  color: white;
-
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-
-  text-align: center;
-
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 95%;
-    content: "";
-    background-color: white;
-    display: block;
-    width: 90px;
-    height: 1px;
-  }
-}
-
 .c-button--responsive {
   position: relative;
   width: fluid-size(200, 604);

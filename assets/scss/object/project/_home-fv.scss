@@ -19,7 +19,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // grid-template-columns: 564fr 933fr 423fr;
     width: 100%;
     height: 100%;
     top: 0;
@@ -27,45 +26,19 @@
     z-index: 1;
   }
   &__title-zone {
-    // grid-column: 2/2;
-    // margin-top: 371px;
-    // position: absolute;
     position: relative;
-    width: 933px;
     width: fluid-size(325, 933);
     background-color: white;
-    // padding: 50px;
-    // width: 900px;
-    // height: 206px;
-    // padding: 2.6vw;
-    // width: 49vw;
-    height: 11vw;
     height: fluid-size(100, 206);
-    // margin-left: 8vw;
-    margin-left: 160px;
     margin-left: fluid-size(0, 160);
-
-    // padding: fluid-size(25, 50);
-    // width: fluid-size(450, 900);
-    // height: fluid-size(103, 206);
-
     z-index: 1;
   }
   &__title {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     @include headingFont;
     font-size: fluid-size(48, 128);
     line-height: 1.5em;
     text-align: center;
-    // margin-top: -108px;
-    // margin-top: -5.5vw;
-    // margin-top: -40px;
-    // margin-top: -100px;
     margin-top: -0.88em;
-    // margin-top: clamp(-40px, -5vw, -100px);
-
     margin-left: -1vw;
   }
   &__title--season {
@@ -74,18 +47,13 @@
   }
   &__divider {
     border-top: 1px solid black;
-    width: 750px;
     width: fluid-size(275, 750);
-    margin-left: 95px;
     margin-left: fluid-size(25, 95);
   }
   &__subtitle {
     @include baseFont;
-    font-size: 0.8vw;
     font-size: fluid-size(10, 16);
     line-height: 1.5em;
-    margin-top: 25px;
-    margin-left: 100px;
     margin-top: fluid-size(5, 25);
     margin-left: fluid-size(25, 95);
   }
@@ -96,7 +64,6 @@
     margin-left: 35px;
     margin-top: 23px;
   }
-
   &__deco-image {
     position: absolute;
     top: -5vw;
@@ -104,13 +71,8 @@
     width: fluid-size(400, 1076);
     z-index: -1;
   }
-
   &__swiper-deco {
     position: absolute;
-    // width: 100%;
-    // width: 40.6vw;
-    // width: 780px;
-    // height: 100%;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -129,10 +91,6 @@
       width: 100%;
     }
   }
-}
-
-// リファクタリング
-.swiper {
 }
 
 .swiper-wrapper {
@@ -194,7 +152,6 @@
   width: 30px;
   background: transparent url(./../img/prev.svg) no-repeat center / contain;
 }
-/* 次への矢印カスタマイズ */
 .swiper-button-next:after {
   content: "";
   height: 30px;

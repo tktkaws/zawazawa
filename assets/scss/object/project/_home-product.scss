@@ -1,15 +1,12 @@
 @use "./../../foundation/global" as *;
-
 .p-home-product {
   margin-top: fluid-size(50, 122);
-
-  .c-grid-wrapper {
+  &__grid-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
     grid-template-rows: auto auto;
     row-gap: 44px;
   }
-
   &__text-wrapper {
     grid-column: 4/-4;
     grid-row: 1;
@@ -25,8 +22,6 @@
     margin-top: fluid-size(25, 50);
     @include japaneseFont;
     font-weight: 500;
-    font-size: 22.5px;
-    line-height: 31px;
     font-size: fluid-size(10, 22.5);
     line-height: fluid-size(18, 31);
   }
@@ -37,7 +32,6 @@
     aspect-ratio: 634/950;
     height: auto;
   }
-
   &__btn-wrapper {
     grid-column: 4/-4;
     display: flex;
@@ -46,7 +40,6 @@
     z-index: 2;
     width: 100%;
   }
-
   &__deco {
     grid-column: 2/2;
     grid-row: 1/3;
@@ -57,7 +50,6 @@
     gap: fluid-size(10, 20);
     @include baseFont;
     height: 100%;
-
     &::before {
       content: "";
       display: block;
@@ -67,27 +59,19 @@
       justify-self: center;
     }
   }
-
   &__btn-wrapper {
     grid-column: 4/-4;
     grid-row: 3;
     margin-top: -100px;
   }
 }
-
 @include mq("md") {
   .p-home-product {
-    .c-grid-wrapper {
-      // grid-template-columns: 70fr 704fr 35fr 628fr;
-      // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
-      grid-template-columns: 100fr 70fr 758fr 35fr 801fr 10fr;
-      grid-template-columns: 24fr 704fr 628fr;
+    &__grid-wrapper {
       grid-template-columns: 24fr 469fr 801fr;
-      column-gap: 60px;
       column-gap: fluid-size(40, 60);
       margin-left: fluid-size(0, 50);
     }
-
     &__deco {
       grid-column: 1/1;
       grid-row: 1;
@@ -98,7 +82,6 @@
         height: 54.5%;
       }
     }
-
     &__text-wrapper {
       grid-column: 2/4;
       grid-row: 1;
@@ -109,11 +92,9 @@
       margin-top: fluid-size(36, 78);
       margin-left: fluid-size(15, 30);
     }
-
     &__image {
       grid-column: 3/3;
       grid-row: 1;
-
       position: relative;
       width: 100%;
       width: 33vw;
@@ -123,74 +104,18 @@
         content: "";
         display: block;
         position: absolute;
-        // width: 634px;
         width: 100%;
-        // height: 950px;
         height: 100%;
         background: #f1e8ff;
         top: 0;
-        left: 167px;
-        left: fluid-size(43, 167);
         left: 8.8vw;
-
         z-index: -1;
       }
     }
     &__btn-wrapper {
-      // grid-column: 2/2;
-      // grid-row: 2;
       margin-top: -16.7vw;
       margin-left: 16.4vw;
       justify-content: flex-start;
     }
   }
 }
-
-// @include mq("1500") {
-//   .p-home-product {
-//     .c-grid-wrapper {
-//       // grid-template-columns: 70fr 704fr 35fr 628fr;
-//       // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
-//       grid-template-columns: 247fr 70fr 758fr 35fr 801fr 236fr;
-//     }
-
-//     &__text-wrapper {
-//       grid-column: 3/3;
-//       grid-row: 1;
-//       margin-right: -100px;
-//     }
-
-//     &__image {
-//       grid-column: 5/5;
-//       grid-row: 1;
-
-//       position: relative;
-//       width: 100%;
-//       margin-left: -120px;
-//       margin-top: 100px;
-//       &::after {
-//         content: "";
-//         display: block;
-//         position: absolute;
-//         // width: 634px;
-//         width: 100%;
-//         // height: 950px;
-//         height: 100%;
-//         background: #f1e8ff;
-//         top: 0;
-//         left: 167px;
-//         left: fluid-size(43, 167);
-//         left: 8vw;
-
-//         z-index: -1;
-//       }
-//     }
-//     &__btn-wrapper {
-//       // grid-column: 5/5;
-//       // grid-row: 2;
-//       position: absolute;
-//       top: 80%;
-//       left: -45%;
-//     }
-//   }
-// }

@@ -549,10 +549,10 @@ a:hover img {
   background: linear-gradient(90deg, #9b92ec 2.07%, #bdbbfc 28.68%, #dfcbfd 55.01%, #fb8cf0 79.8%, #b233bc 101.2%);
 }
 .l-header__nav-logo {
-  margin-top: 20vw;
+  margin-bottom: 5vw;
 }
 .l-header__nav-logo img {
-  width: max(242px, 80vw);
+  width: max(242px, 70vw);
   margin-left: -1vw;
 }
 .l-header__nav-menu {
@@ -642,30 +642,6 @@ a:hover img {
   font-size: clamp(1rem, 0.5177993528vw + 0.8786407767rem, 1.5rem);
 }
 
-.c-button--large {
-  position: relative;
-  width: 651px;
-  height: 92px;
-  background-color: black;
-  color: white;
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-  text-align: center;
-}
-.c-button--large::after {
-  position: absolute;
-  top: 50%;
-  left: 95%;
-  content: "";
-  background-color: white;
-  display: block;
-  width: 90px;
-  height: 1px;
-}
-
 .c-button--responsive {
   position: relative;
   width: clamp(12.5rem, 26.1488673139vw + 6.3713592233rem, 37.75rem);
@@ -718,12 +694,9 @@ a:hover img {
 }
 .p-home-fv__title-zone {
   position: relative;
-  width: 933px;
   width: clamp(20.3125rem, 39.3527508091vw + 11.0891990291rem, 58.3125rem);
   background-color: white;
-  height: 11vw;
   height: clamp(6.25rem, 6.8608414239vw + 4.6419902913rem, 12.875rem);
-  margin-left: 160px;
   margin-left: clamp(0rem, 10.355987055vw - 2.427184466rem, 10rem);
   z-index: 1;
 }
@@ -745,9 +718,7 @@ a:hover img {
 }
 .p-home-fv__divider {
   border-top: 1px solid black;
-  width: 750px;
   width: clamp(17.1875rem, 30.7443365696vw + 9.9817961165rem, 46.875rem);
-  margin-left: 95px;
   margin-left: clamp(1.5625rem, 4.5307443366vw + 0.5006067961rem, 5.9375rem);
 }
 .p-home-fv__subtitle {
@@ -756,11 +727,8 @@ a:hover img {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  font-size: 0.8vw;
   font-size: clamp(0.625rem, 0.3883495146vw + 0.5339805825rem, 1rem);
   line-height: 1.5em;
-  margin-top: 25px;
-  margin-left: 100px;
   margin-top: clamp(0.3125rem, 1.2944983819vw + 0.0091019417rem, 1.5625rem);
   margin-left: clamp(1.5625rem, 4.5307443366vw + 0.5006067961rem, 5.9375rem);
 }
@@ -865,7 +833,6 @@ a:hover img {
   background: transparent url(./../img/prev.svg) no-repeat center/contain;
 }
 
-/* 次への矢印カスタマイズ */
 .swiper-button-next:after {
   content: "";
   height: 30px;
@@ -873,18 +840,17 @@ a:hover img {
   background: transparent url(./../img/next.svg) no-repeat center/contain;
 }
 
-.c-grid-wrapper {
+.p-home-about {
+  margin-top: clamp(3.125rem, 9.7087378641vw + 0.8495145631rem, 12.5rem);
+}
+.p-home-about__grid-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
   grid-template-rows: auto auto;
   row-gap: 44px;
 }
-.c-grid-wrapper > * {
+.p-home-about__grid-wrapper > * {
   grid-column: 2/-2;
-}
-
-.p-home-about {
-  margin-top: clamp(3.125rem, 9.7087378641vw + 0.8495145631rem, 12.5rem);
 }
 .p-home-about__text-wrapper {
   grid-column: 4/-4;
@@ -896,16 +862,9 @@ a:hover img {
   font-weight: 500;
   font-size: 128px;
   line-height: 190px;
-  font-size: clamp(3.75rem, 4.4012944984vw + 2.7184466019rem, 8rem);
-  line-height: clamp(5.625rem, 6.4724919094vw + 4.1080097087rem, 11.875rem);
-  margin-bottom: clamp(0.625rem, 1.9417475728vw + 0.1699029126rem, 2.5rem);
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 128px;
-  line-height: 190px;
   font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
   line-height: 1.5em;
+  margin-bottom: clamp(0.625rem, 1.9417475728vw + 0.1699029126rem, 2.5rem);
   margin-top: -15px;
 }
 .p-home-about__subtitle {
@@ -926,7 +885,6 @@ a:hover img {
   font-style: normal;
   font-weight: 500;
   font-size: clamp(0.625rem, 0.8090614887vw + 0.4353762136rem, 1.40625rem);
-  line-height: 31px;
   line-height: clamp(1.125rem, 0.8414239482vw + 0.9277912621rem, 1.9375rem);
 }
 .p-home-about__deco {
@@ -973,7 +931,7 @@ a:hover img {
 }
 
 @media (min-width: 768px) {
-  .c-grid-wrapper {
+  .p-home-about__grid-wrapper {
     grid-template-columns: 24fr 704fr 628fr;
     column-gap: 40px;
     margin-left: clamp(0rem, 3.2362459547vw - 0.7584951456rem, 3.125rem);
@@ -986,12 +944,10 @@ a:hover img {
     grid-column: 1/1;
     grid-row: 1;
     margin-top: clamp(0.78125rem, 0.8090614887vw + 0.5916262136rem, 1.5625rem);
-    height: clamp(34.375rem, 10.1618122977vw + 31.9933252427rem, 44.1875rem);
     height: 100%;
     margin-left: 0vw;
   }
   .p-home-about__deco::before {
-    height: clamp(25rem, 10.1618122977vw + 22.6183252427rem, 34.8125rem);
     height: 77%;
   }
   .p-home-about__image-left {
@@ -1039,7 +995,6 @@ a:hover img {
   color: #f4f4f4;
   z-index: -1;
   top: 0;
-  left: 0;
   left: 35%;
 }
 .p-home-news__card-wrapper {
@@ -1182,7 +1137,7 @@ a:hover img {
 .p-home-product {
   margin-top: clamp(3.125rem, 4.6601941748vw + 2.0327669903rem, 7.625rem);
 }
-.p-home-product .c-grid-wrapper {
+.p-home-product__grid-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
   grid-template-rows: auto auto;
@@ -1208,8 +1163,6 @@ a:hover img {
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 500;
-  font-size: 22.5px;
-  line-height: 31px;
   font-size: clamp(0.625rem, 0.8090614887vw + 0.4353762136rem, 1.40625rem);
   line-height: clamp(1.125rem, 0.8414239482vw + 0.9277912621rem, 1.9375rem);
 }
@@ -1258,11 +1211,8 @@ a:hover img {
 }
 
 @media (min-width: 768px) {
-  .p-home-product .c-grid-wrapper {
-    grid-template-columns: 100fr 70fr 758fr 35fr 801fr 10fr;
-    grid-template-columns: 24fr 704fr 628fr;
+  .p-home-product__grid-wrapper {
     grid-template-columns: 24fr 469fr 801fr;
-    column-gap: 60px;
     column-gap: clamp(2.5rem, 1.2944983819vw + 2.1966019417rem, 3.75rem);
     margin-left: clamp(0rem, 3.2362459547vw - 0.7584951456rem, 3.125rem);
   }
@@ -1303,8 +1253,6 @@ a:hover img {
     height: 100%;
     background: #f1e8ff;
     top: 0;
-    left: 167px;
-    left: clamp(2.6875rem, 8.0258899676vw + 0.8064320388rem, 10.4375rem);
     left: 8.8vw;
     z-index: -1;
   }
@@ -1464,10 +1412,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 40px;
-  margin-top: 45px;
-  margin-left: 10px;
+  font-size: 16px;
+  line-height: 24px;
   font-size: clamp(0.75rem, 0.7766990291vw + 0.567961165rem, 1.5rem);
   line-height: clamp(1.5rem, 1.0355987055vw + 1.2572815534rem, 2.5rem);
   margin-top: clamp(1.4375rem, 1.4239482201vw + 1.1037621359rem, 2.8125rem);
@@ -1476,11 +1422,8 @@ a:hover img {
 .p-home-info__map {
   grid-column: 4/7;
   aspect-ratio: 562/497;
-  width: 75%;
   width: clamp(17.5625rem, 18.1877022654vw + 13.2997572816rem, 35.125rem);
   height: auto;
-  margin-top: 100px;
-  margin-bottom: 110px;
   margin-top: clamp(3.1875rem, 3.3656957929vw + 2.3986650485rem, 6.4375rem);
   margin-bottom: clamp(3.4375rem, 3.5598705502vw + 2.6031553398rem, 6.875rem);
 }
@@ -1488,10 +1431,8 @@ a:hover img {
   position: relative;
   grid-column: 8/10;
   aspect-ratio: 434/652;
-  width: 434px;
   width: clamp(12.5rem, 15.145631068vw + 8.9502427184rem, 27.125rem);
   height: auto;
-  margin-top: 315px;
   margin-top: clamp(10rem, 10.0323624595vw + 7.6486650485rem, 19.6875rem);
 }
 @media (max-width: 767px) {
@@ -1516,10 +1457,6 @@ a:hover img {
 @media (min-width: 768px) {
   .p-home-info__grid-wrapper {
     display: grid;
-    grid-template-columns: 15vw 15vw 15vw;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-columns: 15vw 30vw 30vw;
     grid-template-columns: 15vw 43vw 25vw;
     column-gap: 5vw;
   }
@@ -1534,7 +1471,6 @@ a:hover img {
   .p-home-info__main-wrapper {
     grid-column: 2/-2;
     margin-top: clamp(2.5rem, 2.5889967638vw + 1.8932038835rem, 5rem);
-    margin-left: -41px;
     margin-left: -1.1vw;
   }
   .p-home-info__image {
@@ -1561,8 +1497,6 @@ a:hover img {
   }
   .p-home-info__deco::before {
     height: 557px;
-    height: clamp(25rem, 25.8899676375vw + 18.932038835rem, 50rem);
-    height: 557px;
     justify-self: center;
     justify-content: center;
   }
@@ -1583,7 +1517,7 @@ a:hover img {
     column-gap: 9vw;
   }
   .p-home-info__image {
-    margin-left: -1.1vw;
+    margin-left: 0vw;
   }
 }
 .p-category-list {
@@ -1694,9 +1628,7 @@ a:hover img {
     margin-top: clamp(0rem, 2.5242718447vw - 0.5916262136rem, 2.4375rem);
   }
 }
-.u-inline-block {
-  display: inline-block;
-} /*--------------------------------------*
+/*--------------------------------------*
  * foundation
  *--------------------------------------*/
 /*--------------------------------------*

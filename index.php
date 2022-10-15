@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZAWA-ZAWA　Inc.</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js" type="text/javaScript" charset="utf-8">
-    </script> -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/style.css">
     <?php wp_head() ?>
 </head>
@@ -61,16 +59,13 @@
                     <h1 class="p-home-fv__title">
                         <?php echo get_the_date('Y'); ?>
                         <span class="p-home-fv__title--season">
-                            <!-- <?php echo_season(); ?> -->
-                            summer
+                            <?php echo_season(); ?>
                         </span>
-
                     </h1>
                     <div class="p-home-fv__divider"></div>
                     <p class="p-home-fv__subtitle">
                         <?php echo get_the_date(); ?>
                         新商品が入荷しました。
-
                     </p>
                     <div class="p-home-fv__btn-wrapper">
                         <button class="c-button">read more</button>
@@ -84,7 +79,7 @@
 
         <section class="p-home-about" id="about">
             <div class="c-contents-wrapper">
-                <div class="c-grid-wrapper">
+                <div class="p-home-about__grid-wrapper">
                     <div class="p-home-about__text-wrapper">
                         <h2 class="p-home-about__title">company</h2>
                         <p class="p-home-about__subtitle">イベント・コンサートグッズ制作</p><br />
@@ -96,7 +91,6 @@
                             等の雑貨の製造は 弊社にお任せください。
                         </p>
                     </div>
-                    <!-- <div class="p-home-about__image-wrapper"></div> -->
                     <div class="p-home-about__image-left">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company1.png" alt="" />
                     </div>
@@ -104,7 +98,6 @@
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/company2.png" alt="" />
                     </div>
                     <div class="p-home-about__deco">about us</div>
-
                 </div>
             </div>
         </section>
@@ -158,7 +151,7 @@
 
         <section class="p-home-product" id="product">
             <div class="c-contents-wrapper">
-                <div class="c-grid-wrapper">
+                <div class="p-home-product__grid-wrapper">
                     <div class="p-home-product__text-wrapper">
                         <h2 class="p-home-product__title">
                             BASIC,MANISH,<br />
