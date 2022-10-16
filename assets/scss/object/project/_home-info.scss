@@ -21,9 +21,8 @@
     justify-content: center;
     writing-mode: vertical-rl;
     gap: 19px;
-    @include baseFont;
+    @include oswald500;
     font-size: fluid-size(10, 16);
-    line-height: fluid-size(15, 24);
     color: white;
     height: fluid-size(500, 900);
     &::before {
@@ -41,12 +40,11 @@
     margin-top: fluid-size(40, 80);
   }
   &__title {
-    @include headingFont;
+    @include oswald500;
     font-size: fluid-size(50, 128);
-    line-height: fluid-size(60, 190);
   }
   &__desc {
-    @include baseFont;
+    @include oswald500;
     font-size: fluid-size(12, 24);
     line-height: fluid-size(24, 40);
     margin-top: fluid-size(23, 45);

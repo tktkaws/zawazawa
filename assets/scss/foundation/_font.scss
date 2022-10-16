@@ -1,3 +1,25 @@
+// @include oswald500;
+// @include oswald700;
+
+@mixin oswald500() {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+@mixin oswald700() {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+@mixin japaneseFont() {
+  font-family: "Noto Sans";
+  font-style: normal;
+}
+
 @mixin headingFont() {
   font-family: "Oswald";
   font-style: normal;
@@ -12,9 +34,4 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-}
-
-@mixin japaneseFont() {
-  font-family: "Noto Sans";
-  font-style: normal;
 }

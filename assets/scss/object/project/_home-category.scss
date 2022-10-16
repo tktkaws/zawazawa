@@ -29,18 +29,16 @@
     margin-bottom: fluid-size(10, 20);
   }
   &__card-title {
-    @include baseFont;
+    @include oswald500;
     font-size: fluid-size(32, 64);
-    line-height: fluid-size(48, 95);
     border-bottom: 1px solid #000;
     width: 60%;
     margin: 0 auto;
     margin-top: fluid-size(17, 35);
   }
   &__card-subtitle {
-    @include baseFont;
+    @include oswald500;
     font-size: fluid-size(16, 24);
-    line-height: fluid-size(24, 36);
   }
 }
 @include mq(sm) {

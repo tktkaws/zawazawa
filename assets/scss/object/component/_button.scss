@@ -5,15 +5,9 @@
   background: #000000;
   color: #ffffff;
   text-align: center;
-
-  width: 403px;
-  width: fluid-size(200, 403);
   width: 100%;
-  padding: fluid-size(8, 18);
   padding: 1.2em;
-
   @include baseFont;
-  font-size: 24px;
   line-height: 1.5em;
   font-size: fluid-size(16, 24);
 }
@@ -21,21 +15,13 @@
 .c-button--responsive {
   position: relative;
   width: fluid-size(200, 604);
-  height: 92px;
   height: fluid-size(46, 92);
   background-color: black;
   color: white;
-
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
+  @include baseFont;
   font-size: fluid-size(16, 24);
-  line-height: 36px;
-  line-height: fluid-size(25, 36);
-
+  line-height: 1.5em;
   text-align: center;
-
   &::after {
     position: absolute;
     top: 50%;

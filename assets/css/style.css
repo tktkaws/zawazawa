@@ -602,7 +602,6 @@ a:hover img {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  font-size: 24px;
   font-size: clamp(1rem, 0.5177993528vw + 0.8786407767rem, 1.5rem);
   line-height: 1.5em;
   margin-top: -30px;
@@ -627,17 +626,13 @@ a:hover img {
   background: #000000;
   color: #ffffff;
   text-align: center;
-  width: 403px;
-  width: clamp(12.5rem, 13.1391585761vw + 9.4205097087rem, 25.1875rem);
   width: 100%;
-  padding: clamp(0.5rem, 0.6472491909vw + 0.3483009709rem, 1.125rem);
   padding: 1.2em;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  font-size: 24px;
   line-height: 1.5em;
   font-size: clamp(1rem, 0.5177993528vw + 0.8786407767rem, 1.5rem);
 }
@@ -645,17 +640,16 @@ a:hover img {
 .c-button--responsive {
   position: relative;
   width: clamp(12.5rem, 26.1488673139vw + 6.3713592233rem, 37.75rem);
-  height: 92px;
   height: clamp(2.875rem, 2.9773462783vw + 2.177184466rem, 5.75rem);
   background-color: black;
   color: white;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 24px;
   font-size: clamp(1rem, 0.5177993528vw + 0.8786407767rem, 1.5rem);
-  line-height: 36px;
-  line-height: clamp(1.5625rem, 0.71197411vw + 1.395631068rem, 2.25rem);
+  line-height: 1.5em;
   text-align: center;
 }
 .c-button--responsive::after {
@@ -704,10 +698,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
-  line-height: 190px;
-  font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
   line-height: 1.5em;
+  font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
   text-align: center;
   margin-top: -0.88em;
   margin-left: -1vw;
@@ -725,10 +717,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  font-size: clamp(0.625rem, 0.3883495146vw + 0.5339805825rem, 1rem);
   line-height: 1.5em;
+  font-size: clamp(0.625rem, 0.3883495146vw + 0.5339805825rem, 1rem);
   margin-top: clamp(0.3125rem, 1.2944983819vw + 0.0091019417rem, 1.5625rem);
   margin-left: clamp(1.5625rem, 4.5307443366vw + 0.5006067961rem, 5.9375rem);
 }
@@ -860,10 +850,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
-  line-height: 190px;
-  font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
   line-height: 1.5em;
+  font-size: clamp(3rem, 5.1779935275vw + 1.786407767rem, 8rem);
   margin-bottom: clamp(0.625rem, 1.9417475728vw + 0.1699029126rem, 2.5rem);
   margin-top: -15px;
 }
@@ -986,12 +974,10 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
+  line-height: 1.5em;
+  font-size: min(26vw, 400px);
   line-height: clamp(20rem, 17.6699029126vw + 15.8586165049rem, 37.0625rem);
   letter-spacing: clamp(0.3125rem, 0.3883495146vw + 0.2214805825rem, 0.6875rem);
-  font-size: min(26vw, 400px);
   color: #f4f4f4;
   z-index: -1;
   top: 0;
@@ -1042,10 +1028,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5em;
   font-size: clamp(1rem, 1.1650485437vw + 0.7269417476rem, 2.125rem);
-  line-height: clamp(1.4375rem, 1.7475728155vw + 1.0279126214rem, 3.125rem);
   border-bottom: 1px solid;
   margin-top: 30px;
 }
@@ -1053,11 +1037,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5em;
+  font-size: clamp(0.625rem, 0.6472491909vw + 0.4733009709rem, 1.25rem);
   margin-top: 10px;
 }
 .p-home-news__title-wrapper {
@@ -1075,10 +1056,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5em;
   font-size: 64px;
-  line-height: 95px;
   margin-bottom: 3px;
 }
 .p-home-news__title-image {
@@ -1151,8 +1130,7 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
-  line-height: 190px;
+  line-height: 1.5em;
   font-size: clamp(3.125rem, 5.0485436893vw + 1.9417475728rem, 8rem);
   line-height: clamp(3.75rem, 5.3721682848vw + 2.4908980583rem, 8.9375rem);
   margin-bottom: clamp(0.625rem, 1.9417475728vw + 0.1699029126rem, 2.5rem);
@@ -1296,10 +1274,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5em;
   font-size: clamp(2rem, 2.071197411vw + 1.5145631068rem, 4rem);
-  line-height: clamp(3rem, 3.0420711974vw + 2.2870145631rem, 5.9375rem);
   border-bottom: 1px solid #000;
   width: 60%;
   margin: 0 auto;
@@ -1309,10 +1285,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5em;
   font-size: clamp(1rem, 0.5177993528vw + 0.8786407767rem, 1.5rem);
-  line-height: clamp(1.5rem, 0.7766990291vw + 1.317961165rem, 2.25rem);
 }
 
 @media (min-width: 375px) {
@@ -1379,10 +1353,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5em;
   font-size: clamp(0.625rem, 0.3883495146vw + 0.5339805825rem, 1rem);
-  line-height: clamp(0.9375rem, 0.5825242718vw + 0.8009708738rem, 1.5rem);
   color: white;
   height: clamp(31.25rem, 25.8899676375vw + 25.182038835rem, 56.25rem);
 }
@@ -1403,17 +1375,14 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
-  line-height: 190px;
+  line-height: 1.5em;
   font-size: clamp(3.125rem, 5.0485436893vw + 1.9417475728rem, 8rem);
-  line-height: clamp(3.75rem, 8.4142394822vw + 1.7779126214rem, 11.875rem);
 }
 .p-home-info__desc {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5em;
   font-size: clamp(0.75rem, 0.7766990291vw + 0.567961165rem, 1.5rem);
   line-height: clamp(1.5rem, 1.0355987055vw + 1.2572815534rem, 2.5rem);
   margin-top: clamp(1.4375rem, 1.4239482201vw + 1.1037621359rem, 2.8125rem);
@@ -1547,10 +1516,8 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
-  line-height: 190px;
+  line-height: 1.5em;
   font-size: clamp(3.125rem, 5.0485436893vw + 1.9417475728rem, 8rem);
-  line-height: clamp(3.75rem, 8.4142394822vw + 1.7779126214rem, 11.875rem);
   text-align: center;
 }
 .p-category-list__card-wrapper {
@@ -1599,17 +1566,17 @@ a:hover img {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 34px;
-  line-height: 50px;
+  line-height: 1.5em;
+  font-size: clamp(1rem, 1.1650485437vw + 0.7269417476rem, 2.125rem);
   border-bottom: 1px solid;
   margin-top: 30px;
 }
 .p-category-list__card-subtitle {
   font-family: "Oswald";
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
+  font-weight: 500;
+  line-height: 1.5em;
+  font-size: clamp(0.625rem, 0.6472491909vw + 0.4733009709rem, 1.25rem);
   margin-top: 10px;
 }
 

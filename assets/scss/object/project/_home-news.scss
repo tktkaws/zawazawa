@@ -17,11 +17,10 @@
       content: "journal";
       display: block;
       writing-mode: vertical-rl;
-      @include baseFont;
-      font-weight: 700;
+      @include oswald700;
+      font-size: min(26vw, 400px);
       line-height: fluid-size(320, 593);
       letter-spacing: fluid-size(5, 11);
-      font-size: min(26vw, 400px);
       color: #f4f4f4;
       z-index: -1;
       top: 0;
@@ -78,17 +77,14 @@
   }
   &__card-title {
     display: inline-block;
-    @include baseFont;
+    @include oswald500;
     font-size: fluid-size(16, 34);
-    line-height: fluid-size(23, 50);
     border-bottom: 1px solid;
     margin-top: 30px;
   }
   &__card-subtitle {
-    @include baseFont;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
+    @include oswald700;
+    font-size: fluid-size(10, 20);
     margin-top: 10px;
   }
   &__title-wrapper {
@@ -103,9 +99,8 @@
   }
   &__title {
     writing-mode: vertical-rl;
-    @include baseFont;
+    @include oswald500;
     font-size: 64px;
-    line-height: 95px;
     margin-bottom: 3px;
   }
   &__title-image {

@@ -25,9 +25,8 @@
     margin-right: 1vw;
   }
   &__title {
-    @include headingFont;
+    @include oswald500;
     font-size: fluid-size(50, 128);
-    line-height: fluid-size(60, 190);
     text-align: center;
   }
 
@@ -85,20 +84,14 @@
     color: #d058d1;
   }
   &__card-title {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 50px;
+    @include oswald500;
+    font-size: fluid-size(16, 34);
     border-bottom: 1px solid;
     margin-top: 30px;
   }
   &__card-subtitle {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
+    @include oswald700;
+    font-size: fluid-size(10, 20);
     margin-top: 10px;
   }
 }
@@ -117,10 +110,6 @@
       gap: fluid-size(10, 77);
       margin-left: fluid-size(0, 27);
       margin-top: fluid-size(0, 39);
-    }
-
-    &__card-image {
-      // width: fluid-size(116, 238);
     }
   }
 }

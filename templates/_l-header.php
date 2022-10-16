@@ -1,7 +1,7 @@
 <header class="l-header">
     <div class="l-header__logo">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ロゴ.svg" alt="ZAWAZAWA inc." width="447"
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="ZAWAZAWA inc." width="447"
                 height="59" />
         </a>
     </div>
@@ -38,7 +38,7 @@
     <nav class="l-header__nav">
         <div class="l-header__nav-logo">
             <a href="<?php echo esc_url(home_url('/')); ?>">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ロゴ.svg" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="" />
             </a>
         </div>
         <ul class="l-header__nav-menu">
