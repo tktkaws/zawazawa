@@ -1,6 +1,3 @@
-// @include oswald500;
-// @include oswald700;
-
 @mixin oswald500() {
   font-family: "Oswald";
   font-style: normal;
@@ -20,18 +17,18 @@
   font-style: normal;
 }
 
-@mixin headingFont() {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 128px;
-  line-height: 190px;
-}
+// @mixin headingFont() {
+//   font-family: "Oswald";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 128px;
+//   line-height: 190px;
+// }
 
-@mixin baseFont() {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-}
+// @mixin baseFont() {
+//   font-family: "Oswald";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 24px;
+// }

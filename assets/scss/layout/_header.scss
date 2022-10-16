@@ -36,7 +36,7 @@
   }
   &__gnav {
     display: none;
-    @include baseFont;
+    @include oswald500;
 
     @include mq(lg) {
       display: block;
@@ -152,7 +152,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include headingFont;
+    @include oswald500;
     font-size: fluid-size(60, 128);
     line-height: fluid-size(90, 190);
     margin-bottom: fluid-size(10, 40);
