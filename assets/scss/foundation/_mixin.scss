@@ -14,28 +14,3 @@ $breakpoints: (
     @content;
   }
 }
-
-// @include mq(lg) {
-//   display: block;
-// }
-
-// @mixin headingFont() {
-//   font-family: "Oswald";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 128px;
-//   line-height: 190px;
-// }
-
-// @mixin japaneseFont() {
-//   font-family: "Noto Sans";
-//   font-style: normal;
-// }
-
-// @mixin baseFont() {
-//   font-family: "Oswald";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 24px;
-// }

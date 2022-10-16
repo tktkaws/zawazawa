@@ -1,29 +1,15 @@
-$f-base: "Noto Sans JP", sans-serif;
-$f-lora: "Lora", serif;
-$f-serif: "Noto Serif JP", serif;
-
-// gnav
-// font-family: "Oswald";
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 24px;
-//     text-transform: uppercase;
-
-@mixin headingFont() {
+@mixin oswald500() {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 128px;
-  line-height: 190px;
+  line-height: 1.5em;
 }
 
-@mixin baseFont() {
+@mixin oswald700() {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5em;
 }
 
 @mixin japaneseFont() {

@@ -1,40 +1,40 @@
 @use "./../../foundation/global" as *;
 
 .p-home-news {
-  margin-top: 97px;
-  margin-bottom: 97px;
+  margin-top: fluid-size(50, 108);
   position: relative;
-
-  &__card-wrapper {
-    display: flex;
-    flex-direction: column;
-    grid-column: 4/-4;
-    grid-row: 1;
-
-    gap: 60px;
-    margin-top: 30px;
-
+  &__grid-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
+    grid-template-rows: auto auto;
+    row-gap: 44px;
+    & > * {
+      grid-column: 2/-2;
+    }
     &::before {
       position: absolute;
       content: "journal";
       display: block;
       writing-mode: vertical-rl;
-      font-family: "Oswald";
-      font-style: normal;
-      font-weight: 700;
-      // font-size: 400px;
-      // line-height: 593px;
-      font-size: 27vw;
-      line-height: 34vw;
-      font-size: fluid-size(200, 400);
+      @include oswald700;
+      font-size: min(26vw, 400px);
       line-height: fluid-size(320, 593);
-
+      letter-spacing: fluid-size(5, 11);
       color: #f4f4f4;
       z-index: -1;
       top: 0;
-      left: 0;
       left: 35%;
     }
+  }
+  &__card-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-column: 4/-4;
+    grid-row: 1;
+    gap: fluid-size(10, 60);
+    margin-top: fluid-size(10, 30);
+    width: 50%;
   }
   &__card {
     display: inline-block;
@@ -42,24 +42,21 @@
   &__card-image {
     aspect-ratio: 238/199;
     object-fit: cover;
-    width: 50%;
-    width: fluid-size(116, 238);
-    // width: 238px;
-    // height: 199px;
+    width: 100%;
     position: relative;
-
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
-
     &::after {
       position: absolute;
-      top: 10%;
-      left: 10%;
+      top: 12%;
+      left: 9%;
       content: "";
-      width: 100%;
-      height: 100%;
+      width: 95%;
+      height: 90%;
+
       background: linear-gradient(
         90deg,
         #9b92ec 2.07%,
@@ -80,85 +77,73 @@
   }
   &__card-title {
     display: inline-block;
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
+    @include oswald500;
     font-size: fluid-size(16, 34);
-    line-height: fluid-size(23, 50);
     border-bottom: 1px solid;
     margin-top: 30px;
   }
   &__card-subtitle {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
+    @include oswald700;
+    font-size: fluid-size(10, 20);
     margin-top: 10px;
   }
-
   &__title-wrapper {
     grid-column: 5/5;
-    // grid-column: 4/-4;
     grid-row: 1;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    margin-right: 1vw;
   }
   &__title {
     writing-mode: vertical-rl;
-
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
+    @include oswald500;
     font-size: 64px;
-    line-height: 95px;
+    margin-bottom: 3px;
   }
   &__title-image {
-    // width: 50px;
+    margin-top: -5px;
+    margin-left: -10px;
   }
   &__btn-wrapper {
     grid-column: 4/-4;
-    // margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-
 @include mq(md) {
   .p-home-news {
-    .c-grid-wrapper {
-      // grid-template-columns: 70fr 704fr 35fr 628fr;
-      // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
-      grid-template-columns: 270fr 1500fr 270fr;
+    &__grid-wrapper {
+      grid-template-columns: 100fr 1300fr 100fr;
+      margin-left: fluid-size(0, 50);
+      &::before {
+        writing-mode: lr;
+        top: -10%;
+        left: 0%;
+      }
     }
-
     &__card-wrapper {
       grid-column: 2/2;
       grid-row: 1;
       flex-direction: row;
-
-      margin-left: 125px;
-      margin-top: 6px;
-
-      &::before {
-        writing-mode: lr;
-        top: -19%;
-        left: 16%;
-      }
+      width: 100%;
+      gap: fluid-size(10, 77);
+      margin-left: fluid-size(0, 27);
+      margin-top: fluid-size(0, 39);
     }
-
+    &__card-image {
+      width: fluid-size(116, 238);
+    }
     &__title-wrapper {
       grid-column: 3/3;
-      // grid-column: 4/-4;
       grid-row: 1;
-      margin-left: -15vw;
-      margin-top: -3vw;
+      margin-left: -1.5em;
+      margin-top: -1.5em;
+      margin-right: 0;
     }
-
     &__btn-wrapper {
       grid-column: 2/2;
       grid-row: 2;
@@ -166,125 +151,10 @@
       display: flex;
       justify-content: center;
       text-align: center;
-      margin-top: 76px;
       margin-top: fluid-size(20, 76);
       & > * {
-        margin-left: 4vw;
+        margin-left: 1.2vw;
       }
     }
   }
 }
-
-// .p-home-news {
-//   margin-top: 97px;
-//   position: relative;
-//   &__main-contents-wrapper {
-//     &::before {
-//       position: absolute;
-//       content: "journal";
-//       display: block;
-//       font-family: "Oswald";
-//       font-style: normal;
-//       font-weight: 700;
-//       // font-size: 400px;
-//       // line-height: 593px;
-//       font-size: 27vw;
-//       line-height: 34vw;
-//       color: #f4f4f4;
-//       z-index: -1;
-//       top: 0;
-//       left: 0;
-//     }
-
-//     display: flex;
-//     justify-content: space-evenly;
-//     height: 400px;
-//   }
-
-//   &__card-wrapper {
-//     display: flex;
-
-//     gap: 120px;
-//     margin-top: 90px;
-//   }
-//   &__card {
-//   }
-//   &__card-image {
-//     width: 238px;
-//     height: 199px;
-//     position: relative;
-
-//     img {
-//       width: 100%;
-//       height: 100%;
-//     }
-
-//     &::after {
-//       position: absolute;
-//       top: 10%;
-//       left: 10%;
-//       content: "";
-//       width: 238px;
-//       height: 199px;
-//       background: linear-gradient(
-//         90deg,
-//         #9b92ec 2.07%,
-//         #bdbbfc 28.68%,
-//         #dfcbfd 55.01%,
-//         #fb8cf0 79.8%,
-//         #b233bc 101.2%
-//       );
-//       transform: matrix(1, 0, 0, -1, 0, 0);
-//       z-index: -1;
-//     }
-//   }
-//   &__card-date {
-//     position: absolute;
-//     top: 10%;
-//     left: 10%;
-//     color: #d058d1;
-//   }
-//   &__card-title {
-//     font-family: "Oswald";
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 34px;
-//     line-height: 50px;
-//     border-bottom: 1px solid;
-//     margin-top: 30px;
-//   }
-//   &__card-subtitle {
-//     font-family: "Oswald";
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 20px;
-//     line-height: 30px;
-//     margin-top: 10px;
-//   }
-
-//   &__title-wrapper {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     gap: 10px;
-//   }
-//   &__title {
-//     writing-mode: vertical-rl;
-
-//     font-family: "Oswald";
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 64px;
-//     line-height: 95px;
-//   }
-//   &__title-image {
-//     // width: 50px;
-//   }
-//   &__btn-wrapper {
-//     margin-top: 150px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-// }

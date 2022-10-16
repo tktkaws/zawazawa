@@ -1,9 +1,3 @@
-// todo
-// clippathレスポンシブ
-// clippath下の余白
-// swiperボタン　レスポンシブ
-// メディアクエリ　スマホサイズ
-
 @use "./../../foundation/global" as *;
 
 .p-home-fv {
@@ -12,93 +6,91 @@
   }
   &__slider-item {
     height: 957px;
+    height: fluid-size(700, 957);
     object-fit: cover;
     img {
       height: 100%;
       width: 100%;
     }
   }
-  &__deco-image {
+
+  &__absolute-wrapper {
     position: absolute;
-    // top: -10%;
-    // left: 10%;
-    top: -200%;
-    left: -50%;
-    width: 110%;
-    // width: max(720px, 50%);
-    z-index: 1;
-    // @include mq(md-lg) {
-    //   top: 10%;
-    //   left: 10%;
-    //   width: 50%;
-    // }
-  }
-  &__title-zone {
-    position: absolute;
-    top: 38%;
-    left: 28%;
-    background-color: white;
-    // padding: 50px;
-    // width: 900px;
-    // height: 206px;
-    padding: 2.6vw;
-    width: 47vw;
-    height: 11vw;
-
-    // padding: fluid-size(25, 50);
-    // width: fluid-size(450, 900);
-    // height: fluid-size(103, 206);
-
-    z-index: 1;
-  }
-  &__title {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    @include headingFont;
-    margin-top: -7.5vw;
-    // font-size: fluid-size(64, 128);
-
-    font-size: 7vw;
-    line-height: 1.5em;
-
-    border-bottom: solid 1px;
-    text-align: center;
-    margin-left: 1vw;
-    margin-right: 1vw;
-  }
-  &__subtitle {
-    @include headingFont;
-    // font-size: 16px;
-    // line-height: 24px;
-    font-size: 0.8vw;
-    line-height: 1.5em;
-    margin-top: 1vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
-  }
-  &__btn-wrapper {
-    position: absolute;
-    top: 75%;
-    left: 60%;
-  }
-}
-
-// リファクタリング
-.swiper {
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background: white;
     top: 0;
     left: 0;
     z-index: 1;
-    clip-path: polygon(0 85%, 0% 100%, 40% 100%);
+  }
+  &__title-zone {
+    position: relative;
+    width: fluid-size(325, 933);
+    background-color: white;
+    height: fluid-size(100, 206);
+    margin-left: fluid-size(0, 160);
+    z-index: 1;
+  }
+  &__title {
+    @include oswald500;
+    font-size: fluid-size(48, 128);
+    text-align: center;
+    margin-top: -0.88em;
+    margin-left: -1vw;
+  }
+  &__title--season {
+    margin-left: 30px;
+    margin-left: fluid-size(10, 30);
+  }
+  &__divider {
+    border-top: 1px solid black;
+    width: fluid-size(275, 750);
+    margin-left: fluid-size(25, 95);
+  }
+  &__subtitle {
+    @include oswald500;
+    font-size: fluid-size(10, 16);
+    margin-top: fluid-size(5, 25);
+    margin-left: fluid-size(25, 95);
+  }
+  &__btn-wrapper {
+    position: absolute;
+    padding-left: 57%;
+    width: 100%;
+    margin-left: 35px;
+    margin-top: 23px;
+  }
+  &__deco-image {
+    position: absolute;
+    top: -5vw;
+    left: 1vw;
+    width: fluid-size(400, 1076);
+    z-index: -1;
+  }
+  &__swiper-deco {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-right: 20%;
+    @include mq(md) {
+      padding-right: 30%;
+    }
+    @include mq(lg) {
+      padding-right: 40%;
+    }
+    @include mq(xl) {
+      padding-right: 60%;
+    }
+    z-index: 1;
+    img {
+      width: 100%;
+    }
   }
 }
+
 .swiper-wrapper {
   display: flex;
 }
@@ -122,17 +114,24 @@
 .swiper-button {
   &-prev {
     color: black;
-    top: 95%;
-    left: 6%;
+    top: 97%;
+    left: 2%;
+    @include mq(md) {
+      top: 95%;
+      left: 5%;
+    }
   }
   &-next {
     color: black;
-    top: 95%;
-    left: 12.5%;
+    top: 97%;
+    left: 8.5%;
+    @include mq(md) {
+      top: 95%;
+      left: 11.5%;
+    }
   }
 }
 
-/* 前へ次への矢印カスタマイズ */
 .swiper-button-prev:after,
 .swiper-button-next:after {
   bottom: 0;
@@ -144,14 +143,13 @@
   width: 0;
   content: url(./assets/img/prev.svg);
 }
-/* 前への矢印カスタマイズ */
+
 .swiper-button-prev:after {
   content: "";
   height: 30px;
   width: 30px;
   background: transparent url(./../img/prev.svg) no-repeat center / contain;
 }
-/* 次への矢印カスタマイズ */
 .swiper-button-next:after {
   content: "";
   height: 30px;

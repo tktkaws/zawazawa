@@ -2,11 +2,50 @@
 
 .p-category-list {
   display: flex;
+
+  &__grid-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
+    grid-template-rows: auto auto;
+    row-gap: 44px;
+    & > * {
+      grid-column: 2/-2;
+    }
+  }
+
+  &__title-wrapper {
+    grid-column: 5/5;
+    grid-row: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 1vw;
+  }
+  &__title {
+    @include oswald500;
+    font-size: fluid-size(50, 128);
+    text-align: center;
+  }
+
   &__card-wrapper {
     display: flex;
-
     gap: 120px;
     margin-top: 90px;
+    gap: fluid-size(30, 120);
+    margin-top: fluid-size(30, 90);
+  }
+
+  &__card-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-column: 4/-4;
+    grid-row: 1;
+    gap: fluid-size(10, 60);
+    margin-top: fluid-size(10, 30);
+    width: 50%;
   }
   &__card {
   }
@@ -45,20 +84,32 @@
     color: #d058d1;
   }
   &__card-title {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 50px;
+    @include oswald500;
+    font-size: fluid-size(16, 34);
     border-bottom: 1px solid;
     margin-top: 30px;
   }
   &__card-subtitle {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
+    @include oswald700;
+    font-size: fluid-size(10, 20);
     margin-top: 10px;
+  }
+}
+
+@include mq(md) {
+  .p-category-list {
+    &__grid-wrapper {
+      grid-template-columns: 100fr 1300fr 100fr;
+      margin-left: fluid-size(0, 50);
+    }
+    &__card-wrapper {
+      grid-column: 2/2;
+      grid-row: 1;
+      flex-direction: row;
+      width: 100%;
+      gap: fluid-size(10, 77);
+      margin-left: fluid-size(0, 27);
+      margin-top: fluid-size(0, 39);
+    }
   }
 }

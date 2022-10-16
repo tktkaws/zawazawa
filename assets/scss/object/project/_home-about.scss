@@ -1,54 +1,45 @@
 @use "./../../foundation/global" as *;
 
-.c-grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
-  grid-template-rows: auto auto;
-  row-gap: 44px;
-  & > * {
-    grid-column: 2/-2;
-  }
-}
-
 .p-home-about {
   margin-top: fluid-size(50, 200);
 
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 5vw) auto repeat(3, 5vw);
+    grid-template-rows: auto auto;
+    row-gap: 44px;
+    & > * {
+      grid-column: 2/-2;
+    }
+  }
   &__text-wrapper {
     grid-column: 4/-4;
     grid-row: 1;
   }
   &__title {
-    @include headingFont;
-    font-size: fluid-size(60, 128);
-    line-height: fluid-size(90, 190);
+    @include oswald500;
+    font-size: fluid-size(48, 128);
     margin-bottom: fluid-size(10, 40);
+    margin-top: -15px;
   }
   &__subtitle {
     display: inline-block;
     @include japaneseFont;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 49px;
-    margin-bottom: 11px;
     font-size: fluid-size(14, 36);
-    line-height: fluid-size(25, 49);
+    line-height: 2em;
     margin-bottom: fluid-size(6, 11);
-
+    padding-inline: 0.5em;
     color: #ffffff;
     background-color: black;
-    padding: 0.8em;
   }
   &__desc {
     margin-top: 32px;
     @include japaneseFont;
     font-weight: 500;
-    font-size: 22.5px;
-    line-height: 31px;
     font-size: fluid-size(10, 22.5);
     line-height: fluid-size(18, 31);
-    // margin-bottom: fluid-size(6, 11);
   }
-
   &__deco {
     grid-column: 2/2;
     grid-row: 1/3;
@@ -56,29 +47,19 @@
     align-items: center;
     justify-content: flex-start;
     writing-mode: vertical-rl;
-    gap: 20px;
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: fluid-size(50, 100);
-
-    height: 900px;
-    height: fluid-size(500, 900);
+    gap: fluid-size(10, 20);
+    @include oswald500;
+    height: 100%;
 
     &::before {
       content: "";
       display: block;
       background-color: black;
       width: 2px;
-      height: 800px;
-      height: fluid-size(400, 800);
-      // height: 900px;
+      height: 80%;
       justify-self: center;
     }
   }
-
   &__image-left {
     grid-column: 4/-4;
     grid-row: 2;
@@ -99,92 +80,39 @@
     margin-top: 0vw;
   }
 }
-
-@include mq("md-1500") {
-  .c-grid-wrapper {
-    // grid-template-columns: 70fr 704fr 35fr 628fr;
-    // grid-template-columns: 10fr 70fr 704fr 35fr 628fr 10fr;
-    grid-template-columns: 100fr 70fr 704fr 35fr 628fr 10fr;
-  }
+@include mq("md") {
   .p-home-about {
+    &__grid-wrapper {
+      grid-template-columns: 24fr 704fr 628fr;
+      column-gap: 40px;
+      margin-left: fluid-size(0, 50);
+    }
     &__text-wrapper {
-      grid-column: 3/3;
-      grid-row: 1;
-    }
-    &__title {
-    }
-    &__subtitle {
-    }
-    &__desc {
-    }
-    &__deco {
       grid-column: 2/2;
       grid-row: 1;
-      height: fluid-size(400, 657);
-      margin-left: 0vw;
-      &::before {
-        height: fluid-size(300, 557);
-      }
     }
-    &__image-left {
-      grid-column: 5/5;
-      grid-row: 1;
-      width: 25vw;
-      width: fluid-size(190, 385);
-    }
-    &__image-right {
-      grid-column: 5/5;
-      grid-row: 1;
-      width: 25vw;
-      width: fluid-size(189, 378);
-      margin-left: 10vw;
-    }
-  }
-}
-
-@include mq("1500") {
-  .c-grid-wrapper {
-    grid-template-columns: 247fr 70fr 704fr 35fr 628fr 236fr;
-  }
-
-  .p-home-about {
-    &__text-wrapper {
-      grid-column: 3/3;
-      grid-row: 1;
-    }
-    &__title {
-    }
-    &__subtitle {
-    }
-    &__desc {
-    }
-
     &__deco {
-      grid-column: 2/2;
+      grid-column: 1/1;
       grid-row: 1;
       margin-top: fluid-size(12.5, 25);
-
-      height: fluid-size(550, 707);
+      height: 100%;
       margin-left: 0vw;
-
       &::before {
-        height: fluid-size(400, 557);
+        height: 77%;
       }
     }
-
     &__image-left {
-      grid-column: 5/5;
+      grid-column: 3/3;
       grid-row: 1;
-      width: 25vw;
-      width: fluid-size(190, 385);
+      width: 20vw;
+      margin-top: 8vw;
     }
     &__image-right {
-      grid-column: 5/5;
+      grid-column: 3/3;
       grid-row: 1;
-      width: 25vw;
-      width: fluid-size(189, 378);
-      margin-left: 10vw;
-      margin-top: 0vw;
+      width: 19.5vw;
+      margin-left: 12.5vw;
+      margin-top: -0.3vw;
     }
   }
 }
